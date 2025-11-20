@@ -1,0 +1,74 @@
+1. Calculate the sum of two numbers. Prompt the user to enter two numbers and display their sum
+Psuedo Code:
+    START
+    INPUT num1
+    INPUT num2
+    SET sum TO num1+ num2
+    PRINT sum
+    END
+
+    Solution:
+    let a=prompt("enter first number")
+    let b=prompt("enter second number")
+    let sum= a+b
+    alert(sum)
+---------------------------------------------------------------------------------
+2. Problem : Find the largest Number in an array . 
+given an array of numbers, 
+find and Display the Largets Number
+
+Psuedo Code:
+START
+SET array TO [2,5,1,8,4]
+
+FOR EACH number IN array    
+    IF number > largest THEN
+        SET     Largest TO number
+END FOR
+
+PRINT Largest
+END
+
+-------------------------------------------------------------------
+
+Problem Statements: 
+Generate a program which can find whether
+ the number is divisible by 2 or not?
+
+ Solution: 
+    START
+    INPUT a num
+    IF (num%2==0)
+    PRINT : num is divisible
+    ELSE
+    PRINT :not divisible
+    END
+
+------------------------------------------------------------------
+Problem:
+Generate a Psuedo code for Number Multiple of 3
+Solution:
+    START
+    INPUT a number
+    IF a number %3==0
+        PRINT: Multiple of 3
+    ELSE 
+        PRINT: Not Multiple of 3
+    END
+-------------------------------------------------------------------
+Problem: Count the Number of occurrence of each character in a given String
+String: MISSISIPPI
+Solution:
+    START
+    INPUT str 
+    SET counts to EMPTY DICTIONARY
+
+    FOR EACH char IN str
+        IF char IN counts THEN
+            SET counts[char] TO counts[char]+1
+        ELSE
+            SET counts[char] to 1
+
+    END FOR
+    PRINT counts
+
