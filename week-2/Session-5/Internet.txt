@@ -1,0 +1,54 @@
+What is IP?
+------------------------------------------------
+Unique address for every device
+Two versions: IPv4 (32-bit) & IPv6 (128-bit)
+-------------------------------------------------
+Types of IP
+    - Public IP
+    - Private IP
+    - Static vs Dynamic IP
+*****************************************************
+DNS
+******************************************************
+What is a Domain?
+---------------------------------
+- Human-friendly name for websites
+- Example: google.com
+- DNS = Internet’s Phonebook
+- Converts domain name → IP address
+--------------------------------------------------------
+DNS Steps
+    - Browser checks local cache
+    - DNS Resolver
+    - Root server
+    - TLD server (.com, .in)
+    - Authoritative DNS
+    - IP returned to user
+******************************************************
+HTTP & HTTPS
+*******************************************************
+HTTP = HyperText Transfer Protocol
+    - Stateless, request-response model
+    - HTTPS = secure version (TLS/SSL encryption)
+HTTPS & SSL/TLS
+    - SSL/TLS = encryption of data
+    - Locks & certificates
+    - CA (Certificate Authority) validation
+
+Basic explanation of handshake
+******************************************************
+TCP/IP
+******************************************************
+- TCP = reliable (handshake, error checking)
+- UDP = faster, no guarantee (used in video streaming)
+******************************************************
+SMTP (Email)
+******************************************************
+SMTP = sends emails
+    - POP3/IMAP = retrieves emails
+    - Client → SMTP server → Mail transfer → Recipient inbox
+******************************************************
+FTP
+******************************************************
+File transfer Protocol
+
