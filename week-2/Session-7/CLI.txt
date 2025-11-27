@@ -6,24 +6,139 @@ or
 press windows button+R togather> enter cmd
 Forward Navigation
 ---------------------
-cd <name_of_file or directory>
+> cd <name_of_file or directory>
 
 Backward Navigation
 ----------------------
-cd ..
+> cd ..
 
 Root Navigation
 ----------------------
-cd \
+> cd \
 
 List files and folders
 ----------------------
-dir
+> dir
 
 wide list of directory
 ----------------------
-dir /w 
+> dir /w 
 
 Show hidden files and folders
 -----------------------------
-dir /a
+> dir /a
+
+clear everything
+-----------------------------
+> cls
+
+Close the cmd
+-----------------------------
+> exit
+--------------------------------------------------------------
+TASK-1
+--------------------------------------------------------------
+Navigate Between Desktop>Documents>Downloads> get the list of file
+ and folders along with hidden files
+
+####################################################################
+Installation of WSL(Linux)
+####################################################################
+> wsl --install 
+
+(for Windows Users)
+> goto> search> wsl > open
+
+1. to update Linux Distribution
+---------------------------------
+> sudo apt update
+
+2. Upgrade Packages:
+---------------------------------
+> sudo apt upgrade
+
+3. Install Additional Software
+---------------------------------
+> sudo apt install git
+
+4. check the users name
+---------------------------------
+> whoami 
+5. clear the terminal
+---------------------------------
+> clear
+
+6. list of file
+---------------------------------
+> ls
+
+7. list a file with details
+---------------------------------
+ls -l
+
+8. list hidden files and folders
+---------------------------------
+ls -a
+
+9. move to any folder
+----------------------------------
+cd <name of folder>
+
+10. move to root directory
+----------------------------------
+cd ~
+
+11. Create New directory(Folder)
+-----------------------------------
+mkdir <name of folder>
+
+12. move to that directory
+-----------------------------------
+> cd <name of folder>
+
+13. Create a new file
+-----------------------------------
+> touch file.txt
+
+14. add some content to that file
+----------------------------------
+> echo "Hello World!" > file.txt
+
+15. add a long data using different editors
+there are 3 types of editors
+    1. nano
+    2. cat
+    3. vim
+lets Use Nano editor
+----------------------------------------
+follow below command:
+> nano file.txt
+
+
+ <here you can add your text>
+ 
+ to save: ctr+o + enter
+ to exit: ctr+x
+ ----------------------------------------
+ lets use vim
+ > vim file.txt
+ > press i
+ > type your text
+ > press 'esc'
+ > :wq! +enter
+
+ 16. copy files
+ ----------------------------------------
+ > cp file.txt copy.txt   
+
+ 17. delete file
+ ----------------------------------------
+ > rm copy.txt
+*********************************************************
+ TASK:2 Linux
+*********************************************************
+> Create a Folder
+> Create 4 files 
+> add a data to that files
+> copy that files 
+> delete all the files
