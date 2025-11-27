@@ -1,0 +1,29 @@
+***************************************************
+WINDOWS COMMAND PROMPTS (CMD)
+****************************************************
+goto> search bar> search for "cmd"> open command prompt
+or
+press windows button+R togather> enter cmd
+Forward Navigation
+---------------------
+cd <name_of_file or directory>
+
+Backward Navigation
+----------------------
+cd ..
+
+Root Navigation
+----------------------
+cd \
+
+List files and folders
+----------------------
+dir
+
+wide list of directory
+----------------------
+dir /w 
+
+Show hidden files and folders
+-----------------------------
+dir /a
