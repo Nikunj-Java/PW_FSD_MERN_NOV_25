@@ -137,8 +137,25 @@ follow below command:
 *********************************************************
  TASK:2 Linux
 *********************************************************
-> Create a Folder
-> Create 4 files 
+> Create a Folder -- mkdir demo
+> Create 4 files  -- touch file1.txt ,touch file2.txt ....... 
 > add a data to that files
-> copy that files 
+    echo "demo text1" > file1.txt
+    echo "demo text2" > file2.txt
+    echo "demo text3" > file3.txt
+    echo "demo text4" > file4.txt
+    [note: if not working use nano | vim editor to add a data]
+> copy that files  
+    cp file1.txt copy1.txt
+    cp file2.txt copy2.txt
+    cp file3.txt copy3.txt
+    cp file4.txt copy4.txt
 > delete all the files
+    rm file1.txt
+    rm file2.txt
+    rm file3.txt
+    rm file4.txt
+    rm copy1.txt
+    rm copy2.txt
+    rm copy3.txt
+    rm copy4.txt
