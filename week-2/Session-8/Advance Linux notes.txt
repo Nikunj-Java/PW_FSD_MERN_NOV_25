@@ -102,3 +102,20 @@ grep -n "404" *.log
 grep -o cat error.log
 grep -o cat access.log
 grep -o cat *.log
+
+12. User Management in Linux
+----------------------------------------------------------
+1. add user in Linux
+> sudo useradd username
+eg: sudo useradd pw
+
+2. set password for the User
+> sudo passwd username
+eg: sudo passwd pw
+it will ask for password & re enter password
+
+3. get The list of users
+-----------------------------------------------------------
+cat /etc/passwd
+
+
