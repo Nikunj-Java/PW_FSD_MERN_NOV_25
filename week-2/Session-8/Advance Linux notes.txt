@@ -1,0 +1,52 @@
+1. Create a directory
+--------------------------------
+> mkdir demo   
+
+2. move to directory
+--------------------------------
+> cd demo
+
+3. get the current working directory
+-------------------------------------
+> pwd
+
+4. Copy a file 
+-------------------------------------
+> cp source.txt dest.txt
+
+5. moving a file
+-------------------------------------
+mv oldname.txt newname.txt
+
+6. moving a file to a destionation
+--------------------------------------
+mv file.txt /path/to/destination
+
+7. Multi Command Line Input
+---------------------------------------
+cat <<EOF > greeting.txt
+Hello
+How Are you
+This is Multi-Line Input
+EOF
+
+8. Single Line Input
+----------------------------------------
+echo "Hello World" > file.txt
+
+9.Append a data in a file
+----------------------------------------
+> echo "Hello" > file.txt    # create msg.txt
+> echo "world" >> file.txt   # Adds "World" without deleting "Hello"
+
+10. Handling Errors
+----------------------------------------
+lets understand first file Discriptors
+> 0=stdin= Input
+> 1=stdout= Output
+> 2=stderr= Error
+
+ To Redirect stdrr we use 2>, 2>>, or some another format
+
+ > ls /path/does/not/exist/ 2> error.txt
+ when we execute this command it will print an error in the error.txt file
