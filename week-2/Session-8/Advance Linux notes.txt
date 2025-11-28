@@ -50,3 +50,55 @@ lets understand first file Discriptors
 
  > ls /path/does/not/exist/ 2> error.txt
  when we execute this command it will print an error in the error.txt file
+
+ 11. Searching in a File(s)
+ -------------------------------------------
+ we can do using grep command
+ 'grep'- Global Regular Expression Printer
+ - it searches for text patterns inside file or coommnad Outputs and prints the matching lines
+
+ example:
+ grep "error" logfile.txt  # it will search for error in that file
+ 
+ [a] case sensetive Vs case in-sensetive case
+ ---------------------------------------------
+ grep "hello" file.txt
+ grep -i "hello" notes.txt   # -i it is case insensitive
+
+ [b] Search in a Multiple files
+ -------------------------------------
+ grep "404" access.log error.log
+
+ example:1
+ create two file and add some error data
+ > touch access.log
+ > cat <<EOF > access.log
+    there is a 404 error
+    404 error in the program
+    the is 404 error
+    EOF
+> touch error.log
+ > cat <<EOF > error.log
+    there is a 404 error
+    404 error in the program
+    the is 404 error
+    EOF
+> ls
+> grep "404" access.log error.log
+
+[c] Search in All files
+---------------------------------
+grep "error" *.txt
+grep "404" *.log
+
+[d] show number line with match
+---------------------------------
+grep -n "404" access.log
+grep -n "404" error.log
+grep -n "404" *.log
+
+[e] Show only the matching part (not the whole line)
+---------------------------------------------------------
+grep -o cat error.log
+grep -o cat access.log
+grep -o cat *.log
