@@ -9,17 +9,22 @@
 
 <body>
     <div style="background-color: azure; padding: 50px;">
+
         <h1>Forms Example</h1>
+        <p>A &amp; B</p>
+        <p>2 &lt; 5 </p>
+        <p>10 &gt; 5 </p>
+        <p> &copy; Copyright 2025 | Prepared and Devloped By: Nikunk Soni</p>
         <form action="#actionpage" method="post">
             <!--Text Input-->
             <label for="fullname">Fullname:</label>
-            <input type="text" id="fname" name="fname" placeholder="Please Enter Fullname"><br> <br>
+            <input type="text" id="fname" name="fname" placeholder="Please Enter Fullname" required><br> <br>
             <!--Email Input-->
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="email@testmail.com" /><br><br>
+            <input type="email" id="email" name="email" placeholder="email@testmail.com" required /><br><br>
             <!--Password Input-->
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Enter Your Secret Password" /><br><br>
+            <input type="password" id="password" name="password" placeholder="Enter Your Secret Password" required /><br><br>
 
             <!--Radio Buttons-->
             <label for="gender">Gender:</label>
@@ -28,8 +33,8 @@
 
             <!--CheckBoxes-->
             <label for="hobbies">Hobbies:</label>
-            <input type="checkbox" name="reading" value="reading">Reading
-            <input type="checkbox" name="traveling"  value="traveling">Traveling
+            <input type="checkbox" name="reading" value="reading" checked>Reading
+            <input type="checkbox" name="traveling"  value="traveling"  disabled>Traveling
             <input type="checkbox" name="singing" value="singing">Singing
             <input type="checkbox" name="dancing"  value="dancing">Dancing
             <input type="checkbox" name="sports" value="sports">Sports<br><br>
@@ -49,10 +54,15 @@
             </select>
             <br><br>
             <input type="submit" value="Register"/> 
-            <button type="reset">Reset</button>
+              <button type="reset">Reset</button>
 
         </form>
+      
+          
+            
 
+        <!--summary-->
+        <!--input types: text, number, email, password, radio, checkbox, textarea, select, submit, reset-->
     </div>
 
 </body>
