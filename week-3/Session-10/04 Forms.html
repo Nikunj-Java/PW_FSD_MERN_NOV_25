@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="background-color: azure; padding: 50px;">
+        <h1>Forms Example</h1>
+        <form action="#actionpage" method="post">
+            <!--Text Input-->
+            <label for="fullname">Fullname:</label>
+            <input type="text" id="fname" name="fname" placeholder="Please Enter Fullname"><br> <br>
+            <!--Email Input-->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="email@testmail.com" /><br><br>
+            <!--Password Input-->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter Your Secret Password" /><br><br>
+
+            <!--Radio Buttons-->
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" id="gender" value="male">Male
+            <input type="radio" name="gender" id="gender" value="female">Female <br><br>
+
+            <!--CheckBoxes-->
+            <label for="hobbies">Hobbies:</label>
+            <input type="checkbox" name="reading" value="reading">Reading
+            <input type="checkbox" name="traveling"  value="traveling">Traveling
+            <input type="checkbox" name="singing" value="singing">Singing
+            <input type="checkbox" name="dancing"  value="dancing">Dancing
+            <input type="checkbox" name="sports" value="sports">Sports<br><br>
+
+            <!--Address-->
+            <label for="address">Address:</label><br>
+            <textarea name="address" rows="5" cols="30"></textarea><br><br>
+
+            <!--Dropdown-->
+            <label for="country">Country:</label>
+            <select name="country">
+                <option>India</option>
+                <option>UK</option>
+                <option>USA</option>
+                <option>Canada</option>
+                <option>Australia</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Register"/> 
+            <button type="reset">Reset</button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
