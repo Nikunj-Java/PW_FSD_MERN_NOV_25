@@ -3,103 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Store</title>
+    <title>ReadSphere – Online Bookstore</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+<header>
+    <img src="images/logo.png" alt="Books Banner" class="banner">
+    <h1>📚 ReadSphere – Your Digital Bookstore</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Genres</a>
+        <a href="#">Best Sellers</a>
+        <a href="#">New Arrivals</a>
+    </nav>
+</header>
 
-    <center>
-    <header>
-        <img src="images/logo.png" height="200" width="250" alt="books banner">
-        <h1>ReadSphere - Your Digital BookStore</h1>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#genre">Genre</a>
-            <a href="#best-seller">Best Seller</a>
-            <a href="#new-arrivals">New Arrivals</a>
-        </nav>
+<main>
+    <div class="intro">
+        <h2>Featured Books</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Genre</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The Silent Echo</td>
+                    <td>Emma Carter</td>
+                    <td>Thriller</td>
+                    <td>$12.99</td>
+                </tr>
+                <tr>
+                    <td>Journey Beyond Stars</td>
+                    <td>Leo Harrison</td>
+                    <td>Sci-Fi</td>
+                    <td>$15.49</td>
+                </tr>
+                <tr>
+                    <td>The Wisdom Tree</td>
+                    <td>Mira Joshi</td>
+                    <td>Self-Help</td>
+                    <td>$10.99</td>
+                </tr>
+                <tr>
+                    <td>Garden of Dreams</td>
+                    <td>Sophia Kim</td>
+                    <td>Romance</td>
+                    <td>$9.75</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-    </header>
-    </center>
-    <hr>
+    <div class="separator"> 
+        <h2>🎬 Promotional Video</h2>
+        <video width="100%" controls>
+            <source src="videos/promo.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
 
-    <main>
-        <div>
-            <h2> Featured Books</h2>
-            <table border="5" cellspacing="5" cellpadding="5">
-                <thead>
-                    <tr>
-                        <th>Book Title</th>
-                        <th>Author</th>
-                        <th>Price</th>
-                        <th>Rating</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>The Great Gatsby</td>
-                        <td>F. Scott Fitzgerald</td>
-                        <td>$10.99</td>
-                        <td>4.5/5</td>
-                    </tr>
-                    <tr>
-                        <td>1984</td>
-                        <td>George Orwell</td>
-                        <td>$8.99</td>
-                        <td>4.7/5</td>
-                    </tr>
-                    <tr>
-                        <td>To Kill a Mockingbird</td>
-                        <td>Harper Lee</td>
-                        <td>$12.49</td>
-                        <td>4.8/5</td>
-                    </tr>
-                    <tr>
-                        <td>The Catcher in the Rye</td>
-                        <td>J.D. Salinger</td>
-                        <td>$9.99</td>
-                        <td>4.2/5</td>
-                    </tr>
+    <div class="separator">
+        <h2>Subscribe to Our Monthly Newsletter</h2>
+        <form>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
 
-                </tbody>
-            </table>
-        </div>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" required>
 
-        <!--Video Section-->
-        <div>
-            <h2> Pramotional Video</h2>
-            <video width="600" controls>
-                <source src="videos/bookstore_promo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <h2> Subscribe to Monthly Newsletter</h2>
-            <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+            <label>Preferences:</label>
+            <input type="checkbox" id="thriller"> Thriller
+            <input type="checkbox" id="romance"> Romance
+            <input type="checkbox" id="scifi"> Sci-Fi
+            <input type="checkbox" id="selfhelp"> Self-Help
 
-                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+            <br><br>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</main>
 
-                <label> Preferences:</label>
-                <input type="checkbox" id="fiction" name="preferences" value="Fiction">
-                <label for="fiction">Fiction</label>
-                <input type="checkbox" id="nonfiction" name="preferences" value="Non-Fiction">
-                <label for="nonfiction">Non-Fiction</label>
-                <input type="checkbox" id="mystery" name="preferences" value="Mystery">
-                <label for="mystery">Mystery</label>
-                <input type="checkbox" id="science" name="preferences" value="Science">
-                <label for="science">Science</label>
-                <br><br>
-                <input type="submit" value="Subscribe">
-            </form>
-        </div>
+<footer>
+    <p>© 2025 ReadSphere Bookstore – All Rights Reserved.</p>
+    <p>Prepared By | PWSKILLS</p>
+</footer>
 
-    </main>
-<hr>
-    <center>
-    <footer>
-        <p>&copy; 2025 ReadSphere BookStore | All rights reserved. </p>
-        <p>Prepared By: PWSKILLS</p>
-    </footer>
-    </center>
 </body>
 </html>

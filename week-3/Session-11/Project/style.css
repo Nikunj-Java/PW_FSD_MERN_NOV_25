@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #fafafa;
+    color: #222;
+}
+
+header {
+    background: #1a73e8;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.banner {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+}
+
+nav a {
+    margin: 8px;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background: white;
+    color: #1a73e8;
+    border-radius: 4px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.separator {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 45%;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    background: #1a73e8;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0c4fb0;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: white;
+}
