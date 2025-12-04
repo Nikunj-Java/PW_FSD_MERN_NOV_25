@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!--internal CSS-->
+    <style>
+        h2{
+            background-color: yellow;
+        }
+        h3{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Specificity</h1>
+        <p>Specificity is a set of rules that browsers use to determine which CSS rule applies 
+            when multiple rules could apply to the same element. </p>
+        <p>It is based on the matching rules which are composed of different 
+            sorts of CSS selectors.</p>
+            <h3>Specificity Levels</h3>
+        <ul>
+            <li>1.inline has the highest specificity</li>
+            <li>2.internal CSS has the second highest specificity</li>
+            <li>3.external CSS has the lowest specificity</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2 style="background-color: lightblue;">inline</h2>
+        <h3>internal</h3>
+        <h4>external</h4>
+    </div>
+    
+    
+</body>
+</html>
