@@ -1,0 +1,7 @@
+Class Project: 
+- Design a simple webpage for a fictional online bookstore. 
+- The webpage should include a well-structured table displaying book details 
+    (title, author, genre, price), an interactive form for users to subscribe 
+    to a newsletter (collecting name, email, and preferences), and incorporate
+     various HTML5 semantic tags to ensure accessibility and readability.
+- Additionally, embed an image banner and a promotional video on the page.
