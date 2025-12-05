@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Link - unvisited */
+        a:link{
+            color: blue;
+        }
+        /* Link - visited */
+        a:visited{
+            color: purple;
+        }
+        p:not(.special){
+            font-style: italic;
+        }
+        p:first-of-type{
+            color: red;
+            font-weight: bold;
+        }
+         p:last-of-type{
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h2>Psuedo-Class</h2>
+        <a href="https://www.facebook.com" target="_blank">Facebook.com</a>
+        <a href="https://www.google.com" target="_blank">Google.com</a>
+
+        <section>
+            <p>This is the first paragraph</p>
+            <p class="special">This is a special paragraph(not italic)</p>
+            <p>This is the third paragraph</p>
+            <p>This is last paragraph (Style Green)</p>
+
+        </section>
+
+    </div>
+    
+</body>
+</html>
