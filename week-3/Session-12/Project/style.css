@@ -1,0 +1,79 @@
+/* Universal selector */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Body selector */
+body {
+  background: #fffdf3;
+  line-height: 1.5;
+}
+
+/* Banner */
+header img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Menu table */
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-size: 18px;
+}
+th, td {
+  border: 1px solid #444;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background: #ffcf6f;
+}
+
+/* UL marker styling */
+li::marker {
+  color: green;
+  font-size: 22px;
+}
+
+/* Selection highlight */
+::selection {
+  background: yellow;
+  color: black;
+}
+
+/* Links */
+a:link { color: blue; }
+a:visited { color: purple; }
+a:hover { color: red; }
+
+/* First and last item styling */
+.menu-list li:first-of-type {
+  font-weight: bold;
+  color: darkred;
+}
+.menu-list li:last-of-type {
+  font-style: italic;
+}
+
+/* Subscription form */
+form {
+  width: 60%;
+  margin: 30px auto;
+  background: #ffeab5;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* Button */
+button {
+  padding: 10px 20px;
+  background: #d66a00;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
