@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:hover{
+            color: orange;
+        }
+        button:active{
+            background-color: green;
+            color: white;
+        }
+        input:focus{
+            border: 2px solid red;
+        }
+        li:nth-child(1){
+            color: brown;
+            font-weight: bold;
+        }
+        li:nth-child(2){
+            color: blue;
+        }
+        li:nth-child(3){
+            color: orangered
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>Psuedo-class</h1>
+        <a href="https://www.google.com">Google.com</a>
+        <p>A pseudo-class is a keyword added to selectors that specifies a special state of the selected elements.</p>
+        <p>For example, it can be used to style an element when a user mouses over it, or to style visited links differently from unvisited links.</p>
+        <button>Click me</button>
+        <input type="text" placeholder="click to focus"><br><br>
+        <ul>
+            <li>First Item(bold)</li>
+            <li>Second Item(Blue)</li>
+            <li>Third Item</li>
+        </ul>
+    </div>
+    <div>
+        <h2>Summary</h2>
+        <ul>
+            <li><strong>:hover</strong>- Works with Mouse Hover</li>
+            <li><strong>:active</strong>- Works when the element is being activated(e.g., clicked)</li>
+            <li><strong>:focus</strong>- Works when the element is focused(e.g., clicked or tabbed into)</li>
+            <li><strong>:nth-child(n)</strong>- Selects the nth child of a parent element</li>
+            <li><strong>:first-child</strong>- Selects the first child of a parent element</li>
+        </ul>
+    </div>
+    
+</body>
+</html>
