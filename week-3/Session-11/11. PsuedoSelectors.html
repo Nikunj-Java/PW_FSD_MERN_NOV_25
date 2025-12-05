@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::first-letter {
+            font-size: 200%;
+            color: red;
+        }
+        p::first-line{
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        h2::before{
+            content:"\00A9 ";
+            color: navy;
+        }
+        h2::after{
+            content:"\00A9 ";
+            color: navy;
+        }
+        ::selection {
+            background: yellow;
+            color: black;
+        }
+        li::marker {
+            color: green;
+            font-weight: bold;
+            font-size: 150%;
+        }
+        input::placeholder {
+            color: blue;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Pseudo-Selectors Example</h1>
+    <p>This paragraph uses the :first-letter pseudo-selector to style its first letter.</p>
+    <h2>This is for content-before pseudo-selector</h2>
+
+    <h3>Select the Below Text</h3>
+    <p>Select this text to see the :first-line pseudo-selector in action.</p>
+    
+    <h3>List of Books</h3>
+    <ul>
+        <li>The Great Gatsby</li>
+        <li>To Kill a Mockingbird</li>
+        <li>1984</li>
+        <li>Pride and Prejudice</li>
+        <li>The Catcher in the Rye</li>
+    </ul>
+    
+    <input type="text" placeholder="Enter Your Name">
+
+    <div>
+        <h1>:: Represent Psuedo-Element</h1>
+        <ol>
+            <li>::before- Adds content before an element</li>
+            <li>::after- Adds content after an element</li>
+            <li>::first-letter- Styles the first letter of an element</li>
+            <li>::first-line- Styles the first line of an element</li>
+            <li>::marker- Styles the marker of list items</li>
+            <li>::placeholder- Styles the placeholder text of input fields</li>
+            <li>::selection- Styles the portion of an element that is selected by the user</li>
+
+        </ol>
+    </div>
+</body>
+</html>
