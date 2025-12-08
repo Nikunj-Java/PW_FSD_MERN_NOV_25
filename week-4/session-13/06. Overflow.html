@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 80px;
+            border: 2px solid brown;
+            margin-bottom: 20px;
+        }
+        .hidden{
+            overflow: hidden;
+        }
+        .scroll{
+            overflow: scroll;
+        }
+        .auto{
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+  <b>overflow: visible (default)</b><br>
+  This content is bigger than the box so it will come out of the box.
+</div>
+
+<div class="box hidden">
+  <b>overflow: hidden</b><br>
+  This content is bigger than the box so the extra part will be hidden.
+</div>
+
+<div class="box scroll">
+  <b>overflow: scroll</b><br>
+  This content is bigger than the box so scrollbars appear.
+   This content is bigger than the box so scrollbars appear.
+</div>
+
+<div class="box auto">
+  <b>overflow: auto</b><br>
+  This content is bigger than the box so scrollbars appear only if needed.
+  This content is bigger than the box so scrollbars appear only if needed.
+  This content is bigger than the box so scrollbars appear only if needed.
+</div>
+</body>
+</html>
