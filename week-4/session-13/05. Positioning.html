@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            padding: 10px;
+            color: white;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .sticky{
+            position: sticky;
+            top: 0;
+            background-color: orange;
+        }
+        .static{
+            position: static;
+            background: teal;
+        }
+        .relative{
+            position: relative;
+            top: 10px;
+            left: 20px;
+            background: purple;
+        }
+        .absolute{
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background: brown;
+        }
+        .parent{
+            position: relative;
+            height: 100px;
+            background: grey;
+            margin-bottom: 40px;
+        }
+        .absolute{
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background: brown;
+            padding: 5px;
+        }
+        .fixed{
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Positioning Example</h2>
+    <div class="sticky">
+        <p>Sticky Heading -Scroll down to see the effect</p>
+        
+    </div>
+
+    <div class="static">
+        <p>static Position</p>
+        
+    </div>
+
+     <div class="relative">
+        <p>Relative Position (Shifted)</p>
+        
+    </div>
+
+     <div class="parent">
+        <div class="absolute">
+            absolute position in parent
+        </div>
+
+     </div>
+
+     <p style="height: 600px;">Scroll Down to see the fixed element....</p>
+
+     <div class="fixed">Fixed Position (always at bottom - right)</div>
+        
+        
+
+</body>
+</html>
