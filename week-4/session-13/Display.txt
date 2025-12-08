@@ -1,0 +1,16 @@
+Display: 
+1. block: Starts on a new line , takes full width
+
+2. inline: Stays on the same line, width is only as per content
+
+3. inline-block: Stays in the same line like inline but allows width, height, margin ,padding like block
+
+4. none: Hides the element completely
+
+5. flex: makes element a flex container 
+
+6. grid: Makes element a grid container
+
+7. inline-flex: Same as flex but stays inline
+
+8. inline-grid: Same a grid  but stays inline
