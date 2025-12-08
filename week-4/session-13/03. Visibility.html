@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            padding: 10px;
+            background-color: lightgreen;
+            border: 2px solid black;
+            margin: 5px;
+        }
+        .hiddenBox{
+            visibility: hidden;
+        }
+        .noneBox{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Visibility Example</h2>
+    <div class="box"> I am Visible</div>
+
+    <h2>Visibility Hidden Example</h2>
+    <div class="box hiddenBox">I am hidden but space is still here</div>
+    <div class="box"> i come after hidden - but gap remains</div>
+
+    <h2> Display None Example</h2>
+    <div class="box noneBox">You can't see me and no space is reserved</div>
+    <div class="box"> i come after display none - no gap</div>
+    
+</body>
+</html>
