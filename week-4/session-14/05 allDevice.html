@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            padding: 50px;
+            font-size: 28px;
+            color: white;
+            text-align: center;
+        }
+        .box{
+            background: purple;
+        }
+        /*Extra Large Device*/
+        @media (min-width: 1200px){
+            .box{
+                background: navy;
+            }
+        }
+         /*Large Device*/
+        @media (min-width: 992px) and (max-width: 1199px){
+            .box{
+                background:green;
+            }
+        }
+        /*Medium Device*/
+        @media (min-width: 768px) and (max-width: 991px){
+            .box{
+                background: orange;
+            }
+        }
+        /*Small Device*/
+        @media (max-width: 767px){
+            .box{
+                background: red;
+            }
+        }
+        /*Extra Small Device*/
+        @media (max-width: 480px){
+            .box{
+                background: black;
+            }
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        Responsive Design for All Devices<br>
+        Resize the browser window to see the effect.
+    </div>
+    
+</body>
+</html>
