@@ -4,7 +4,119 @@
 <meta charset="UTF-8">
 <title>Bakery Demo – CSS Concepts</title>
 
+<style>
+/* Layout / Display */
+header, section, footer {
+  display: block;
+  padding: 15px;
+  margin-bottom: 15px;
+}
 
+/* Banner */
+header {
+  background: #ffdac1;
+  text-align: center;
+}
+
+/* FLOAT EXAMPLE */
+.float-box img {
+  float: right;
+  width: 160px;
+  border-radius: 10px;
+  margin-left: 15px;
+}
+
+/* OVERFLOW EXAMPLE */
+.overflow-box {
+  width: 270px;
+  height: 110px;
+  border: 2px solid #cc5500;
+  overflow: auto;
+  margin-bottom: 20px;
+  padding: 8px;
+}
+
+/* OPACITY EXAMPLE */
+.opacity-box {
+  background: #ffd6c4;
+  padding: 15px;
+  opacity: 0.6;
+}
+
+/* VISIBILITY EXAMPLE */
+.hidden-note {
+  visibility: hidden; /* Space remains, only element becomes invisible */
+}
+
+/* DISPLAY EXAMPLE */
+.inline-demo span {
+  display: inline-block;
+  background: #e0a18b;
+  margin: 4px;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/* POSITIONING + Z-INDEX */
+.box-container {
+  position: relative;
+  height: 180px;
+  border: 2px solid #9c4d1c;
+  margin-top: 20px;
+}
+.static-box {
+  position: static;
+  width: 110px;
+  height: 110px;
+  background: #d68960;
+}
+.relative-box {
+  position: relative;
+  top: 15px;
+  left: 15px;
+  width: 110px;
+  height: 110px;
+  background: #c96e33;
+}
+.absolute-box {
+  position: absolute;
+  top: 25px;
+  left: 60px;
+  width: 110px;
+  height: 110px;
+  background: #742d16;
+  z-index: 3;
+}
+.fixed-box {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #ffc107;
+  padding: 10px;
+  font-size: 15px;
+  z-index: 10;
+}
+.sticky-title {
+  position: sticky;
+  top: 0;
+  background: #cc5500;
+  color: white;
+  padding: 8px;
+}
+
+/* Layout using Flex */
+.menu-layout {
+  display: flex;
+  gap: 15px;
+}
+.menu-layout div {
+  flex: 1;
+  background: #ffe9d6;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+}
+</style>
 </head>
 
 <body>
