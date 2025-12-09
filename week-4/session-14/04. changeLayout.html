@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container{
+            display: flex;
+            gap:20px;
+            padding:20px;
+        }
+        .box{
+            font-size: 16px;
+            background: #fff3cd;
+        }
+
+        @media(max-width: 480px){
+            header{
+                font-size: 16px;
+                padding: 10px;
+            }
+            .box{
+                font-size: 14px;
+                padding: 15px;
+                background: #d1ecf1;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Welcome to Responsive Page</h1>
+
+    </header>
+    <div class="container">
+        <div class="box"> Box 1 - Content Goes Here</div>
+        <div class="box"> Box 2 - Content Goes Here</div>
+        <div class="box"> Box 3 - Content Goes Here</div>
+    </div>
+
+</body>
+</html>
