@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 80px 300px 80px;
+
+ 
+  grid-template-areas:
+    "header  header"
+    "sidebar content"
+    "footer  footer";
+
+  grid-gap: 10px;
+}
+
+.header  { grid-area: header;  background: coral; }
+.sidebar { grid-area: sidebar; background: teal; }
+.content { grid-area: content; background: orange; }
+.footer  { grid-area: footer;  background: purple; }
+
+.box {
+  padding: 20px;
+  color: #fff;
+  font-size: 24px;
+}
+</style>
+</head>
+<body>
+
+<h2>Grid Template Areas Example</h2>
+
+<div class="container">
+  <div class="box header">Header</div>
+  <div class="box sidebar">Sidebar</div>
+  <div class="box content">Content</div>
+  <div class="box footer">Footer</div>
+</div>
+
+</body>
+</html>
