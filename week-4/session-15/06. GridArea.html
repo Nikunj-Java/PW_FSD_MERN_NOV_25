@@ -5,14 +5,13 @@
 
 .container {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 200px 1fr; 
   grid-template-rows: 80px 300px 80px;
 
- 
   grid-template-areas:
-    "header  header"
+    "header header"
     "sidebar content"
-    "footer  footer";
+    "footer footer";
 
   grid-gap: 10px;
 }
@@ -27,11 +26,30 @@
   color: #fff;
   font-size: 24px;
 }
+
+/* ---------------------------------
+        RESPONSIVE PART
+---------------------------------- */
+@media (max-width: 768px) {
+  .container {
+    /* Switch to single column layout */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+
+    /* Rearranging the layout for mobile */
+    grid-template-areas:
+      "header"
+      "content"
+      "sidebar"
+      "footer";
+  }
+}
 </style>
 </head>
+
 <body>
 
-<h2>Grid Template Areas Example</h2>
+<h2>Responsive Grid Layout using Media Queries</h2>
 
 <div class="container">
   <div class="box header">Header</div>
