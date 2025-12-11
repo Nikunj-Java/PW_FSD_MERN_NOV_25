@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: flex;
+  padding: 20px;
+  background: #eee;
+  margin-bottom: 20px;
+  height: 150px;           /* ADDED: Helps show vertical movement */
+  border: 2px solid #333;  /* ADDED: Visual boundary */
+}
+
+.box {
+  background: teal;
+  color: white;
+  padding: 20px;
+  margin: 5px;
+}
+</style>
+</head>
+<body>
+
+<h2>Align Items: center</h2>
+<div class="container" style="align-items: center;">
+  <div class="box">1</div><div class="box">2</div><div class="box">3</div>
+</div>
+
+<h2>Align Items: flex-end</h2>
+<div class="container" style="align-items: flex-end;">
+  <div class="box">1</div><div class="box">2</div><div class="box">3</div>
+</div>
+
+<h2>Align Items: flex-start</h2>
+<div class="container" style="align-items: flex-start;">
+  <div class="box">1</div><div class="box">2</div><div class="box">3</div>
+</div>
+
+<h2>Align Items: stretch</h2>
+<div class="container" style="align-items: stretch;">
+  <div class="box">1</div><div class="box">2</div><div class="box">3</div>
+</div>
+
+</body>
+</html>
