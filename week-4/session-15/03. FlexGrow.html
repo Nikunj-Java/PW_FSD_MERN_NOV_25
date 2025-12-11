@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flex Grow, Shrink, Basis Example</title>
+
+<style>
+.container {
+  display: flex;
+  border: 2px solid #333;
+  margin-bottom: 30px;
+  height: 150px;
+}
+
+/* Common box style */
+.box {
+  background: teal;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+/* EXAMPLE 1: flex-grow */
+.grow-1 { flex-grow: 1; }
+.grow-2 { flex-grow: 2; }
+
+/* EXAMPLE 2: flex-shrink */
+.shrink-0 { flex-shrink: 0; }
+.shrink-1 { flex-shrink: 1; }
+
+/* EXAMPLE 3: flex-basis */
+.basis-150 { flex-basis: 150px; }
+.basis-300 { flex-basis: 300px; }
+
+/* EXAMPLE 4: flex shorthand (grow, shrink, basis) */
+.flex-all {
+  flex: 1 1 200px;   /* grow =1, shrink=1, basis=200px */
+}
+</style>
+</head>
+
+<body>
+
+<h2>1️⃣ flex-grow Example</h2>
+<p>Extra space is divided based on grow value.</p>
+<div class="container">
+  <div class="box grow-1">Grow 1</div>
+  <div class="box grow-2">Grow 2</div>
+</div>
+
+
+<h2>2️⃣ flex-shrink Example</h2>
+<p>Box 1 does NOT shrink, Box 2 shrinks first.</p>
+<div class="container">
+  <div class="box shrink-0 basis-300">Shrink 0</div>
+  <div class="box shrink-1 basis-300">Shrink 1</div>
+</div>
+
+
+<h2>3️⃣ flex-basis Example</h2>
+<p>Box 1 starts at 150px, Box 2 starts at 300px.</p>
+<div class="container">
+  <div class="box basis-150">150px</div>
+  <div class="box basis-300">300px</div>
+</div>
+
+
+<h2>4️⃣ flex shorthand Example</h2>
+<p>flex: 1 1 200px → grow=1, shrink=1, basis=200px</p>
+<div class="container">
+  <div class="box flex-all">Flex</div>
+  <div class="box flex-all">Flex</div>
+  <div class="box flex-all">Flex</div>
+</div>
+
+</body>
+</html>
