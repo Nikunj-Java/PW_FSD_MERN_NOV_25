@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 150px;
+            height: 150px;
+            background: tomato;
+            margin:  50px auto;
+
+            /*Apply Animation*/
+            animation-name: moveBox;
+            animation-duration: 5s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+            animation-play-state: running;
+        }
+        @keyframes moveBox{
+            0% {transform:translateX(0); background: tomato;}
+            100% {transform:translateX(300px); background: teal;}
+        }
+        .box:hover{
+            animation-play-state: paused;
+        }
+
+
+         
+    </style>
+</head>
+<body>
+
+    <h2>All Animation(ALl Properties)</h2>
+    <div class="box"></div>
+    
+</body>
+</html>
