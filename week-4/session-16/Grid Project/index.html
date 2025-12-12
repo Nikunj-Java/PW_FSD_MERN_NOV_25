@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Photo Gallery - CLASS PROJECT</title>
+
+<style>
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* GRID CONTAINER (Desktop Layout)*/
+.gallery-container {
+  display: grid;
+
+  /* Grid Template Columns (4 columns on large screen) */
+  grid-template-columns: repeat(4, 1fr);
+
+  /* Grid Template Rows Auto */
+  grid-auto-rows: 200px;
+
+  
+  grid-gap: 15px;  
+
+  
+  padding: 10px;
+}
+
+/* GRID ITEMS*/
+.gallery-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+
+  /* Grid Area Example: spanning items */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+/* Hover Effect */
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+
+/*Write media querie for Tablet, Mobile*/
+
+</style>
+</head>
+<body>
+
+<h1>Responsive Photo Gallery (CSS Grid Project)</h1>
+
+<div class="gallery-container">
+
+  <!-- GRID ITEMS -->
+  <div class="gallery-item"><img src="https://picsum.photos/id/1015/400/300" alt="img"></div>
+  <div class="gallery-item"><img src="https://picsum.photos/id/1025/400/300" alt="img"></div>
+  <div class="gallery-item"><img src="https://picsum.photos/id/1035/400/300" alt="img"></div>
+  <div class="gallery-item"><img src="https://picsum.photos/id/1045/400/300" alt="img"></div>
+
+  <!-- Example of Grid Line Span -->
+  <div class="gallery-item" style="grid-column: span 2;">
+    <img src="https://picsum.photos/id/1055/800/300" alt="img">
+  </div>
+
+  <div class="gallery-item"><img src="https://picsum.photos/id/1065/400/300" alt="img"></div>
+  <div class="gallery-item"><img src="https://picsum.photos/id/1075/400/300" alt="img"></div>
+  <div class="gallery-item"><img src="https://picsum.photos/id/1085/400/300" alt="img"></div>
+
+  <!-- Example of Grid Area -->
+  <div class="gallery-item" style="grid-column: span 2; grid-row: span 2;">
+    <img src="https://picsum.photos/id/1095/800/600" alt="img">
+  </div>
+
+  <div class="gallery-item"><img src="https://picsum.photos/id/1105/400/300" alt="img"></div>
+  <div class="gallery-item"><img src="https://picsum.photos/id/1115/400/300" alt="img"></div>
+
+</div>
+
+</body>
+</html>
