@@ -6,7 +6,7 @@
 <title>Responsive Photo Gallery - CLASS PROJECT</title>
 
 <style>
-
+/* BASIC RESET */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -21,7 +21,9 @@ h1 {
   color: #333;
 }
 
-/* GRID CONTAINER (Desktop Layout)*/
+/* -------------------------------------
+    GRID CONTAINER (Desktop Layout)
+--------------------------------------*/
 .gallery-container {
   display: grid;
 
@@ -31,14 +33,16 @@ h1 {
   /* Grid Template Rows Auto */
   grid-auto-rows: 200px;
 
-  
-  grid-gap: 15px;  
+  /* Gap Between Items */
+  grid-gap: 15px; /* older syntax: grid-gap works too */
 
-  
+  /* Visual boundary */
   padding: 10px;
 }
 
-/* GRID ITEMS*/
+/* -------------------------------------
+    GRID ITEMS
+--------------------------------------*/
 .gallery-item {
   width: 100%;
   height: 100%;
@@ -53,7 +57,7 @@ h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
+  transition: 0.3s ease;
 }
 
 /* Hover Effect */
@@ -61,8 +65,31 @@ h1 {
   transform: scale(1.1);
 }
 
+/* -------------------------------------
+    MAKING GALLERY RESPONSIVE
+--------------------------------------*/
 
-/*Write media querie for Tablet, Mobile*/
+/* Large Tablets (3 columns) */
+@media (max-width: 992px) {
+  .gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablets (2 columns) */
+@media (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile (1 column) */
+@media (max-width: 480px) {
+  .gallery-container {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 250px;
+  }
+}
 
 </style>
 </head>
