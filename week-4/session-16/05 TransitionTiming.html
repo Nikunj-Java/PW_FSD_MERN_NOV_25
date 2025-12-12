@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            background: coral;
+            transition: width 2s; /*Only width Changes*/
+        }
+        /*Different Timing Function*/
+        .ease {transition-timing-function: ease;}
+        .ease-in {transition-timing-function: ease-in;}
+        .ease-out {transition-timing-function: ease-out;}
+        .ease-in-out {transition-timing-function: ease-in-out;}
+        .linear {transition-timing-function: linear;}
+
+        .box:hover{
+            width: 250px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>CSS Transition Timing Function</h2>
+
+    <div class="box ease">ease</div>
+    <div class="box ease-in">ease-in</div>
+    <div class="box ease-out">ease-out</div>
+    <div class="box ease-in-out">ease-in-out</div>
+    <div class="box linear">linear</div>
+    
+</body>
+</html>
