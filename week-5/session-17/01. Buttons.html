@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            background-color: teal;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 6px;
+
+            transition: all 0.3s ease;
+
+        }
+        .btn:hover{
+            background-color: darkcyan;
+            transform: scale(1.05);
+        }
+        /*Active Buttons: creates Pressing Effects*/
+        .btn:active{
+            transform: scale(0.95);
+        }
+        .btn:focus{
+            outline: 3px solid lightblue;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Interactive Buttons</h1>
+
+    <button class="btn">Click Me</button>
+
+    
+    
+</body>
+</html>
