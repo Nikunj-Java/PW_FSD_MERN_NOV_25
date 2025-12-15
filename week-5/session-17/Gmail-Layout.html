@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mail Layout</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* MAIN GRID */
+.app {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar content";
+  height: 100vh;
+}
+
+/* HEADER */
+.header {
+  grid-area: header;
+  background: #d93025;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 20px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  grid-area: sidebar;
+  background: #f1f3f4;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.menu a {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  color: #333;
+  border-radius: 6px;
+}
+
+.menu a:hover {
+  background: #e0e0e0;
+}
+
+/* BADGE */
+.badge {
+  background: red;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+/* ACCORDION */
+details {
+  margin-top: 15px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px;
+  background: #ddd;
+  border-radius: 6px;
+}
+
+/* CONTENT */
+.content {
+  grid-area: content;
+  padding: 20px;
+  overflow-y: auto;
+  background: #fff;
+}
+
+.mail {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.mail:hover {
+  background: #f7f7f7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .app {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "content";
+  }
+  .sidebar {
+    display: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- HEADER -->
+  <div class="header">
+    📧 Dummy Mail App
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="menu">
+      <a href="#">📥 Inbox <span class="badge">99+</span></a>
+      <a href="#">⭐ Starred</a>
+      <a href="#">📤 Sent</a>
+      <a href="#">📝 Drafts <span class="badge">5</span></a>
+    </div>
+
+    <details>
+      <summary>📂 More</summary>
+      <div class="menu">
+        <a href="#">Work</a>
+        <a href="#">Personal</a>
+        <a href="#">Spam</a>
+      </div>
+    </details>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <div class="mail">
+      <span>Lorem ipsum dolor sit amet</span>
+      <span class="badge">New</span>
+    </div>
+
+    <div class="mail">
+      <span>Dummy email subject line here</span>
+      <span>4:30 PM</span>
+    </div>
+
+    <div class="mail">
+      <span>Meeting reminder – tomorrow</span>
+      <span>Yesterday</span>
+    </div>
+
+    <div class="mail">
+      <span>Project update dummy text</span>
+      <span class="badge">2</span>
+    </div>
+
+    <div class="mail">
+      <span>Newsletter – Weekly Digest</span>
+      <span>Dec 15</span>
+    </div>
+
+    <div class="mail">
+      <span>Account verification email</span>
+      <span>Dec 14</span>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
