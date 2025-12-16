@@ -1,0 +1,65 @@
+1. Get the Version of Git
+> git --Version
+
+2. Show current directory
+> pwd
+
+3. list the files
+> ls 
+
+4. list all files
+> ls -a 
+
+5. go inside a folder
+> ls folder
+
+6. go back 
+> cd ..
+
+7. create new folder
+> mkdir test 
+
+8. create new file
+> touch file.txt
+
+9. remove the file 
+> rm file.txt
+
+9. clear the terminal
+> clear
+
+*********************************************************
+Git Hub Commands
+*********************************************************
+1.initialize an Empty Repository
+> git init
+
+2. Get The Status like, Modified, Untracked,Stagged files
+> git status
+
+3. Add file(s) to the remote Repository
+> git add <name of file>
+> git add .      // . means adding all the files and folder whithin the Repository
+
+4. remove file from stagging area
+> git rm --cached <name of file>
+
+5. Commit a Change (Creating a Snapshot | Version)
+> git commit -m "Initial Command"
+
+6. Get the log of Repository
+> git log
+
+7. get the log in Oneline
+> git log --oneline
+
+8. get the Global username and Email
+> git config user.name
+> git config user.email 
+
+9.set Global username and email
+> git config --global user.name "your github username"
+> git config --global user.email "your guthub email"
+
+10. get the global user list
+> git config --list
