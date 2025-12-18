@@ -1,0 +1,56 @@
+creating branch in GitBash
+--------------------------------------------------------------
+1. get the list of branches
+> git branch
+
+2. create a new branch in GitHub Repo
+---------------------------------------------------------------
+> git branch main
+[this will create "main" branch in github repository]
+
+3. Switch between the branches
+----------------------------------------------------------------
+> git checkout <branch_name>
+or
+> git switch <branch_name>
+or
+> git checkout -b <branch_name>
+or
+> git switch -c <branch_name>
+
+create and switch the branch
+> git switch -c login-feature
+
+4. push the code to Github repository
+-----------------------------------------------------------------
+> goto> Github repository
+1. create empty repository 
+2. donot create readMe file
+3. copy the remote origin URL: git remote add origin https://github.com/username/youRepository.git
+
+now > open git bash 
+1. git init
+2. git add .
+3. git commit -m "Message"
+4. git remote add origin https://github.com/Nikunj-Java/Testing.git
+5. verify
+    > git remote -v
+6. git push -u origin <branch name>
+**********************************************
+For First Time Users:
+
+9.set Global username and email
+> git config --global user.name "your github username"
+> git config --global user.email "your github email"
+
+> git config user.name
+> git config user.email 
+
+10. get the global user list
+> git config --list
+
+**********************************************
+
+now> run> git push -u origin <branchname>
+
+[for first time user it will ask for Github Authorization | Token, go to that browser and Authorise then re-run the code]
