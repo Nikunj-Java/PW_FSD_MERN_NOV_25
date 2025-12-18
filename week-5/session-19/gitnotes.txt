@@ -54,3 +54,7 @@ For First Time Users:
 now> run> git push -u origin <branchname>
 
 [for first time user it will ask for Github Authorization | Token, go to that browser and Authorise then re-run the code]
+
+11. git merge
+-----------------------------------
+> git merge <branchname>
