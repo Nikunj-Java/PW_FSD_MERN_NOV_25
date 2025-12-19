@@ -1,0 +1,23 @@
+*************************************************
+Connect Remote Repository to local Repositpory
+*************************************************
+1. goto> github.com>create new Repository>create without README.md File
+2. now it will show you couple of commands and instructions
+3. copy the BRANCH and ORIGIN commands
+4. create a folder in your local machine
+5. add some test files to it
+6. open terminal | cmd from that folder | or open cmd and move to that folder
+7. write the below commands
+> git init 
+> git git branch -M main     # here main is the branch you can also use *master
+> git remote add origin https://github.com/<username>/<repository_name>.git
+> git add .
+> git commit -m "commit message"
+> git push -u origin main   # here main is the branch you can also use *master
+***************************************************
+PULLING DATA FROM GITHUB REPOSITORY
+***************************************************
+1. GOTO> github.com> got to the Repository that you want to pull> click on code>copy repository url
+2. Now goto your local machine> create a new folder > open cmd | terminal from that
+3. follow these below set of commands
+> git clone https://github.com/Nikunj-Java/pw_test_1912.git
