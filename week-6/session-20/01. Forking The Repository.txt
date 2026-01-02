@@ -1,0 +1,46 @@
+What is Git Fork?
+----------------------------------------
+A fork is a personal copy of someone else’s GitHub repository created inside your own GitHub account.
+
+Step 1: Fork a Repository
+----------------------------------------------
+> Open a GitHub repo (example: facebook/react)
+> Click Fork button (top-right)
+> GitHub creates a copy under your account
+
+
+*************************************************************
+Deploy Website Using GitHub Pages
+*************************************************************
+STEP-BY-STEP PROCESS
+-------------------------------------------------------------
+STEP 1: Create a GitHub Repository
+-------------------------------------------------------------
+Go to GitHub
+> Click New Repository
+> Give repo name (example: my-website)
+> Keep it Public
+> Click Create Repository
+-------------------------------------------------------------
+STEP 2: Push Your Website Code to GitHub
+-------------------------------------------------------------
+git init
+git add .
+git commit -m "Initial website commit"
+git branch -M main
+git remote add origin https://github.com/username/my-website.git
+git push -u origin main
+------------------------------------------------------------------
+STEP 3: Enable GitHub Pages
+------------------------------------------------------------------
+Open your repository
+> Go to Settings> Click Pages (left menu)
+> Under Source:
+    > Branch → main
+    > Folder → / (root)
+
+> Click Save
+-------------------------------------------------------------------
+STEP:4 Wait for 2-3 minutes (refresh)
+-------------------------------------------------------------------
+> https://nikunj-java.github.io/WhatsAppProject/

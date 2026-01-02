@@ -1,0 +1,16 @@
+1.goto> forked Repository> copy the url
+2.open> gitbash from your local machine
+3.follow the below set of commands
+> git clone https://github.com/sonam-niit/GitExample.git
+> cd GitExample
+> git branch
+> git branch master
+> git checkout master
+> ls
+> touch file3.txt
+> ls
+> git add .
+> git commit -m "Pull Request"
+> git push -u origin main
+4. goto the repository and accept the pull request
+
