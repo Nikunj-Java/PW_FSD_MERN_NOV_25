@@ -6,6 +6,7 @@ console.log("x+y=", x+y);
 //javascript is not a strictly typed language
 var num=45; // num is a number
 var name="Nikunj Soni"; // name is a string
+
 var condition= true; // condition is a boolean
 var object=null; // object is null
 console.log("Type of num is: ",typeof num); // number
