@@ -3,7 +3,6 @@
 // The most common assignment operator is the equal sign (=).
 // There are also compound assignment operators that combine arithmetic operations with assignment.
 // operators: =, +=, -=, *=, /=, %=, **=
-
 var x= 10;  //assigning a value
 console.log("Initial value of x: ", x); // 10
 
@@ -26,3 +25,8 @@ console.log("After y **= 3: ", y); // 8
 // Summary:
 // =   : Simple assignment
 // +=  : Addition assignment
+// -=  : Subtraction assignment
+// *=  : Multiplication assignment
+// /=  : Division assignment
+// %=  : Modulo assignment
+// **= : Exponentiation assignment

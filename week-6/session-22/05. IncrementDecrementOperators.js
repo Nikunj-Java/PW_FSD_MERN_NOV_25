@@ -6,10 +6,13 @@
 let count=5;
 count ++; // Incrementing count by 1 (post-increment)
 console.log("After post-increment, count: ", count); // 6
+
 count ++; // Incrementing count by 1 (post-increment)
 console.log("After another post-increment, count: ", count); // 7
+
 count --; // Decrementing count by 1 (post-decrement)
 console.log("After post-decrement, count: ", count);
+
 count --; // Decrementing count by 1 (post-decrement)
 console.log("After another post-decrement, count: ", count); // 5
 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const q1 = "What is 2 + 6?";
+        const ans1 = 8;
+        const q2 = "What is the capital of india?";
+        const ans2 = "delhi";
+        const q3 = "Is javascript case-sensitive ? (yes/no)";
+        const ans3 = "yes";
+
+        //initial score
+        let score = 0;
+
+        //question 1
+        let userAnswer1 = Number(prompt(q1));
+        if (userAnswer1 === ans1) {
+            score++;
+        }
+
+
+        //question 2
+        let userAnswer2 = prompt(q2).toLowerCase();
+        if (userAnswer2 === ans2) {
+            score++;
+        }
+
+        //question 2
+        let userAnswer3 = prompt(q3).toLowerCase();
+        if (userAnswer3 === ans3) {
+            score++;
+        }
+
+        const totalQuestion = 3;
+        const percentageScore = (score / totalQuestion) * 100;
+
+        let resultMessage = "Quiz result: \n\n";
+        resultMessage += "Question answered Correctly: " + score + " out of " + totalQuestion + "\n";
+
+
+        alert(resultMessage);
+
+        //evaluate performance using logical operators and conditional statement
+
+
+    </script>
+
+</body>
+
+</html>
