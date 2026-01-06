@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let books = [];
+        let statuses = [];
+        let numbersofBooks = prompt("How many Books do You Want to track?")
+        numbersofBooks= Number(numbersofBooks);
+
+        //use for loop to collect book titles and initializa statuses
+        for (let i=0; i<numbersofBooks; i++){
+            let bookTitle= prompt("Enter the title of Book: "+(i+1)+":");
+            books[i]= bookTitle;
+            statuses[i]="Available"// All books status is Available
+        }
+        //display the list of books
+        console.log("Library Book Tracker:");
+        for (let i=0; i< numbersofBooks;i++){
+            console.log(books[i]+":"+statuses[i]);
+        }
+        // ask the user if they want to borrow or return the book
+
+
+        //use a while loop to handle borrow/return the book until the user chooses to exit
+
+
+        // display the updated list
+        
+    </script>
+
+</body>
+
+</html>
