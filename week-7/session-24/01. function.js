@@ -53,8 +53,6 @@ setTimeout(function (){
     console.log("Hello after 5 seconds");
 },5000); //5000 milliseconds= 5 seconds
 
-
-
 //conclusion: JavaScript is fundamentally synchronous and Single Threaded in its core execution, 
 // but the browser and node.js environments provide mechanis, to hanle asynchronous tasks. 
 
