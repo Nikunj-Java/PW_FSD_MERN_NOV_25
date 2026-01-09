@@ -7,7 +7,6 @@ function sum(...num){
     }
     return total;
 }
-
 console.log("Sum of 1,2,3: ",sum(1,2,3));// 1+2+3=6
 
 console.log("Sum of 1,2,3,4,5: ",sum(1,2,3,4,5)); //1+2+3+4+5=15
