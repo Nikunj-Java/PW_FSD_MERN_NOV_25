@@ -6,7 +6,6 @@ function greet(name){
 greet("Nikunj Soni"); //passing a single parameter with function
 
 //ex: passing a number(s) -> two variables
-
 function add(a,b){
     console.log(a+b);
 }
