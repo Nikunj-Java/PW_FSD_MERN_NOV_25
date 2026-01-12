@@ -2,6 +2,7 @@
 function Book(title, author){
     this.title=title;
     this.author=author;
+    //Here The Scope of this is within the function
 }
 
 let book1= new Book("Atomic Habits","James");
