@@ -2,7 +2,6 @@
 class Person{
     //must have one constructor if not create an empty one
     // consturctor carries the proeperties of class
-
     constructor(name,email,password,mobile){
         this.name=name;
         this.email=email;
@@ -24,5 +23,6 @@ class Person{
 
 //object
 let user1= new Person("Nikunj","nikunj@gmail.com","Nikunj@123","9876543210");
-user1.sayHello();
-user1.printDetails();
+let user2= new Person("Jhon","jhon@gmail.com","jhon@123","9876543210");
+user2.sayHello();
+user2.printDetails();
