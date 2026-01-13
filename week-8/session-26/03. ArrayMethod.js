@@ -48,5 +48,32 @@ console.log(fruits.slice(2,5));
 console.log(fruits.splice(0,2)); //["apple","banana"];
 
 //02.add elements
-console.log(fruits.splice(2,2,"grapes","orange")); //["apple","banana"];
+console.log("Adding Using Splice:",fruits.splice(2,0,"grapes"));  //start at index2 Remove 0 element, so nothing is deleted, only meant for adding
 console.log(fruits);
+
+//03.replace elements
+console.log("Replace using Splice:",fruits.splice(1,1,"banana"));  //start at index1 Remove 1 element
+console.log(fruits);
+
+ 
+//joining an elements if an array using .join();
+let result= fruits.join(",");
+console.log(result);
+
+//delete element using delete
+delete fruits[0]; //keeping index but deleting an item
+console.log(fruits);
+
+//reversing an array using .reverse();
+fruits.reverse();
+console.log(fruits);
+
+//converting an array toString
+let numbers=[10,20,30];
+console.log(numbers.toString());
+
+
+//revision
+// Methods Available in Array:
+// Methods:push,pop,shift,unshift,slice,splice,reverse,toString,join,delete
+// to print an array: for loop, for each loop
