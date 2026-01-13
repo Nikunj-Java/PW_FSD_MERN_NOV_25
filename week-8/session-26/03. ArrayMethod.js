@@ -21,3 +21,32 @@ console.log(fruits);
 // remove the first element
 fruits.shift();
 console.log(fruits);
+
+
+//indexOf Methods
+console.log("is apple exist in the array? :",fruits.includes("apple"));
+console.log("is papita exist in the array? :",fruits.includes("papita"));
+//includes Methods
+console.log("index of 'KIWI' :",fruits.indexOf("kiwi"));
+
+//iterate the array
+// using for loop
+// using for each
+fruits.forEach(function(item){
+    console.log(item);
+})
+
+//slice an array
+ //syntax: array.slice(startIndex,endindex);
+console.log("Splicing An Array Between 1 and 3:",fruits.slice(1,3));
+console.log(fruits.slice(2,5));
+
+//splice ---> Remove and Add Elements(changes original Array)
+//syntax: array.splice(startindex, deleteindex, item1,item2....);
+
+//01.remove elements
+console.log(fruits.splice(0,2)); //["apple","banana"];
+
+//02.add elements
+console.log(fruits.splice(2,2,"grapes","orange")); //["apple","banana"];
+console.log(fruits);
