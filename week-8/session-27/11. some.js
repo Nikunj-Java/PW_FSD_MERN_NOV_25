@@ -9,6 +9,6 @@ console.log(result);//true
 //example-2: check atleast any 1 condition is true then its it true
 let num1= [1,3,5,7,9,11];
 let result1= num1.some(n=> n%2 === 0);
-console.log(result1);//true
+console.log(result1);//false
 
 // apply in object as well
