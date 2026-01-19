@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Movie Collection Organizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>🎬 Movie Collection Organizer</h1>
+
+  <div class="container">
+
+    <div class="form">
+      <input type="text" id="title" placeholder="Movie Title">
+      <input type="number" id="rating" placeholder="Rating (1-10)">
+      <button onclick="addMovie()">Add Movie</button>
+    </div>
+
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search movie..." onkeyup="searchMovies()">
+      <button onclick="filterTopMovies()">Top Rated (8+)</button>
+      <button onclick="showAllMovies()">Show All</button>
+    </div>
+
+    <ul id="movieList"></ul>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
