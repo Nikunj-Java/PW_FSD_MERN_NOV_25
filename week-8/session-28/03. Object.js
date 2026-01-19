@@ -56,3 +56,26 @@ movie.details();
 
 delete movie.country;
 console.log(movie);
+
+// using 'in' in Object
+console.log("title" in movie); // true
+console.log("country" in movie); // false
+
+// use of 'in' in array
+let fruit= ["Apple","Banana","Mangos"];
+
+console.log(0 in fruit);//true
+console.log(3 in fruit);//false
+
+// Optional Chaining
+//- it allows you safely access object properties , methods or array elements 
+// without causing error if something is null or undefined
+
+// without chaining:
+let user={}
+//console.log(user.profile.name); // X Error
+
+// with Optional Chaining:
+console.log(user.profile?.name); // undefined
+
+console.log(movie.ticket?.price);
