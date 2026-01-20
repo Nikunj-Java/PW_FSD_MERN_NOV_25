@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #f4f6f8;
+            padding: 20px;
+            ;
+        }
+
+        .box {
+            background: #0f3861;
+            color: white;
+            padding: 20px;
+            margin: 5px 0;
+        }
+
+        button {
+            margin: 5px 5px 5px 0;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+        .highlight{
+            background: lightgreen;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 id="title">DOM Selector Demo</h2>
+
+    <p class="box"> Paragraph1</p>
+    <p class="box"> Paragraph2</p>
+    <p class="box"> Paragraph3</p>
+
+    <div class="box special">Special Box</div>
+
+    <button onclick="useGetElementbyId()">useGetElementbyId</button>
+    <button onclick="useGetClassName()">useGetClassName</button>
+    <button onclick="useQuerySelector()">useQuerySelector</button>
+    <button onclick="useQuerySelectorAll()">useQuerySelectorAll</button>
+    <button onclick="addElement()">addElement</button>
+    <button onclick="removeElement()">removeElement</button>
+
+    <ul id="list"></ul>
+
+    <script>
+        //getElementById()
+        function useGetElementbyId() {
+            let heading = document.getElementById("title");
+            heading.innerText = "Selected Using Element By Id";
+        }
+        //getElementByClassName()
+        function useGetClassName() {
+            let items = document.getElementsByClassName("box");
+            for (let i = 0; i < items.length; i++) {
+                items[i].style.border = "2px solid lightblue"
+            }
+        }
+        
+        function useQuerySelector() {
+            let firstBox = document.querySelector(".box");
+            firstBox.classList.add("highlight");
+        }
+
+        function useQuerySelectorAll() {
+            let allBoxes = document.querySelectorAll(".box");
+            allBoxes.forEach(box=>{
+                box.style.backgroundColor="lightblue";
+                 box.style.color="black";
+                
+            });
+        }
+
+        function addElement(){
+            let li=document.createElement("li");
+            li.innerText="New Item Added";
+            document.getElementById("list").appendChild(li);
+        }
+
+        function removeElement(){
+            let list=document.getElementById("list");
+            if(list.lastChild){
+                list.removeChild(list.lastChild);
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
