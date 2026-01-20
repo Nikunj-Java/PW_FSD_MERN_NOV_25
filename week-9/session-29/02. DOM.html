@@ -24,7 +24,8 @@
             padding: 8px 12px;
             cursor: pointer;
         }
-        .highlight{
+
+        .highlight {
             background: lightgreen;
             color: black;
         }
@@ -39,7 +40,13 @@
     <p class="box"> Paragraph2</p>
     <p class="box"> Paragraph3</p>
 
-    <div class="box special">Special Box</div>
+    <div class="box special" id="specialBox">Special Box</div>
+
+    <img id="myimage"
+        src="https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-fall-nature-scenery-free-image.jpeg?w=600&quality=80"
+        alt="Sample Image">
+
+    <br><br>
 
     <button onclick="useGetElementbyId()">useGetElementbyId</button>
     <button onclick="useGetClassName()">useGetClassName</button>
@@ -47,6 +54,10 @@
     <button onclick="useQuerySelectorAll()">useQuerySelectorAll</button>
     <button onclick="addElement()">addElement</button>
     <button onclick="removeElement()">removeElement</button>
+    <button onclick="useSetAttribute()">useSetAttribute</button>
+    <button onclick="useInnerHTML()">useInnerHTML</button>
+    <button onclick="useTextContent()">useTextContent</button>
+
 
     <ul id="list"></ul>
 
@@ -63,7 +74,7 @@
                 items[i].style.border = "2px solid lightblue"
             }
         }
-        
+
         function useQuerySelector() {
             let firstBox = document.querySelector(".box");
             firstBox.classList.add("highlight");
@@ -71,27 +82,46 @@
 
         function useQuerySelectorAll() {
             let allBoxes = document.querySelectorAll(".box");
-            allBoxes.forEach(box=>{
-                box.style.backgroundColor="lightblue";
-                 box.style.color="black";
-                
+            allBoxes.forEach(box => {
+                box.style.backgroundColor = "lightblue";
+                box.style.color = "black";
+
             });
         }
 
-        function addElement(){
-            let li=document.createElement("li");
-            li.innerText="New Item Added";
+        function addElement() {
+            let li = document.createElement("li");
+            li.innerText = "New Item Added";
             document.getElementById("list").appendChild(li);
         }
 
-        function removeElement(){
-            let list=document.getElementById("list");
-            if(list.lastChild){
+        function removeElement() {
+            let list = document.getElementById("list");
+            if (list.lastChild) {
                 list.removeChild(list.lastChild);
             }
         }
 
+        function useSetAttribute() {
+            let img = document.getElementById("myimage");
+            img.setAttribute("src", "https://m.media-amazon.com/images/I/91r1mQRQnoL.png");
+            img.setAttribute("alt", "Updated Image");
+            alert("Image attributes updated using setAttribute");
+        }
 
+        function useInnerHTML() {
+            let list = document.getElementById("list");
+            list.innerHTML = `
+                                <li><b>Book 1</b></li>
+                                <li><i>Book 2</i></li>
+                                <li style="color: green;">Book 3</li>
+                            `;
+        }
+
+        function useTextContent() {
+            let special = document.getElementById("specialBox");
+            special.textContent = "<b>This is plain text, not HTML</b>";
+        }
 
     </script>
 
