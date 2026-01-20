@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Library Book Catalog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>📚 Library Book Catalog</h1>
+
+  <div class="container">
+
+    <div class="form">
+      <input type="text" id="title" placeholder="Book Title">
+      <input type="text" id="author" placeholder="Author Name">
+      <input type="number" id="year" placeholder="Published Year">
+      <button onclick="addBook()">Add Book</button>
+    </div>
+
+    <input type="text" id="search" placeholder="Search by title..." onkeyup="searchBooks()">
+
+    <ul id="bookList"></ul>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
