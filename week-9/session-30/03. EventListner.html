@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="text">Click The Button</h2>
+    <button id="attachBtn">Attach Listner</button>
+    <button id="detachBtn">Detach Listner</button>
+    <button id="mainBtn">Main Button</button>
+
+    <script>
+        let mainBtn = document.getElementById("mainBtn");
+        let text = document.getElementById("text");
+
+        // Event handler function
+        function showMessage() {
+            text.textContent = "Main button clicked!";
+        }
+
+        // Attach listener
+        document.getElementById("attachBtn").addEventListener("click", function () {
+            mainBtn.addEventListener("click", showMessage);
+            alert("Listener attached!");
+        });
+
+        //detach listner
+        document.getElementById("detachBtn").addEventListener("click", function () {
+            mainBtn.removeEventListener("click", showMessage);
+            alert("Listener detached!");
+        });
+
+        //main btn
+        mainBtn.addEventListener("click",showMessage);
+    </script>
+
+</body>
+
+</html>

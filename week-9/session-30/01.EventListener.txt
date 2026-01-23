@@ -1,0 +1,5 @@
+//an event listner is a way to tell javascript
+// ---> when this event happens on this element, run this function
+// like: mouse click, mouseover,keypress,submit
+
+//synatx: element.addEventListner("event",function);

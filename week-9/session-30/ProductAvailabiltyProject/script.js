@@ -8,7 +8,6 @@ function Product(name, available) {
 //product array
 let products = [];
 
-
 function addProduct() {
     let name = document.getElementById("productName").value;
 
