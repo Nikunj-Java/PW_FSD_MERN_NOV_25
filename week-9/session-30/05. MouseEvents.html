@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+
+    <h2 id="msg">Type Something....</h2>
+    <input type="text" id="box" placeholder="Type Here...">
+
+
     <script>
         /*
 
         syntax: box.addEventListner("event",()=>{//your code here})
+        // Click
+        box.addEventListener("click", () => {
+        msg.textContent = "Box Clicked!";
+        });
 
             Event	    - When it happens
             click	    - Mouse click
@@ -22,8 +33,44 @@
             mouseleave	- Mouse leaves (no bubbling)
             mousemove	- Mouse moves
         */
+
+        let box = document.getElementById("box");
+        let msg = document.getElementById("msg");
+
+        box.addEventListener("click", function () {
+            msg.textContent = "Box Clicked ";
+        });
+
+        box.addEventListener("dblclick", function () {
+            msg.textContent = "Box Double Clicked ";
+        });
+
+        //mouseover
+
+        box.addEventListener("mouseover", function () {
+            box.style.background = "lightgreen"
+            msg.textContent = "mouse over ";
+        });
+
+        // Mouse Down
+        box.addEventListener("mousedown", () => {
+            msg.textContent = "Mouse Button Pressed";
+        });
+
+        // Mouse Up
+        box.addEventListener("mouseup", () => {
+            msg.textContent = "Mouse Button Released";
+        });
+
+        // Mouse Move
+        box.addEventListener("mousemove", () => {
+            msg.textContent = "Mouse Moving...";
+        });
+
+
     </script>
- 
-    
+
+
 </body>
+
 </html>
