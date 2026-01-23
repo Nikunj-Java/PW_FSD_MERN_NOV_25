@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2 id="msg">Type Something....</h2>
+    <input type="text" id="box" placeholder="Type Here...">
+
+    <script>
+        let box= document.getElementById("box");
+        let msg=document.getElementById("msg");
+
+        //key pressed
+        box.addEventListener("keydown",function(event){
+            msg.textContent="Key Down:" + event.key;
+        })
+
+        //key released
+        box.addEventListener("keyup",function(event){
+            msg.textContent="Key Up:" + event.key;
+        })
+    </script>
+    
+</body>
+</html>
