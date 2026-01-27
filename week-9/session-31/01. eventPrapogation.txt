@@ -1,0 +1,4 @@
+// event prapogation can be done in 3 ways
+// 1---> Capturing Phase (document->grandparent->parent->child)
+// 2---> Target Phase     (button click)
+// 3---> Bubbling Phase   (child->parent->grandparent->document)
