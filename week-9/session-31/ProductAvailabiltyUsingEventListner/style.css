@@ -1,0 +1,57 @@
+body {
+      font-family: Arial;
+      background: #f4f6f8;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      width: 400px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+    }
+
+    input {
+      width: 90%;
+      padding: 8px;
+      margin: 5px 0;
+    }
+
+    button {
+      padding: 8px 12px;
+      margin: 5px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background: #4caf50;
+      color: white;
+      font-weight: bold;
+    }
+
+    .out {
+      background: #f44336;
+    }
+
+    li {
+      list-style: none;
+      background: #e3f2fd;
+      margin: 6px 0;
+      padding: 10px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .available {
+      color: green;
+      font-weight: bold;
+    }
+
+    .not-available {
+      color: red;
+      font-weight: bold;
+    }
