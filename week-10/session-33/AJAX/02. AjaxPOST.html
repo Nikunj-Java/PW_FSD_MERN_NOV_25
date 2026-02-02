@@ -32,6 +32,12 @@
                 }
             }
 
+            //error Handling
+            xhr.onerror= function(){
+                document.getElementById("result").textContent="Network Error: Failed to send request";
+                document.getElementById("result").style.color="red";
+            }
+
             const data=[{
                 title: document.getElementById("title").value,
                 body: document.getElementById("body").value,

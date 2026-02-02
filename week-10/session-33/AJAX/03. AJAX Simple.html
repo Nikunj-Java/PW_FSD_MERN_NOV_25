@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AJAX Users Table</title>
+  
+  <style>
+    table{
+        border-collapse: collapse;
+        width: 80%;
+    }
+    th,td{
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+    th{
+        background: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>AJAX Simple Example</h2>
+  <h5>Fetch Data: https://jsonplaceholder.typicode.com/users</h5>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th><th>Name</th><th>Email</th><th>City</th><th>Company</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
+
+    
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        const users = JSON.parse(xhr.responseText);
+        let tableData = "";
+
+        users.forEach(user => {
+          tableData += `
+            <tr>
+              <td>${user.id}</td>
+              <td>${user.name}</td>
+              <td>${user.email}</td>
+              <td>${user.address.city}</td>
+              <td>${user.company.name}</td>
+            </tr>`;
+        });
+
+        document.querySelector("tbody").innerHTML = tableData;
+      } else {
+        alert("Server Error: " + xhr.status);
+      }
+    };
+
+    
+    xhr.onerror = function () {
+      alert("Error while fetching data");
+    };
+
+    
+    xhr.send();
+  </script>
+
+</body>
+</html>
