@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>XHR AJAX Example</h2>
+    <button onclick="loadData()">Load Data</button>
+    <pre id="output" style="background-color: lightgray;"></pre>
+
+    <!-- <script src="srcipt.js"></script> -->
+     <script>
+        function loadData(){
+            //step:1 create XHR Object
+            const xhr= new XMLHttpRequest();
+
+            //step:2 configure request
+            xhr.open("GET","https://jsonplaceholder.typicode.com/users",true);
+
+            //step:3 handle request
+            xhr.onload= function(){
+                if(xhr.status === 200){
+                    document.getElementById("output").textContent=xhr.responseText;
+                }else{
+                    document.getElementById("output").textContent="Error: While Fetching a Data: "+xhr.status;
+               
+                }
+            }
+            // step:4 send the request
+            xhr.send();
+
+        }
+
+     </script>
+    
+</body>
+</html>
