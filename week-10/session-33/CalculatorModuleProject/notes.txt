@@ -1,0 +1,13 @@
+Calculator
+|
+|----index.html
+|----style.css (Optional)
+|----js/
+|      |
+|      |---main.js
+|      |---calcularot.js
+|      |---operations/
+|      |    |---add.js
+|      |    |---subtract.js
+|      |    |---multiply.js
+|      |    |---divide.js
