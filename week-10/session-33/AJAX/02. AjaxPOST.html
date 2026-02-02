@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>AJAX POST REQUEST EXAMPLE</h2>
+    <input type="text" id="title" placeholder="Enter Title"><br><br>
+    <input type="text" id="body" placeholder="Enter Body"><br><br>
+    <button onclick="sendData()">Submit Data</button>
+
+    <p id="result"></p>
+    <!-- <script src="script.js"></script> -->
+     <script>
+        function sendData(){
+            const xhr= new XMLHttpRequest();
+
+            xhr.open("POST","https://jsonplaceholder.typicode.com/posts",true);
+
+            //needed to set type of content and format of application(PUT | POST)
+            xhr.setRequestHeader("Content-Type","application/json");
+
+            xhr.onload= function(){
+                //newly inserted data status code is 201
+                if(xhr.status === 201){
+                    document.getElementById("result").textContent="Data Submitted Successfully: "+xhr.responseText;
+                }else{
+                    document.getElementById("result").textContent="Error While Submitting Data: "+xhr.status;       
+                }
+            }
+
+            const data=[{
+                title: document.getElementById("title").value,
+                body: document.getElementById("body").value,
+                userId: 1
+            }]
+            xhr.send(JSON.stringify(data));
+
+        }
+     </script>
+
+    
+</body>
+</html>
