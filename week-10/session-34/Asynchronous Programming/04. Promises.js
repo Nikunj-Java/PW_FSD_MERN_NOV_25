@@ -1,5 +1,4 @@
 // a Promise represents a value that will be available in the future
-
 const promise= new Promise((resolve,reject)=>{
     setTimeout(()=>{
         resolve("Data Loaded Successfully!");
