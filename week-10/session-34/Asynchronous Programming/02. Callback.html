@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Callback Example</h1>
+    <button onclick="loadData()">Load Data</button>
+    <p id="output"></p>
+
+    <script>
+        function loadData(){
+            setTimeout(function(){
+                document.getElementById("output").innerText="Data Loaded!";
+            },3000);  //3000 milliseconds = 3 seconds
+        }
+    </script>
+    
+</body>
+</html>
