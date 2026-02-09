@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes App (REST CRUD)</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f4f6f8;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    input,
+    textarea,
+    button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+    }
+
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1e40af;
+    }
+
+    .note {
+      background: #eef2ff;
+      padding: 12px;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+
+    .note button {
+      width: auto;
+      margin-right: 8px;
+      background: #dc2626;
+    }
+
+    .note .edit {
+      background: #16a34a;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>📝 Notes App (REST CRUD)</h2>
+
+    <input type="hidden" id="noteId" />
+
+    <input type="text" id="title" placeholder="Enter note title" />
+    <textarea id="content" rows="4" placeholder="Enter note content"></textarea>
+    <button onclick="saveNote()">Save Note</button>
+
+    <hr />
+
+    <div id="notesList"></div>
+  </div>
+
+  <script>
+    const API_URL = "http://localhost:3000/notes";
+
+    // -------------------- READ --------------------
+
+    // -------------------- CREATE & UPDATE --------------------
+      
+    // -------------------- DELETE --------------------
+    
+
+    // -------------------- LOAD NOTE INTO FORM --------------------
+     
+  </script>
+
+</body>
+
+</html>

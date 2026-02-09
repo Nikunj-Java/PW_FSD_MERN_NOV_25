@@ -1,0 +1,9 @@
+1. install json server
+> npm install -g json-server
+2. create db.json file
+
+{
+    "notes":[]
+}
+3. start the server
+> json-server --watch db.json --port 3000
