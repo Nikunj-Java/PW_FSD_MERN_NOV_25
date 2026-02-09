@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Notes App (REST CRUD)</title>
+  <title>Notes App</title>
   <style>
     body {
       font-family: Arial;
@@ -20,13 +19,7 @@
       border-radius: 8px;
     }
 
-    h2 {
-      text-align: center;
-    }
-
-    input,
-    textarea,
-    button {
+    input, textarea, button {
       width: 100%;
       padding: 10px;
       margin: 8px 0;
@@ -39,10 +32,6 @@
       cursor: pointer;
     }
 
-    button:hover {
-      background: #1e40af;
-    }
-
     .note {
       background: #eef2ff;
       padding: 12px;
@@ -50,28 +39,29 @@
       margin-top: 10px;
     }
 
-    .note button {
+    .actions button {
       width: auto;
-      margin-right: 8px;
-      background: #dc2626;
+      margin-right: 5px;
     }
 
-    .note .edit {
+    .edit {
       background: #16a34a;
+    }
+
+    .delete {
+      background: #dc2626;
     }
   </style>
 </head>
-
 <body>
 
   <div class="container">
-    <h2>📝 Notes App (REST CRUD)</h2>
+    <h2>📝 Notes App</h2>
 
     <input type="hidden" id="noteId" />
-
     <input type="text" id="title" placeholder="Enter note title" />
     <textarea id="content" rows="4" placeholder="Enter note content"></textarea>
-    <button onclick="saveNote()">Save Note</button>
+    <button id="saveBtn">Save Note</button>
 
     <hr />
 
@@ -81,17 +71,111 @@
   <script>
     const API_URL = "http://localhost:3000/notes";
 
-    // -------------------- READ --------------------
+    const titleInput = document.getElementById("title");
+    const contentInput = document.getElementById("content");
+    const noteIdInput = document.getElementById("noteId");
+    const notesList = document.getElementById("notesList");
+    const saveBtn = document.getElementById("saveBtn");
 
-    // -------------------- CREATE & UPDATE --------------------
-      
-    // -------------------- DELETE --------------------
-    
+    // ---------------- READ ----------------
+    async function loadNotes() {
+      const res = await fetch(API_URL);
+      const notes = await res.json();
 
-    // -------------------- LOAD NOTE INTO FORM --------------------
-     
+      notesList.innerHTML = "";
+
+      notes.forEach(note => {
+        const div = document.createElement("div");
+        div.className = "note";
+
+        const h4 = document.createElement("h4");
+        h4.textContent = note.title;
+
+        const p = document.createElement("p");
+        p.textContent = note.content;
+
+        const actions = document.createElement("div");
+        actions.className = "actions";
+
+        const editBtn = document.createElement("button");
+        editBtn.textContent = "Edit";
+        editBtn.className = "edit";
+        editBtn.addEventListener("click", () => editNote(note));
+
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Delete";
+        deleteBtn.className = "delete";
+        deleteBtn.addEventListener("click", () => deleteNote(note.id));
+
+        actions.appendChild(editBtn);
+        actions.appendChild(deleteBtn);
+
+        div.appendChild(h4);
+        div.appendChild(p);
+        div.appendChild(actions);
+
+        notesList.appendChild(div);
+      });
+    }
+
+    // ---------------- CREATE & UPDATE ----------------
+    async function saveNote() {
+      const title = titleInput.value.trim();
+      const content = contentInput.value.trim();
+      const id = noteIdInput.value;
+
+      if (!title || !content) {
+        alert("Please fill all fields");
+        return;
+      }
+
+      const note = { title, content };
+
+      if (id) {
+        // UPDATE
+        await fetch(`${API_URL}/${id}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(note)
+        });
+      } else {
+        // CREATE
+        await fetch(API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(note)
+        });
+      }
+
+      clearForm();
+      loadNotes();
+    }
+
+    // ---------------- DELETE ----------------
+    async function deleteNote(id) {
+      await fetch(`${API_URL}/${id}`, {
+        method: "DELETE"
+      });
+      loadNotes();
+    }
+
+    // ---------------- EDIT ----------------
+    function editNote(note) {
+      noteIdInput.value = note.id;
+      titleInput.value = note.title;
+      contentInput.value = note.content;
+    }
+
+    function clearForm() {
+      noteIdInput.value = "";
+      titleInput.value = "";
+      contentInput.value = "";
+    }
+
+    saveBtn.addEventListener("click", saveNote);
+
+    loadNotes();
   </script>
 
 </body>
-
 </html>
