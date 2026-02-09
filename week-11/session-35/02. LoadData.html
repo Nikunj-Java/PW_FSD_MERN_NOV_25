@@ -10,28 +10,43 @@
 <body>
 
     <h1>Load Posts</h1>
-    <table>
+    <table border="1" cellpadding="0">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Title</th>
-                <th>Body</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="tableBody">
             <!--Load Dynamic Data Here-->
-
+             
         </tbody>
     </table>
     <script>
         function loadData() {
-            fetch("https://jsonplaceholder.typicode.com/posts")
+            fetch("https://jsonplaceholder.typicode.com/users")
                 .then(response => response.json())
-                .then(data => console.log(data))
+                .then(data=>{
+                    const tbody=document.getElementById("tableBody");
+                    tbody.innerHTML="" ; //clear old rows
+                    data.forEach(user=>{
+                        const row= `<tr> 
+                            <td>${user.id} </td>
+                            <td>${user.name} </td>
+                            <td>${user.username} </td>
+                            <td>${user.email} </td>
+                            </tr>
+                            `
+                            tbody.innerHTML +=row;
+
+                    })
+                })
                 .catch(error => console.error(error))
                 // get the data here and load in the table
         }
-
+        loadData();
     </script>
 
 
