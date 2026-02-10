@@ -1,25 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
 </head>
 <body>
 
-    <h1>Form Validation using Regex</h1>
-    <form>
-        <label for="email">Email:</label>
-        <input type="email" id="email" placeholder="Enter Your Email"/> <br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" placeholder="Enter Your password"/><br><br>
-        <label for="mobile">Mobile:</label>
-        <input type="phone" id="mobile" placeholder="Enter Your Mobile +91 XXXXXXXXXX"/><br><br>
-        <input type="submit" value="Register"/>
-    </form>
-    <script>
-        //write a Javascript program to validate user input
-    </script>
-    
+  <h1>Form Validation using Regex</h1>
+
+  <form id="myForm">
+    <label>Email:</label>
+    <input type="text" id="email" placeholder="Enter Your Email"><br><br>
+
+    <label>Password:</label>
+    <input type="password" id="password" placeholder="Enter Your Password"><br><br>
+
+    <label>Mobile:</label>
+    <input type="text" id="mobile" placeholder="Enter Your Mobile +91 XXXXXXXXXX"><br><br>
+
+    <input type="submit" value="Register">
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function (e) {
+      e.preventDefault(); // stop form submission
+
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+      let mobile = document.getElementById("mobile").value;
+
+      // Regex patterns
+      let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      let passwordPattern = /^[A-Za-z0-9@#]{6,}$/; // min 6 chars
+      let mobilePattern = /^\+91 9\d{9}$/;
+
+      if (!emailPattern.test(email)) {
+        alert("Invalid Email!");
+        return;
+      }
+
+      if (!passwordPattern.test(password)) {
+        alert("Password must be at least 6 characters!");
+        return;
+      }
+
+      if (!mobilePattern.test(mobile)) {
+        alert("Mobile must be in format: +91 9XXXXXXXXX");
+        return;
+      }
+
+      alert("Registration Successful!");
+    });
+  </script>
+
 </body>
 </html>
