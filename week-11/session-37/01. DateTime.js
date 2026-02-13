@@ -37,3 +37,11 @@ newdate.setFullYear(2030);
 newdate.setMonth(5);
 newdate.setDate(15);
 console.log("Updated Date:",newdate);
+
+//calculate a date difference
+
+let startDate= new Date("2026-02-01");
+let endDate= new Date("2026-02-27");
+let timeDiff= endDate-startDate; //difference will be in milliseconds
+
+console.log("Time Difference in days:",timeDiff/(60*60*24*1000));
