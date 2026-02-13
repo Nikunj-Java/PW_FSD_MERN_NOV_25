@@ -8,6 +8,7 @@ class Person{
     }
 }
 
+
 let person1= new Person("Suhas",25);
 person1.greet();
 
