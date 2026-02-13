@@ -22,3 +22,18 @@ console.log("Seconds:",date.getSeconds());
 
 //get Milliseconds
 console.log("Milliseconds:",date.getMilliseconds());
+
+//formate date
+
+let d= new Date();
+
+let formattedDate= d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear();
+console.log("Formatted Date:",formattedDate);
+
+//Set Date Values
+
+let newdate= new Date();
+newdate.setFullYear(2030);
+newdate.setMonth(5);
+newdate.setDate(15);
+console.log("Updated Date:",newdate);
