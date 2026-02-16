@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pet Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🐾 Pet Management System</h1>
+
+        <div class="form">
+            <input type="text" id="petName" placeholder="Pet Name">
+            <input type="number" id="petAge" placeholder="Pet Age">
+            <select id="petType">
+                <option value="Dog">Dog</option>
+                <option value="Cat">Cat</option>
+                <option value="Bird">Bird</option>
+            </select>
+            <button onclick="addPet()">Add Pet</button>
+        </div>
+
+        <div id="petList" class="pet-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
