@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vehicle Rental System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🚗 Vehicle Rental System</h1>
+
+        <div class="form">
+            <input type="text" id="name" placeholder="Vehicle Name">
+            
+            <select id="type">
+                <option value="Car">Car</option>
+                <option value="Bike">Bike</option>
+            </select>
+
+            <input type="number" id="price" placeholder="Price Per Day">
+
+            <button onclick="addVehicle()">Add Vehicle</button>
+        </div>
+
+        <div id="vehicleList" class="vehicle-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
