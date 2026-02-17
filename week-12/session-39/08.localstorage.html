@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>LocalStorage</h1>
+    <script>
+        //localStorage.methodName(key,value)
+        localStorage.setItem("name","Nikunj Soni");
+
+        let name=localStorage.getItem("name");
+        document.write("Name from LocalStorage: "+name);
+
+        // update this data
+        localStorage.setItem("name","Nikunj Soni Updated");
+
+        //remove Spcific data Item
+        localStorage.removeItem("name");
+
+        //clear all data from localStorage
+        localStorage.clear();
+
+        //suppose if you will store a number, it will be stored as a string
+        localStorage.setItem("age",25);
+        let age=localStorage.getItem("age");
+        document.write("<br>Age from LocalStorage: "+age);
+        console.log(typeof age); //string
+
+        //we cannot store array and object directly in localStorage, we need to convert them into string using JSON.stringify() method
+        let user={
+            name:"Nikunj Soni",
+            age:25
+        };
+        //bad practise
+        //localStorage.setItem("user",user); // [object Object]
+        //good practise
+        localStorage.setItem("user",JSON.stringify(user));
+    </script>
+    
+</body>
+</html>
