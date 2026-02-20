@@ -1,0 +1,53 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+}
+
+.form-container {
+    margin: 20px;
+}
+
+input {
+    padding: 8px;
+    margin: 5px;
+}
+
+button {
+    padding: 8px 15px;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.actions button {
+    background-color: #f44336;
+}
+
+.actions button:hover {
+    background-color: #d32f2f;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: white;
+    margin: 8px auto;
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px gray;
+}

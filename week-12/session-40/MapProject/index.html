@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Inventory (Map Project)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Product Inventory Manager</h1>
+
+<div class="form-container">
+    <input type="number" id="productId" placeholder="Product ID">
+    <input type="text" id="productName" placeholder="Product Name">
+    <button onclick="addProduct()">Add / Update</button>
+</div>
+
+<div class="actions">
+    <button onclick="deleteProduct()">Delete Product</button>
+    <button onclick="clearProducts()">Clear All</button>
+</div>
+
+<h2>Product List</h2>
+<ul id="productList"></ul>
+
+<script src="script.js"></script>
+</body>
+</html>
