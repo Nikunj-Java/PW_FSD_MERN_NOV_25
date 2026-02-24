@@ -1,0 +1,24 @@
+Project: Quiz App with Score Storage
+Concept Needed:
+    1. Object
+    2. Arrays
+    3. try/catch
+    4. localStorage
+    5. Conditional Logic
+    6. Dynamic Rendering
+Idea:
+    1. Five Multiple Choice Questions
+    2. Calculate Score
+    3. Store Last Score in localStorage
+    4. Show Previous attempt Score
+------------------------------------------
+Classwork
+------------------------------------------
+    1. Timer (Countdown)
+    2. Next / Previous buttons
+    3. Show correct answers after submit
+    4. Restart Quiz button
+    5. Randomize questions
+    6. Score percentage
+    7. Disable submit after completion
+    8. Store best score in localStorage

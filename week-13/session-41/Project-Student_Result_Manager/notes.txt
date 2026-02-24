@@ -1,0 +1,18 @@
+Project:
+Student Result Manager(Using Map + Local Storage)
+
+Features:
+1. Add Student (Roll No + Name + Marks)
+2. Prevent Duplicate Roll No (Using Map)
+3. Auto Grade Calculation
+4. Delete Student
+5. Data Saved in LocalStorage
+6. Responsive UI 
+7. Proper Validation
+
+Files To Prepare:
+1. index.html
+2. style.css
+3. script.js
+
+
