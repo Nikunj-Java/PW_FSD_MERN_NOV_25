@@ -1,3 +1,4 @@
+
 let questions=[
     {
         question: "which method add items in array",

@@ -1,0 +1,28 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #f4f7fa;
+}
+
+.question-box {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 6px;
+}
+
+button {
+    padding: 8px 12px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.correct {
+    color: green;
+    font-weight: bold;
+}
+
+.wrong {
+    color: red;
+}
