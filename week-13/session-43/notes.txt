@@ -1,0 +1,17 @@
+Project: Smart User Registration System
+---------------------------------------------------
+(Form Validation, Error Handling + LocalStorage + Regex)
+
+1. Validate User Input
+2. Use try... Catch and Custom Errors
+3. Use Regular Expressions
+4. Stores users in LocalStorage
+5. Prevent Duplicate Email Registration
+6. Display Registed users
+7. Delete users
+
+----------------------------------------
+index.html
+style.css
+script.js
+----------------------------------------
