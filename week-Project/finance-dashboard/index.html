@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1> Personal Finance Dashboard</h1>
+        <button id="themeToggle">🌙Theme</button>
+    </header>
+    <section class="summary">
+        <div class="card income">Income: ₹<span id="income">0</span></div>
+        <div class="card expense">Expense: ₹<span id="income">0</span></div>
+        <div class="card balance">Balance: ₹<span id="income">0</span></div>
+    </section>
+     <section class="controls">
+        <input type="text" id="title" placeholder="Title"/>
+        <input type="number" id="amount" placeholder="Amount"/>
+        <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+
+        <input type="month" id="month" />
+        <button id="addBtn">Add</button>
+    </section>
+    <section class="filter">
+        <input type="month" id="filterMonth"/>
+    </section>
+    <section class="chart" id="chart"></section>
+    <ul id="list"></ul>
+    <script src="script.js"></script>
+</body>
+
+</html>

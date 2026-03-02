@@ -1,0 +1,18 @@
+Build this:
+
+💼 Personal Finance Dashboard
+
+1. Add income/expense
+2. Filter by month
+3. Simple bar chart (build chart manually using div heights — no libraries)
+4. Balance summary cards
+5. Local storage persistence
+6. Dark/light theme
+7. That project shows: ✔ DOM mastery
+✔ Logic handling
+✔ UI polish
+✔ Clean code structure
+-------------------------------------------------------------------------------
+1. index.html
+2. style.css
+3. script.js
