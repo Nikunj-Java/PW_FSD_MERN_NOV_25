@@ -1,0 +1,84 @@
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f4f4f4;
+  transition: 0.3s;
+}
+
+.dark {
+  background: #1e1e1e;
+  color: white;
+}
+
+.summary {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.card {
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  flex: 1;
+  font-weight: bold;
+}
+
+.dark .card {
+  background: #2c2c2c;
+}
+
+.income { border-left: 5px solid green; }
+.expense { border-left: 5px solid red; }
+.balance { border-left: 5px solid blue; }
+
+.form, .filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 8px;
+}
+
+.chart {
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+  margin: 30px 0;
+  border-bottom: 2px solid #ccc;
+}
+
+.bar {
+  width: 80px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.incomeBar { background: green; }
+.expenseBar { background: red; }
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  background: white;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark li {
+  background: #2c2c2c;
+}
+
+.actions button {
+  margin-left: 5px;
+}
