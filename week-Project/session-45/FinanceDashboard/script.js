@@ -1,86 +1,109 @@
-const titleInput = document.getElementById("title");
-const amountInput = document.getElementById("amount");
-const typeSelect = document.getElementById("type");
-const monthInput = document.getElementById("month");
-const addBtn = document.getElementById("addBtn");
-const list = document.getElementById("list");
-const filterMonth = document.getElementById("filterMonth");
-const chart = document.getElementById("chart");
+var transactions = JSON.parse(localStorage.getItem("transactions")) || [];
 
-const incomeEl = document.getElementById("income");
-const expenseEl = document.getElementById("expense");
-const balanceEl = document.getElementById("balance");
+var titleInput = document.getElementById("title");
+var amountInput = document.getElementById("amount");
+var typeInput = document.getElementById("type");
+var monthInput = document.getElementById("month");
+var addBtn = document.getElementById("addBtn");
+var list = document.getElementById("list");
+var filterMonth = document.getElementById("filterMonth");
+var chart = document.getElementById("chart");
 
-const themeToggle = document.getElementById("themeToggle");
+var totalIncome = document.getElementById("totalIncome");
+var totalExpense = document.getElementById("totalExpense");
+var totalBalance = document.getElementById("totalBalance");
 
-let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+var themeBtn = document.getElementById("themeBtn");
 
-addBtn.onclick = () => {
-  if (!titleInput.value || !amountInput.value || !monthInput.value) return;
+addBtn.onclick = function() {
+  if (titleInput.value === "" || amountInput.value === "" || monthInput.value === "") {
+    alert("Please fill all fields");
+    return;
+  }
 
-  transactions.push({
+  var transaction = {
     title: titleInput.value,
-    amount: +amountInput.value,
-    type: typeSelect.value,
+    amount: parseFloat(amountInput.value),
+    type: typeInput.value,
     month: monthInput.value
-  });
+  };
 
-  saveAndRender();
+  transactions.push(transaction);
+  localStorage.setItem("transactions", JSON.stringify(transactions));
+
+  render();
 };
 
-filterMonth.onchange = render;
+filterMonth.onchange = function() {
+  render();
+};
 
-themeToggle.onclick = () => {
+themeBtn.onclick = function() {
   document.body.classList.toggle("dark");
 };
 
-function saveAndRender() {
-  localStorage.setItem("transactions", JSON.stringify(transactions));
-  render();
-}
-
 function render() {
+
   list.innerHTML = "";
   chart.innerHTML = "";
 
-  const month = filterMonth.value;
-  const filtered = month
-    ? transactions.filter(t => t.month === month)
-    : transactions;
+  var selectedMonth = filterMonth.value;
+  var filtered = transactions;
 
-  let income = 0, expense = 0;
+  if (selectedMonth !== "") {
+    filtered = transactions.filter(function(t) {
+      return t.month === selectedMonth;
+    });
+  }
 
-  filtered.forEach(t => {
-    const li = document.createElement("li");
-    li.innerHTML = `${t.title} <strong>${t.type === "income" ? "+" : "-"}₹${t.amount}</strong>`;
+  var income = 0;
+  var expense = 0;
+
+  for (var i = 0; i < filtered.length; i++) {
+
+    var t = filtered[i];
+
+    var li = document.createElement("li");
+    li.innerHTML = t.title + " - ₹" + t.amount;
     list.appendChild(li);
 
-    if (t.type === "income") income += t.amount;
-    else expense += t.amount;
-  });
+    if (t.type === "income") {
+      income += t.amount;
+    } else {
+      expense += t.amount;
+    }
+  }
 
-  incomeEl.textContent = income;
-  expenseEl.textContent = expense;
-  balanceEl.textContent = income - expense;
+  totalIncome.innerText = income;
+  totalExpense.innerText = expense;
+  totalBalance.innerText = income - expense;
 
-  drawBar("Income", income, "income");
-  drawBar("Expense", expense, "expense");
-  console.log("Filtered data:", filtered);
+  drawChart(income, expense);
 }
 
-function drawBar(label, value, type) {
-  const bar = document.createElement("div");
-  bar.className = "bar " + type;
+function drawChart(income, expense) {
 
-  // Minimum visible height
-  const height = value > 0 ? Math.max(value / 5, 20) : 0;
+  var maxValue = Math.max(income, expense);
 
-  bar.style.height = height + "px";
-  bar.innerHTML = `
-    <small>${label}</small><br>
-    ₹${value}
-  `;
+  if (maxValue === 0) {
+    return;
+  }
 
-  chart.appendChild(bar);
+  var incomeHeight = (income / maxValue) * 200;
+  var expenseHeight = (expense / maxValue) * 200;
+
+  var incomeBar = document.createElement("div");
+  incomeBar.className = "bar incomeBar";
+  incomeBar.style.height = incomeHeight + "px";
+  incomeBar.innerText = "Income";
+
+  var expenseBar = document.createElement("div");
+  expenseBar.className = "bar expenseBar";
+  expenseBar.style.height = expenseHeight + "px";
+  expenseBar.innerText = "Expense";
+
+  chart.appendChild(incomeBar);
+  chart.appendChild(expenseBar);
 }
+
 render();

@@ -1,76 +1,84 @@
-:root{
-    --bg:#f4f4f4;
-    --text:#333;
-    -card: white
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f2f2f2;
+  transition: 0.3s;
 }
-.dark{
-    --bg:#1e1e1e;
-    --text:#eee;
-    --card:#2c2c2c;
+
+.dark {
+  background: #1e1e1e;
+  color: white;
 }
-body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    padding: 20px;
+
+.summary {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
 }
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.summary{
-    display: flex;
-    gap:15px;
-    margin:20px 0;
-}
+
 .card {
-    flex:1;
-    padding:15px;
-    background: var(--card);
-    border-radius: 8px;
-    font-weight: bold;
-}
-.income {border-left: 5px solid green;}
-.expense{border-left: 5px solid red;}
-.balance{border-left: 5px solid blue;}
-
-.controls,.filter{
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-input,select,button {
-    padding:8px;
-}
-.chart{
-    display: flex;
-    align-items: flex-end;
-    height: 150px;
-    gap:10px;
-    
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  flex: 1;
+  font-weight: bold;
 }
 
-.bar{
-    width: 60px;
-    background: steelblue;
-    text-align: center;
-    align-items: center;
-    color: white;
-}
-.bar.expense{
-    background: crimson;
+.dark .card {
+  background: #2c2c2c;
 }
 
-ul{
-    list-style:none;
-    padding:0;
+.income { border-left: 5px solid green; }
+.expense { border-left: 5px solid red; }
+.balance { border-left: 5px solid blue; }
+
+.form, .filter {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
 }
-li{
-    background: var(--card);
-    padding: 10px;
-    margin-bottom:  8px;
-    display: felx;
-    justify-content: space-between;
+
+input, select, button {
+  padding: 8px;
+}
+
+.chart {
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+  margin: 30px 0;
+  border-bottom: 2px solid #ccc;
+}
+
+.bar {
+  width: 80px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.incomeBar {
+  background: green;
+}
+
+.expenseBar {
+  background: red;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  background: white;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dark li {
+  background: #2c2c2c;
 }
