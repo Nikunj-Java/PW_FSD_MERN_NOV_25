@@ -1,0 +1,76 @@
+:root{
+    --bg:#f4f4f4;
+    --text:#333;
+    -card: white
+}
+.dark{
+    --bg:#1e1e1e;
+    --text:#eee;
+    --card:#2c2c2c;
+}
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 20px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.summary{
+    display: flex;
+    gap:15px;
+    margin:20px 0;
+}
+.card {
+    flex:1;
+    padding:15px;
+    background: var(--card);
+    border-radius: 8px;
+    font-weight: bold;
+}
+.income {border-left: 5px solid green;}
+.expense{border-left: 5px solid red;}
+.balance{border-left: 5px solid blue;}
+
+.controls,.filter{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+input,select,button {
+    padding:8px;
+}
+.chart{
+    display: flex;
+    align-items: flex-end;
+    height: 150px;
+    gap:10px;
+    
+}
+
+.bar{
+    width: 60px;
+    background: steelblue;
+    text-align: center;
+    align-items: center;
+    color: white;
+}
+.bar.expense{
+    background: crimson;
+}
+
+ul{
+    list-style:none;
+    padding:0;
+}
+li{
+    background: var(--card);
+    padding: 10px;
+    margin-bottom:  8px;
+    display: felx;
+    justify-content: space-between;
+}
