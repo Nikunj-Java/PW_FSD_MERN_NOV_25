@@ -1,0 +1,10 @@
+Project: Smart To-Do Manager
+Features
+- Add task
+- Mark task complete
+- Edit task
+- Delete task
+- Filter (All / Completed / Pending)
+- Search tasks
+- Task counter
+- Save tasks in LocalStorage

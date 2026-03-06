@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart TO DO Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Smart To Do Manager</h1>
+    <div class="todo-counter">
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <button id="addBtn">Add Task</button>
+       
+        <div class="filters">
+             <label>Filter Tasks</label>
+            <button onclick="filtertask('all')">All</button>
+            <button onclick="filtertask('completed')">Completed</button>
+            <button onclick="filtertask('pending')">Pending</button>
+        </div>
+        <input type="text" id="searchInput" placeholder="Search Task...">
+        <p>Total Tasks: <span id="taskCount">0</span></p>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+
+    
+</body>
+</html>
