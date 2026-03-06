@@ -8,113 +8,124 @@ var taskCount = document.getElementById("taskCount");
 
 var currentFilter = "all";
 
-addBtn.onclick = function () {
+addBtn.onclick = function(){
 
-    if (taskInput.value === "") {
-        alert("Enter a task");
-        return;
-    }
+if(taskInput.value === ""){
+alert("Enter a task");
+return;
+}
 
-    var task = {
-        text: taskInput.value,
-        completed: false
-    };
+var task = {
+text: taskInput.value,
+completed: false
+};
 
-    tasks.push(task);
+tasks.push(task);
 
-    saveTasks();
-    taskInput.value = "";
-    renderTasks();
+saveTasks();
+taskInput.value="";
+renderTasks();
 
 };
 
-function renderTasks() {
+function renderTasks(){
 
-    taskList.innerHTML="";
-    var searchText = searchInput.value.toLowerCase();
-    var filteredTasks = tasks.filter(function (task) {
-        var matchesFilter = true;
-        if (currentFilter === "completed") {
-            matchesFilter = task.completed;
-        }
-        if (currentFilter === "pending") {
-            matchesFilter = !task.completed;
-        }
-        var matchesSearch = task.text.toLowerCase().includes(searchText);
-        return matchesFilter && matchesSearch;
-    });
+taskList.innerHTML="";
 
-    for (var i = 0; i < filteredTasks.length; i++) {
+var searchText = searchInput.value.toLowerCase();
 
-        (function (index) {
+var filteredTasks = tasks.filter(function(task){
 
-            var task = filteredTasks[index];
+var matchesFilter = true;
 
-            var li = document.createElement("li");
+if(currentFilter === "completed"){
+matchesFilter = task.completed;
+}
 
-            if (task.completed) {
-                li.classList.add("completed");
-            }
+if(currentFilter === "pending"){
+matchesFilter = !task.completed;
+}
 
-            li.innerHTML =
-                "<span>" + task.text + "</span>" +
-                "<div class='actions'>" +
-                "<button onclick='toggleTask(" + index + ")'>✔</button>" +
-                "<button onclick='editTask(" + index + ")'>Edit</button>" +
-                "<button onclick='deleteTask(" + index + ")'>Delete</button>" +
-                "</div>";
+var matchesSearch = task.text.toLowerCase().includes(searchText);
 
-            taskList.appendChild(li);
+return matchesFilter && matchesSearch;
 
-        })(i);
+});
 
-    }
+for(var i=0;i<filteredTasks.length;i++){
 
-    taskCount.innerText = tasks.length;
+(function(index){
+
+var task = filteredTasks[index];
+
+var li = document.createElement("li");
+
+if(task.completed){
+li.classList.add("completed");
+}
+
+li.innerHTML =
+"<span>"+task.text+"</span>" +
+"<div class='actions'>" +
+"<button onclick='toggleTask("+index+")'>✔</button>" +
+"<button onclick='editTask("+index+")'>Edit</button>" +
+"<button onclick='deleteTask("+index+")'>Delete</button>" +
+"</div>";
+
+taskList.appendChild(li);
+
+})(i);
 
 }
 
-function toggleTask(index) {
+taskCount.innerText = tasks.length;
 
-    tasks[index].completed = !tasks[index].completed;
+}
 
-    saveTasks();
+function toggleTask(index){
+
+tasks[index].completed = !tasks[index].completed;
+
+saveTasks();
+renderTasks();
+
+}
+
+function deleteTask(index){
+
+tasks.splice(index,1);
+
+saveTasks();
+renderTasks();
+
+}
+
+function editTask(index){
+
+var newText = prompt("Edit task",tasks[index].text);
+
+if(newText){
+tasks[index].text = newText;
+saveTasks();
+renderTasks();
+}
+
+}
+
+function filterTasks(type){
+
+currentFilter = type;
+
+renderTasks();
+
+}
+
+searchInput.onkeyup = function(){
     renderTasks();
+};
 
-}
-
-function deleteTask(index) {
-
-    tasks.splice(index, 1);
-
-    saveTasks();
-    renderTasks();
-
-}
-
-function editTask(index) {
-
-    var newText = prompt("Edit task", tasks[index].text);
-
-    if (newText) {
-        tasks[index].text = newText;
-        saveTasks();
-        renderTasks();
-    }
-
-}
-
-function filterTasks(type) {
-
-    currentFilter = type;
-
-    renderTasks();
-
-}
-
- 
-function saveTasks() {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+function saveTasks(){
+    localStorage.setItem("tasks",JSON.stringify(tasks));
 }
 
 renderTasks();
