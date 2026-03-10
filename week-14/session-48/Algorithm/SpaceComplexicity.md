@@ -40,6 +40,7 @@ for(let i=0;i<n;i++){
 console.log(i);
 }
 ```
+Answer:
 
 Example:3
 ```
@@ -48,4 +49,4 @@ console.log(i);
 }
 
 ```
-
+Answer:
