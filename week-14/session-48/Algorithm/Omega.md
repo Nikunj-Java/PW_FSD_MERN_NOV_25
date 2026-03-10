@@ -1,0 +1,16 @@
+# Omega Notations (Ω)
+- it describes the lower bound(Best case) performance in a program
+- it tells the minimum time an algorithm can take
+
+## Example
+Linear Search in an Array: [10,20,30,40];
+Search: 10
+```
+10 = 10 ✅
+```
+Only 1 comparison needed
+
+## Complexicity
+```
+Ω(1)
+```
