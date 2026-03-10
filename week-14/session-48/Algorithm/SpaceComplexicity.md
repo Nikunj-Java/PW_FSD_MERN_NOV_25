@@ -33,14 +33,24 @@ console.log(i);
 }
 ```
 Answer:
+```
+Operations: n
+Complexicity: O(n)
+```
 
 Example:2
 ```
 for(let i=0;i<n;i++){
-console.log(i);
+    for(let j=0;j<n;j++){
+        console.log(i,j);
+    }
 }
 ```
 Answer:
+```
+Operations: n x n
+Complexicity: O(n^2)
+```
 
 Example:3
 ```
@@ -50,3 +60,9 @@ console.log(i);
 
 ```
 Answer:
+
+```
+Operations: 1,2,4,8,16,.....= log n
+Complexicity: O(log n)
+
+```
