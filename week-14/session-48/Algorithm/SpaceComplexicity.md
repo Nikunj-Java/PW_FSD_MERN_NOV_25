@@ -25,3 +25,27 @@ Space Complexicity:
 ```
 O(n)
 ```
+# Find Space Complexicity of the Below Examples
+Example:1
+```
+for(let i=0;i<n;i++){
+console.log(i);
+}
+```
+Answer:
+
+Example:2
+```
+for(let i=0;i<n;i++){
+console.log(i);
+}
+```
+
+Example:3
+```
+for(let i=1;i<n;i=i*2){
+console.log(i);
+}
+
+```
+
