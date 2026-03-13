@@ -9,6 +9,7 @@
 6. End
 */
 // Method:1 Iterative Approach
+// Time Complexicity: O(n)
 function CountDigits(n){
     let count =0;
     while (n > 0){
@@ -30,5 +31,4 @@ function countDigitsTwo(n){
     // floor(5.739) = 5
     // digits 5 + 1 = 6
 }
-
 console.log("Digits in Number 548321: ",countDigitsTwo(548321));
