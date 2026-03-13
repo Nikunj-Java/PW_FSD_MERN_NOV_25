@@ -1,0 +1,55 @@
+# How to Improve Logical Thinking?
+Problem Solving teches you:
+- Break problems into small steps
+- find patterns
+- Optimized Solutions
+- Think Logically
+
+## Example:1
+1. Problem: Count digits in 54821
+
+Human Thinking:
+```
+- 5 digits
+```
+
+Computuer thinking
+```
+    54821 /10 = 5482
+    5482 /10  = 548
+    548 /10   = 54
+    54 /10    = 5
+    5 /10     = 0
+```
+Computer operations will be 5
+- this is called algorithmic Thinking
+
+2. Algorithmic to Count Digit in a Number
+Example Number:
+```
+N= 54821
+Digits = 5
+```
+## Method:1 Iterative Method
+### Algorithm
+```
+1. Start
+2. Input Number N
+3. count = 0
+4. While N > 0
+    N = N/10
+    count ++;
+5. Print count
+6. End
+
+```
+Computuer thinking
+```
+    54821 /10 = 5482
+    5482 /10  = 548
+    548 /10   = 54
+    54 /10    = 5
+    5 /10     = 0
+```
+
+Code Example( JavaScript )
