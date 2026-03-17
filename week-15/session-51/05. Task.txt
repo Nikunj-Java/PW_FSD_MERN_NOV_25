@@ -1,0 +1,17 @@
+Problem No: 1 | Managing Daily Expenses
+- you store daily expenses in an array
+eg:
+    let expenses= [200,500,100,300];
+Task:?
+----------------------
+- find the total expense and highest expense
+
+How: ?
+----------------------
+1. Traverse array
+2. Keep track of sum and max
+
+Answer: ?
+----------------------
+Total: 1100
+Max: 500
