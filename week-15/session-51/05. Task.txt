@@ -15,3 +15,21 @@ Answer: ?
 ----------------------
 Total: 1100
 Max: 500
+
+Solution:
+-------------------------------------
+function analyzeExpenses(expenses) {
+  let total = 0;
+  let max = expenses[0];
+
+  for (let amount of expenses) {
+    total += amount;
+    if (amount > max) {
+      max = amount;
+    }
+  }
+
+  return { total, max };
+}
+
+console.log(analyzeExpenses([200, 500, 100, 300]));
