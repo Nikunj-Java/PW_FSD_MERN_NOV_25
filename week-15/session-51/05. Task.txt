@@ -28,8 +28,6 @@ function analyzeExpenses(expenses) {
       max = amount;
     }
   }
-
   return { total, max };
 }
-
 console.log(analyzeExpenses([200, 500, 100, 300]));
