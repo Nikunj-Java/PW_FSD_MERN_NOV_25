@@ -39,7 +39,10 @@ function characterReplcement(s,k){ // s- input string, k- max number of characte
     return maxLength;
 }
 
-console.log(characterReplcement("AABABBA",1))// 4
+let s= "AABABBAA";
+let s1= "AABABBAAA";
+let s2= "AABAABBAAA";
+console.log(characterReplcement(s1,1))// 4
 
 
 // chronology
