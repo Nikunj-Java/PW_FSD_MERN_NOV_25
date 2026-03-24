@@ -25,5 +25,5 @@ function characterReplacementWithSubstring(s, k) {
     return s.substring(startIndex, startIndex + maxLength);
 }
 
-console.log(characterReplacementWithSubstring("AABAAAABBABA", 1));
+console.log(characterReplacementWithSubstring("AABABAA", 1));
 // Example output: "AABA"
