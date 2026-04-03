@@ -8,3 +8,9 @@
 >   node app.js
 5. To run TypeScript Directly without using tsc
 >   npx tsx app.ts
+6. TypeScript Environment Setup
+> tsc --init   
+or 
+> npx tsc --init
+[it will create tsConfig.json file]
+this file will define how .ts will be converted to .js
