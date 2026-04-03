@@ -1,0 +1,10 @@
+1. Install TypeScript using VS Code
+>   npm install -g typescript@latest
+2. Check the Version
+>   tsc -v
+3. To Run typescript
+>   tsc app.ts
+4. To Run javascript
+>   node app.js
+5. To run TypeScript Directly without using tsc
+>   npx tsx app.ts
