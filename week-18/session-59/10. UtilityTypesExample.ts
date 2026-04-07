@@ -13,7 +13,7 @@ type Person = Admin | MyUser;
 function handlePerson(p: Person) {
   if (p.type === "admin") {
     console.log(p.permissions);
-  } else {
+  }else {
     console.log(p.name);
   }
 }
