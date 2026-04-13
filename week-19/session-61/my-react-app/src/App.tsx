@@ -4,6 +4,7 @@ function App() {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [liked, setLiked] = useState<boolean>(false);
+  const [name, setName]= useState<string>("");
   
   function increment(){
     setCount(count + 1);
@@ -32,6 +33,15 @@ function App() {
           {liked? "❤️Liked":"Like"}
         </button>
 
+      </div>
+      <div>
+        <input 
+          type="text" 
+          placeholder="Enter your name" 
+          value={name}
+          onChange={(e)=> setName(e.target.value)}
+        />
+        <h3> Hello , {name}!</h3>
       </div>
     </div>
      
