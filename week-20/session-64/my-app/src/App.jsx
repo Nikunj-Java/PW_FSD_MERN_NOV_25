@@ -4,6 +4,8 @@ import NavBar from "./NavBar";
 import Profile from "./Profile";
 import Settings from "./Settings";
 import Counter from './Counter';
+import EventHandler from './EventHandler';
+import EventHandler2 from './EventHandler2';
 function App() {
 
   const [user,setUser]= useState({name:"Nikunj Soni",email:"nikunj@pw.live"});
@@ -14,6 +16,8 @@ function App() {
       <Profile user={user}/>
       <Settings user={user} setUser={setUser}/>
       <Counter/>
+      <EventHandler/>
+      <EventHandler2/>
 
     </div>
   )
