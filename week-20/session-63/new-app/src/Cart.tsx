@@ -19,6 +19,11 @@ function Cart(){
         setCart([...cart,item]);
         //setTotal(total+item.price);
     }
+    // remove item from cart
+    const removeFromCart= (id:number)=>{
+        const newCart= cart.filter(item=>item.id!==id);
+        setCart(newCart);
+    }
     useEffect(()=>{
         const newTotal= cart.reduce((sum,item)=>sum+item.price,0);
         setTotal(newTotal);
@@ -38,7 +43,7 @@ function Cart(){
             {cart.map((item)=>(
                 <div key={item.id}>
                     <span>{item.name} - ₹{item.price}</span>
-                    <button>Remove</button>
+                    <button onClick={()=>removeFromCart(item.id)}>Remove</button>
                 </div>
             ))}
             <h2>Total: ₹{total}</h2>
