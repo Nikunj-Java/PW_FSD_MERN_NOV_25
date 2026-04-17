@@ -6,6 +6,7 @@ import Settings from "./Settings";
 import Counter from './Counter';
 import EventHandler from './EventHandler';
 import EventHandler2 from './EventHandler2';
+import Task from './Task';
 function App() {
 
   const [user,setUser]= useState({name:"Nikunj Soni",email:"nikunj@pw.live"});
@@ -18,6 +19,8 @@ function App() {
       <Counter/>
       <EventHandler/>
       <EventHandler2/>
+      <Task/>
+    
 
     </div>
   )
