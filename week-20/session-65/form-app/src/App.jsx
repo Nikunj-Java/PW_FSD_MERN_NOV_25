@@ -15,13 +15,10 @@ const App=()=> {
   return (
     
     
-      <UserContext.Provider value={user}>
+      <UserContext.Provider value={{user,setUser}}>
         <Parent />
         <Child/>
       </UserContext.Provider>
- 
-
-
   )
 }
 
