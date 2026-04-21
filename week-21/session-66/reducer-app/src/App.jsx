@@ -5,6 +5,8 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import Counter from './Counter'
 import BankAccount from './BankAccount'
+import Counter1 from './Counter1'
+import Counter2 from './Counter2'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +18,8 @@ function App() {
        
       <Counter/>
       <BankAccount/>
+      <Counter1/>
+      <Counter2/>
     </div>
   )
 }
