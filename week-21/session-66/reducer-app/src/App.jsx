@@ -4,6 +4,7 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import Counter from './Counter'
+import BankAccount from './BankAccount'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +15,7 @@ function App() {
       <p>Basic Syntax: const [state, dispatch] = useReducer(reducer, initialState); </p>
        
       <Counter/>
+      <BankAccount/>
     </div>
   )
 }
