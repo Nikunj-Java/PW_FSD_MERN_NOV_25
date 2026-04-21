@@ -7,6 +7,10 @@ import Counter from './Counter'
 import BankAccount from './BankAccount'
 import Counter1 from './Counter1'
 import Counter2 from './Counter2'
+import CustomHook from './CustomHook'
+import UseRef from './UseRef'
+import Task from './task'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,10 +20,13 @@ function App() {
       <h1>useReducer Hook</h1>
       <p>Basic Syntax: const [state, dispatch] = useReducer(reducer, initialState); </p>
        
-      <Counter/>
+      {/* <Counter/>
       <BankAccount/>
       <Counter1/>
       <Counter2/>
+      <CustomHook/> */}
+      <UseRef/>
+      <Task/>
     </div>
   )
 }
