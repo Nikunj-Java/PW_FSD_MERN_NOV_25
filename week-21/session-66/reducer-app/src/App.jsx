@@ -16,9 +16,9 @@ import { BrowserRouter, Routes, Route, Router, Link } from 'react-router-dom'
 import About from './session-67/Routing/About'
 import Contact from './session-67/Routing/Contact'
 import User from './session-67/Routing/User'
+import Dashboard from './session-67/Routing/Dashboard'
 import Profile from './session-67/Routing/Profile'
 import Settings from './session-67/Routing/Settings'
-import Dashboard from './session-67/Routing/Dashboard'
 
 
 function App() {
@@ -45,10 +45,18 @@ function App() {
       <h4>Install React- Router- Dom</h4>
       <p>npm install react-router-dom</p>
        
+        
       
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/about" element={<About />} />
+           {/* Parent Route */}
+           <Route path="/about" element={<About />} >
+            {/* Child Route */}
+            <Route path="profile" element={<Profile/>}/>
+            <Route path="settings" element={<Settings/>}/>
+          </Route>
+         
+          
           <Route path="/contact" element={<Contact />} />
           <Route path="/user/:id" element={<User/>}/>
         </Routes>
