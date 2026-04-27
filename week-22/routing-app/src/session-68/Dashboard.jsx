@@ -5,8 +5,9 @@ const Dashboards=()=>{
     <div>
         <h1>Dashboard Page</h1>
         <nav>
+            <Link to="/"> Home</Link>
             <Link to="/users"> Users</Link>
-            <Link to="/about"> About</Link>
+           <Link to="/about/1"> About</Link>
             <Link to="/dashboard"> Dashboard</Link>
             <Link to="/adduser"> Add User</Link>
             <Link to="/login"> Login</Link>
