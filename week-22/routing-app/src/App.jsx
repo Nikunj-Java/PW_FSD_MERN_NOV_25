@@ -5,18 +5,16 @@ import { createBrowserRouter,RouterProvider} from "react-router-dom"
 import Users from './session-68/Users'
 import Home from './session-68/Home'
 import About from './session-68/About'
+import { userLoader } from './session-68/userLoader'
 // install react-router-dom: npm install react-router-dom
 const router=createBrowserRouter([
   {path:"/",element: <Home/>},
   {path:"/dashboard",element: <Dashboard/>},
   {path:"/about",element: <About/>},
-   {path:"/users",element: <Users/>},
-  // Loader Example
-  // {
-  //   path: "/users",
-  //   element: <Users/>,
-  //   loader: usersLoader
-  // }
+   {path:"/users",
+    element: <Users/>,
+    loader: userLoader
+  },
 ])
 
 function App() {

@@ -1,14 +1,28 @@
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
+ 
 
 const Users=()=>{
+    
+    const users= useLoaderData();
+    console.log(users)
+    if(!users) return <p>Loading...</p>;
     return (
     <div>
         <h1>Users Page</h1>
+
         <nav>
             <Link to="/users"> Users</Link>
             <Link to="/about"> About</Link>
             <Link to="/dashboard"> Dashboard</Link>
         </nav>
+        <div>
+        
+        {users.map(u=>(
+            <p key={u.id}>{u.name}</p>
+        ))}
+        </div>
+        
+        
     </div>
     )
 }
