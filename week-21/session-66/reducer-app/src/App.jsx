@@ -50,10 +50,10 @@ function App() {
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
            {/* Parent Route */}
-           <Route path="/about" element={<About />} >
-            {/* Child Route */}
-            <Route path="profile" element={<Profile/>}/>
-            <Route path="settings" element={<Settings/>}/>
+          <Route path="/about" element={<About />} > 
+              {/* Child Route */}
+              <Route path="profile" element={<Profile/>}/>
+              <Route path="settings" element={<Settings/>}/>
           </Route>
          
           
