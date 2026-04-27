@@ -15,6 +15,7 @@ const Users=()=>{
             <Link to="/about"> About</Link>
             <Link to="/dashboard"> Dashboard</Link>
             <Link to="/adduser"> Add User</Link>
+            <Link to="/login"> Login</Link>
         </nav>
         <div>
         

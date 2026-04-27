@@ -8,18 +8,24 @@ import About from './session-68/About'
 import { userLoader } from './session-68/userLoader'
 import AddUser from './session-68/AddUser'
 import { addUserAction } from './session-68/addUserAction'
+import Login from './session-68/Login'
+import { dashboardLoader } from './session-68/dashboardLoader'
 // install react-router-dom: npm install react-router-dom
 const router=createBrowserRouter([
   {path:"/",element: <Home/>},
-  {path:"/dashboard",element: <Dashboard/>},
+  {path:"/dashboard"
+    ,element: <Dashboard/>,
+  loader:dashboardLoader},
   {path:"/about",element: <About/>},
+  {path:"/login",element: <Login/>},
   {path:"/adduser",
     element: <AddUser/>,
     action:addUserAction
   },
    {path:"/users",
     element: <Users/>,
-    loader: userLoader
+    loader: userLoader,
+    
   },
 ])
 

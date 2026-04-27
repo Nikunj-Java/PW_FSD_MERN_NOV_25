@@ -1,6 +1,10 @@
-import { Form, Link } from "react-router-dom";
+import { Form, Link, useNavigate } from "react-router-dom";
 
-const AddUser=()=>{
+const Login=()=>{
+    const navigate=useNavigate();
+    const handleLogin=()=>{
+        navigate("/dashboard");
+    }
 
     return (
     <div>
@@ -12,12 +16,10 @@ const AddUser=()=>{
             <Link to="/adduser"> Add User</Link>
             <Link to="/login"> Login</Link>
         </nav>
-        <Form method="post">
-            <input type="text" name="name" placeholder="Enter Your Name"/>
-            <button type="submit">Add User</button>
-        </Form>
+         <button onClick={handleLogin}>Login</button>
+        
     </div>
     )
 
 }
-export default AddUser;
+export default Login;
