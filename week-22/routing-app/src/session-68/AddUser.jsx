@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import { Form, Link } from "react-router-dom";
 
-const About=()=>{
+const AddUser=()=>{
 
     return (
     <div>
@@ -11,8 +11,12 @@ const About=()=>{
             <Link to="/dashboard"> Dashboard</Link>
             <Link to="/adduser"> Add User</Link>
         </nav>
+        <Form method="post">
+            <input type="text" name="name" placeholder="Enter Your Name"/>
+            <button type="submit">Add User</button>
+        </Form>
     </div>
     )
 
 }
-export default About;
+export default AddUser;
