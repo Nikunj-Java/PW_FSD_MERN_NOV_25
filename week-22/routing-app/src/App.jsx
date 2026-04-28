@@ -11,6 +11,7 @@ import { addUserAction } from './session-68/addUserAction'
 import Login from './session-68/Login'
 import { dashboardLoader } from './session-68/dashboardLoader'
 import { protectedLoader } from './session-68/ProtectedLoader'
+import Counter from './session-69/Counter'
 // install react-router-dom: npm install react-router-dom
 const router=createBrowserRouter([
   {path:"/",
@@ -40,8 +41,9 @@ function App() {
 
   return (
     <div>
+      <Counter/>
       <RouterProvider router={router}/>
-       
+      
 
     </div>
   )
