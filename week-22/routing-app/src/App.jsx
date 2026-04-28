@@ -15,6 +15,7 @@ import Counter from './session-69/Counter'
 import NavBar from './session-69/Navigation/NavBar'
 import MyDashboard from './session-69/Navigation/MyDashboard'
 import MyProfile from './session-69/Navigation/MyProfile'
+import UserData from './session-69/Navigation/UserData'
 // install react-router-dom: npm install react-router-dom
 const router=createBrowserRouter([
   {path:"/",
@@ -48,6 +49,7 @@ function App() {
       <NavBar/>
       <MyDashboard/>
       <MyProfile/>
+      <UserData/>
       <RouterProvider router={router}/>
       
 
