@@ -1,3 +1,4 @@
+import SubmitButton from "./SubmitButton";
 
 async function submitForm(formData) {
     const name= formData.get("name");
@@ -10,7 +11,8 @@ function Form19(){
             <h1>React 19 Form Example</h1>
             <form action={submitForm}>
                 <input name="name" placeholder="Enter Name"/>
-                <button type="submit">Submit</button>
+                {/* <button type="submit">Submit</button> */}
+                <SubmitButton/>
             </form>
         </div>
     )
