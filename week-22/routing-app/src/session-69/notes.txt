@@ -1,1 +1,7 @@
 npm install @reduxjs/toolkit react-redux
+Store: Global State
+Action: what to do ?
+Reducer: How state Changes
+Dispatcher: Send Action
+Slice: Redux Toolkit version of reducer + Action
+RTK Query: API Handling inside Redux

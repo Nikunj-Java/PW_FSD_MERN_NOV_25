@@ -16,6 +16,8 @@ import NavBar from './session-69/Navigation/NavBar'
 import MyDashboard from './session-69/Navigation/MyDashboard'
 import MyProfile from './session-69/Navigation/MyProfile'
 import UserData from './session-69/Navigation/UserData'
+import withLoading from './session-70/withLoading'
+import WelcomeUser from './session-70/WelcomeUser'
 // install react-router-dom: npm install react-router-dom
 const router=createBrowserRouter([
   {path:"/",
@@ -40,6 +42,9 @@ const router=createBrowserRouter([
   },
 ])
 
+//hoc component
+const WelcomeUserWithLoading= withLoading(WelcomeUser);
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -51,6 +56,9 @@ function App() {
       <MyProfile/>
       <UserData/>
       <RouterProvider router={router}/>
+
+      <h1> HOC Example</h1>
+      <WelcomeUserWithLoading isLoading={false} name="Nikunj Soni"/>
       
 
     </div>
