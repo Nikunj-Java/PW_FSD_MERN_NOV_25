@@ -20,6 +20,7 @@ import withLoading from './session-70/withLoading'
 import WelcomeUser from './session-70/WelcomeUser'
 import DataProvider from './session-70/DataProvider'
 import TransitionDemo from './session-70/TransitionDemo'
+import Form19 from './session-70/Form19'
 // install react-router-dom: npm install react-router-dom
 const router=createBrowserRouter([
   {path:"/",
@@ -64,6 +65,8 @@ function App() {
       <DataProvider render={(data)=><h2>{data}</h2>} />
       <h2>Start Transition</h2>
       <TransitionDemo/>
+      <h2>React 19 Forms</h2>
+      <Form19/>
 
     </div>
   )
