@@ -18,6 +18,8 @@ import MyProfile from './session-69/Navigation/MyProfile'
 import UserData from './session-69/Navigation/UserData'
 import withLoading from './session-70/withLoading'
 import WelcomeUser from './session-70/WelcomeUser'
+import DataProvider from './session-70/DataProvider'
+import TransitionDemo from './session-70/TransitionDemo'
 // install react-router-dom: npm install react-router-dom
 const router=createBrowserRouter([
   {path:"/",
@@ -59,7 +61,9 @@ function App() {
 
       <h1> HOC Example</h1>
       <WelcomeUserWithLoading isLoading={false} name="Nikunj Soni"/>
-      
+      <DataProvider render={(data)=><h2>{data}</h2>} />
+      <h2>Start Transition</h2>
+      <TransitionDemo/>
 
     </div>
   )
