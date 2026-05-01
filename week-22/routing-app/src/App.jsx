@@ -22,6 +22,7 @@ import DataProvider from './session-70/DataProvider'
 import TransitionDemo from './session-70/TransitionDemo'
 import Form19 from './session-70/Form19'
 import SubmitButton from './session-70/SubmitButton'
+import LikeButton from './session-70/LikeButton'
 // install react-router-dom: npm install react-router-dom
 const router=createBrowserRouter([
   {path:"/",
@@ -70,7 +71,8 @@ function App() {
       <Form19/>
       <h2>React 19 useFormStatus Hook</h2>
       
-       
+      <h2>Use Optimistic</h2>
+      <LikeButton/>
       
 
     </div>
