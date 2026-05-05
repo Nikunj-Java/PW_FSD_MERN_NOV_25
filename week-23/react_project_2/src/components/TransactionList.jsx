@@ -8,7 +8,9 @@ function TransactionList() {
     <ul>
       {state.map((t) => (
         <li key={t.id}>
-          {t.text} - ₹{t.amount}
+          <span className={t.amount >= 0 ? "income" : "expense"}>
+            {t.text} - ₹{t.amount}
+          </span>
 
           <button onClick={() => dispatch({ type: "DELETE", payload: t.id })}>
             ❌
