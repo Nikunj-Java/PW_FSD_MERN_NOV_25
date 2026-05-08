@@ -55,3 +55,19 @@ button {
 button:hover {
   opacity: 0.9;
 }
+
+
+.task-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+}
