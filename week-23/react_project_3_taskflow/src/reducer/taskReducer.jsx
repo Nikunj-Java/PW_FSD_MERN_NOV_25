@@ -5,6 +5,13 @@ export const taskReducer=(state,action)=>{
             return [...state,action.payload];
         case "DELETE_TASK":
             return state.filter((t)=>t.id !==action.payload);
+        case "EDIT_TASK":
+            return state.map(
+                (t)=>
+            t.id === action.payload.id 
+                        ?
+            {...t,text:action.payload.text}:t
+        );
         default:
             return state;
     }
