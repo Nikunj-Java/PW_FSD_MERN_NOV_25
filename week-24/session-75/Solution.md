@@ -366,4 +366,4 @@ After completing these solutions, you will understand:
 
 # Author
 
-Nikunj Soni
+SQL learning and practice project for beginners.

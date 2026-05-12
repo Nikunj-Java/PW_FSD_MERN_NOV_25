@@ -309,4 +309,4 @@ After completing this practice, you will understand:
 
 # Author
 
-Practice project for learning SQL and Database Management Systems.
+Nikunj Soni
