@@ -130,3 +130,13 @@ Rule:
 | 2NF         | Remove partial dependency               |
 | 3NF         | Remove transitive dependency            |
 ---------------------------------------------------------
+
+# Task:
+Convert The Given table into 1NF , 2NF and 3NF
+--------------------------------------------------------------------------------
+| EmpID | EmpName | Department | ProjectNames        | Manager | ManagerPhone |
+| ----- | ------- | ---------- | ------------------- | ------- | ------------ |
+| E101  | Rahul   | IT         | Website, Mobile App | Amit    | 98765        |
+| E102  | Priya   | HR         | Recruitment System  | Neha    | 87654        |
+| E103  | Karan   | IT         | Website, CRM        | Amit    | 98765        |
+--------------------------------------------------------------------------------
