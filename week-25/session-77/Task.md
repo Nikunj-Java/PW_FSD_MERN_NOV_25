@@ -79,4 +79,32 @@ Create a separate Manager table.
 
 ---
 
- 
+# Expected Final Tables
+
+## Employee Table
+
+| EmpID | EmpName | Department |
+|-------|----------|-------------|
+
+---
+
+## Project Table
+
+| ProjectID | ProjectName | ManagerID |
+|-----------|--------------|------------|
+
+---
+
+## Manager Table
+
+| ManagerID | ManagerName | ManagerPhone |
+|-----------|---------------|---------------|
+
+---
+
+## Employee_Project Table
+
+| EmpID | ProjectID |
+|-------|------------|
+
+---------------------------------------------------------------------------
