@@ -53,3 +53,156 @@ INSERT INTO Employee VALUES
 ```
 SELECT * FROM Employee;
 ```
+
+# 1. Inner Join
+```
+SELECT 
+    Employee.EmpID,
+    Employee.EmpName,
+    Department.DeptName
+FROM Employee
+INNER JOIN Department
+ON Employee.DeptID = Department.DeptID;
+```
+
+## Output
+
++-------+---------+-----------+
+| EmpID | EmpName | DeptName |
+| ----- | ------- | -------- |
+| 101   | Rahul   | IT       |
+| 102   | Priya   | HR       |
+| 103   | Karan   | IT       |
+| 105   | Sneha   | Support  |
++-------+---------+-----------+
+
+# 2. LEFT JOIN
+```
+SELECT 
+    Employee.EmpID,
+    Employee.EmpName,
+    Department.DeptName
+FROM Employee
+LEFT JOIN Department
+ON Employee.DeptID = Department.DeptID;
+
+```
+## Output:
++-------+---------+-----------+
+| EmpID | EmpName | DeptName |
+| ----- | ------- | -------- |
+| 101   | Rahul   | IT       |
+| 102   | Priya   | HR       |
+| 103   | Karan   | IT       |
+| 104   | Amit    | NULL     |
+| 105   | Sneha   | Support  |
++-------+---------+-----------+
+
+
+# 3. Right Join
+```
+SELECT 
+    Employee.EmpId,
+    Employee.EmpName,
+    Department.DeptName
+FROM Employee
+RIGHT JOIN Department
+ON Employee.DeptID = Department.DeptID;
+```
+
+## Output:
+
++-------+---------+-----------+
+| EmpId | EmpName | DeptName  |
++-------+---------+-----------+
+|   101 | Rahul   | IT        |
+|   103 | Karan   | IT        |
+|   102 | Priya   | HR        |
+|  NULL | NULL    | Finance   |
+|  NULL | NULL    | Marketing |
+|   105 | Sneha   | Support   |
++-------+---------+-----------+
+
+# 4. FULL OUTER Join (MySQL Alternative)
+```
+SELECT 
+    Employee.EmpName,
+    Department.DeptName
+FROM Employee
+LEFT JOIN Department
+ON Employee.DeptID = Department.DeptID
+
+UNION
+
+SELECT 
+    Employee.EmpName,
+    Department.DeptName
+FROM Employee
+RIGHT JOIN Department
+ON Employee.DeptID = Department.DeptID;
+
+```
+
+## Output:
++---------+-----------+
+| EmpName | DeptName  |
++---------+-----------+
+| Rahul   | IT        |
+| Priya   | HR        |
+| Karan   | IT        |
+| Amit    | NULL      |
+| Sneha   | Support   |
+| NULL    | Finance   |
+| NULL    | Marketing |
++---------+-----------+
+
+# 5. CROSS JOIN
+```
+SELECT 
+    Employee.EmpName,
+    Department.DeptName
+FROM Employee
+CROSS JOIN Department;
+```
+
+## Output
+```
+5 Employees × 5 Departments = 25 Rows
+```
+
+# 6. SELF JOIN
+1. Create New Table
+```
+CREATE TABLE Staff (
+    EmpID INT PRIMARY KEY,
+    EmpName VARCHAR(50),
+    ManagerID INT
+);
+```
+2. Insert Some Data
+```
+INSERT INTO Staff VALUES
+(1, 'Rahul', NULL),
+(2, 'Priya', 1),
+(3, 'Karan', 1),
+(4, 'Sneha', 2);
+```
+3. SELF JOIN
+```
+SELECT 
+    E.EmpName AS Employee,
+    M.EmpName AS Manager
+FROM Staff E
+LEFT JOIN Staff M
+ON E.ManagerID = M.EmpID;
+
+```
+## Output:
++----------+---------+
+| Employee | Manager |
++----------+---------+
+| Rahul    | NULL    |
+| Priya    | Rahul   |
+| Karan    | Rahul   |
+| Sneha    | Priya   |
++----------+---------+ 
