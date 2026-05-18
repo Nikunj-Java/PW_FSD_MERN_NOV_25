@@ -67,14 +67,14 @@ ON Employee.DeptID = Department.DeptID;
 
 ## Output
 
-+-------+---------+-----------+
+ 
 | EmpID | EmpName | DeptName |
 | ----- | ------- | -------- |
 | 101   | Rahul   | IT       |
 | 102   | Priya   | HR       |
 | 103   | Karan   | IT       |
 | 105   | Sneha   | Support  |
-+-------+---------+-----------+
+ 
 
 # 2. LEFT JOIN
 ```
@@ -88,7 +88,7 @@ ON Employee.DeptID = Department.DeptID;
 
 ```
 ## Output:
-+-------+---------+-----------+
+ 
 | EmpID | EmpName | DeptName |
 | ----- | ------- | -------- |
 | 101   | Rahul   | IT       |
@@ -96,7 +96,7 @@ ON Employee.DeptID = Department.DeptID;
 | 103   | Karan   | IT       |
 | 104   | Amit    | NULL     |
 | 105   | Sneha   | Support  |
-+-------+---------+-----------+
+ 
 
 
 # 3. Right Join
@@ -112,16 +112,16 @@ ON Employee.DeptID = Department.DeptID;
 
 ## Output:
 
-+-------+---------+-----------+
+ 
 | EmpId | EmpName | DeptName  |
-+-------+---------+-----------+
+|-------|---------|-----------|
 |   101 | Rahul   | IT        |
 |   103 | Karan   | IT        |
 |   102 | Priya   | HR        |
 |  NULL | NULL    | Finance   |
 |  NULL | NULL    | Marketing |
 |   105 | Sneha   | Support   |
-+-------+---------+-----------+
+ 
 
 # 4. FULL OUTER Join (MySQL Alternative)
 ```
@@ -144,9 +144,9 @@ ON Employee.DeptID = Department.DeptID;
 ```
 
 ## Output:
-+---------+-----------+
+ 
 | EmpName | DeptName  |
-+---------+-----------+
+|---------|-----------|
 | Rahul   | IT        |
 | Priya   | HR        |
 | Karan   | IT        |
@@ -154,7 +154,7 @@ ON Employee.DeptID = Department.DeptID;
 | Sneha   | Support   |
 | NULL    | Finance   |
 | NULL    | Marketing |
-+---------+-----------+
+ 
 
 # 5. CROSS JOIN
 ```
@@ -198,11 +198,11 @@ ON E.ManagerID = M.EmpID;
 
 ```
 ## Output:
-+----------+---------+
+
 | Employee | Manager |
-+----------+---------+
+|----------|---------|
 | Rahul    | NULL    |
 | Priya    | Rahul   |
 | Karan    | Rahul   |
 | Sneha    | Priya   |
-+----------+---------+ 
+  
