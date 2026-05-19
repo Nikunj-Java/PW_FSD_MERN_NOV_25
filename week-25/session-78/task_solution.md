@@ -333,9 +333,9 @@ Features:
 - Use indexes
 - Prevent duplicate records
 
-
-# SOLUTIONS.md
-
+---------------------------------------------------------------------
+# SOLUTIONS
+---------------------------------------------------------------------
 # Complete SQL Practice Solutions
 
 ## Create Database
