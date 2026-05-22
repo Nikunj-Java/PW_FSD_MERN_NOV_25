@@ -66,3 +66,35 @@ db.createCollection("students");
     ```
      db.students.insertOne({name:"Test",age: 24, city:"Mumbai", email:"test@gmail.com"});
     ```
+## 4. Read Data
+1. Find All Documents
+- Syntax:
+```
+db.name_of_collection.find();
+```
+- Example:
+```
+db.students.find();
+```
+
+2. Find Specific Data
+- a. Data by age
+```
+db.students.find({age:25});
+```
+- b. Data by name
+
+```
+db.students.find({name:"Nikunj Soni"});
+```
+
+- c. Find by Multiple Conditions
+```
+db.students.find(
+    {
+    name:"Nikunj Soni",
+    age:25,
+    city:"Mumbai"
+    }
+);
+```
