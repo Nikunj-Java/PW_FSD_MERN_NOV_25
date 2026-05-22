@@ -16,11 +16,9 @@ db.createCollection("students");
     ```
     db.name_of_collection.insertOne({JSON Data type});
     ```
-    example
-    ```
+    example:
     ```
     db.student.insertOne({name:"Nikunj Soni",age: 25, city:"Mumbai"});
-    ```
     ```
     OUTPUT:
     ```
