@@ -151,13 +151,14 @@ db.students.deleteMany({age:30});
 ## Comparison Operator
 ----------------------------------------------------------------------------------------------
 |   Operator                                           | Meaning
-|   $eq                                                |Equal
-|   $ne                                                |Not Equal
-|   $gt                                                | Greater Than
-|   $gte                                               | Greater Than equals to
-|   $lt                                                | Less Than
-|   $lte                                               |Less Than Equals to
-|   $in                                                | Match Any
+| ---------------------------------------------------- |------------------------------------ |
+|   $eq                                                |Equal                                |
+|   $ne                                                |Not Equal                            |
+|   $gt                                                | Greater Than                        |
+|   $gte                                               | Greater Than equals to              |
+|   $lt                                                | Less Than                           |
+|   $lte                                               |Less Than Equals to                  |
+|   $in                                                | Match Any                           |
 ----------------------------------------------------------------------------------------------
 - Examples
 1. Greater Than
