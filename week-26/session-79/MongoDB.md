@@ -98,3 +98,32 @@ db.students.find(
     }
 );
 ```
+
+## 5. Update Data
+- to update a data we have two methods 
+    1. updateOne()
+    2. updateMany()
+1. updateOne()
+- it will update only one record
+- Example:
+```
+db.students.updateOne(
+    {name:"Nikunj Soni"},
+        { 
+            $set: 
+            { city: "Indore"}
+        }
+    );
+```
+2. updateMany()
+- it will update many records togather
+-- Example:
+```
+db.students.updateMany(
+    {name:"Nikunj Soni"},
+        { 
+            $set: 
+            { age: 10}
+        }
+    );
+```
