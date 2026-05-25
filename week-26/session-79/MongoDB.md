@@ -127,3 +127,21 @@ db.students.updateMany(
         }
     );
 ```
+
+## 6. Delete Data
+- Deleting a Data Can be done in two ways
+    1. deleteOne()
+    2. deleteMany()
+1. deleteOne()
+- we can delete one record based on matched condition
+- example:
+```
+db.students.deleteOne({name:"Test"});
+```
+
+2. deleteMany()
+- we can delete many Documents based on Matching Condition
+- example:
+```
+db.students.deleteMany({age:30});
+```
