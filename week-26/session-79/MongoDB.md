@@ -145,3 +145,50 @@ db.students.deleteOne({name:"Test"});
 ```
 db.students.deleteMany({age:30});
 ```
+----------------------------------------------------------------------------------------------
+# Query Operators
+
+## Comparison Operator
+----------------------------------------------------------------------------------------------
+|   Operator                                           | Meaning
+|   $eq                                                |Equal
+|   $ne                                                |Not Equal
+|   $gt                                                | Greater Than
+|   $gte                                               | Greater Than equals to
+|   $lt                                                | Less Than
+|   $lte                                               |Less Than Equals to
+|   $in                                                | Match Any
+----------------------------------------------------------------------------------------------
+- Examples
+1. Greater Than
+```
+db.students.find({ age: {$gt:25} })
+```
+
+2. Less Than
+```
+db.students.find({ age: {$lt:25} })
+```
+3. Greater Than
+```
+db.students.find({ age: {$gte:25} })
+```
+
+4. Less Than
+```
+db.students.find({ age: {$lte:25} })
+```
+
+5. In Operator
+```
+db.students.find(
+    {city: 
+        {$in: ["Mumbai","Indore"]
+    }
+});
+```
+
+6. Equals to
+```
+db.students.find({ age: {$eq:10} })
+```
