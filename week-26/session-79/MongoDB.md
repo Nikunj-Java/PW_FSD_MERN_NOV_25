@@ -231,4 +231,41 @@ db.students.find({
 });
 
 ```
+------------------------------------------------------------------------------------------------------------
+# Projection
+- Projection Means Selecting Specific Fields
+- Example:
+```
+db.students.find({},{name:1,_id:0});
+```
+```
+db.students.find({},{name:1,city:1,_id:0});
+```
+------------------------------------------------------------------------------------------------------------
+# Sorting & Limiting
+1. Sort Ascending
+```
+db.students.find().sort({age:1})
+db.students.find().sort({city:1})
+db.students.find().sort({name})
+```
+2. Sort Descending
+```
+db.students.find().sort({age:-1})
+db.students.find().sort({city-1})
+db.students.find().sort({name:-1})
+```
 
+3. Limit Record
+```
+db.students.find().limit(3);
+db.students.find().limit(5);
+db.students.find().limit(1);
+```
+
+4. Skip Record
+```
+db.students.find().skip(3);
+db.students.find().skip(5);
+db.students.find().skip(1);
+```
