@@ -231,8 +231,7 @@ db.students.find({
 });
 
 ```
-------------------------------------------------------------------------------------------------------------
-# Projection
+## 3. Projection
 - Projection Means Selecting Specific Fields
 - Example:
 ```
@@ -242,7 +241,7 @@ db.students.find({},{name:1,_id:0});
 db.students.find({},{name:1,city:1,_id:0});
 ```
 ------------------------------------------------------------------------------------------------------------
-# Sorting & Limiting
+## 4. Sorting & Limiting
 1. Sort Ascending
 ```
 db.students.find().sort({age:1})
@@ -268,4 +267,83 @@ db.students.find().limit(1);
 db.students.find().skip(3);
 db.students.find().skip(5);
 db.students.find().skip(1);
+```
+
+## 5. Update Operators
+---------------------------------------------------------------------------------------------
+|   Operator                                           |    Meaning                         |
+| ---------------------------------------------------- |------------------------------------|
+|   $set                                               |    Set Value                       |
+|   $unset                                             |    Remove Fiels                    |
+|   $inc                                               |    Increment                       |
+|   $rename                                            |    Rename                          |
+|   $push                                              |    Add to Array                    |
+|   $pull                                              |    Remove from array               |
+---------------------------------------------------------------------------------------------
+1. $set
+```
+db.students.updateOne(
+    {name:"Nikunj Soni"},
+        { 
+            $set: 
+            { city: "Indore"}
+        }
+    );
+```
+
+2. $unset
+```
+db.students.updateOne(
+    {name:"Nikunj Soni"},
+        { 
+            $unset: 
+            { city: ""}
+        }
+    );
+```
+3. $inc
+```
+db.students.updateOne(
+    {name:"Nikunj Soni"},
+        { 
+            $inc: 
+            { age: 5}
+        }
+    );
+```
+4. $rename
+```
+db.students.updateOne(
+    {name:"Nikunj Soni"},
+        { 
+            $rename: 
+            { "age": "Age"}
+        }
+    );
+```
+
+5. $push
+- add a new row with skills:
+```
+db.students.insertOne({name:"Gaurav",age: 35, city:"Mumbai",skills:["Dancing","Writing"]});
+```
+- now let's add additional skills
+```
+db.students.updateOne(
+    {name:"Gaurav"},
+        { 
+            $push: 
+            { skills: "Coding"}
+        }
+    );
+```
+6. $pull
+```
+db.students.updateOne(
+    {name:"Gaurav"},
+        { 
+            $pull: 
+            { skills: "Singing"}
+        }
+    );
 ```
