@@ -393,3 +393,98 @@ db.students.find(
     {"address.city":1,"address.pin":1,_id:0}
 );
 ```
+# Index in MongoDB
+1. What is an Index?
+
+- An index helps MongoDB find data faster.
+- Without an index:
+
+    MongoDB checks every document one by one
+    This is called a Collection Scan
+
+- With an index:
+
+    MongoDB directly jumps to matching data
+    Faster searching
+
+2. How MongoDB Searches Without Index
+- Suppose Collection
+```
+{
+    "name": "Nikunj",
+    "age": 36
+}
+```
+- Query:
+```
+db.students.find({name:"Nikunj Soni"});
+```
+- Without Index:
+    MongoDb Scan All Documents to check and Compare with the name "Nikunj Soni"
+
+3. Create Your First Index
+
+## Create Index on name
+```
+db.students.createIndex({name:1});
+```
+- get the indexes:
+```
+[
+  {
+    "name": "_id_"
+  },
+  {
+    "name": "name_1"
+  }
+]
+```
+- Here '_id' is a default index
+
+4. How it will Work ?
+- suppose your document is :
+```
+[
+  { "name": "Amit" },
+  { "name": "Rahul" },
+  { "name": "Neha" }
+]
+```
+- index structure becomes something like :
+```
+Amit -> Document Address
+Rahul -> Document Address
+Neha -> Document Address
+```
+- use index in realtime
+```
+db.students.find({name:"Nikunj Soni:});
+```
+- This time the time of retrival will be faster as compared to all other retival
+- you can also create multiple indexes of the attributes which are frequently used in a query
+
+## Single Field Index
+```
+db.students.createIndex({age:1});
+```
+```
+db.students.createIndex({city:1});
+```
+
+## Coumpound Index
+```
+db.students.createIndex({
+    email: 1,
+    mobile: -1
+    });
+
+```
+- How to use?
+```
+db.students.find({
+    email:"Nikunj@gmail.com",
+    mobile:"9876543210"
+})
+```
+
+
