@@ -12,11 +12,7 @@
 9. Arrays Tasks
 10. Embedded Documents Tasks
 11. Index Tasks
-12. MongoDB Compass Tasks
-13. Import/Export Tasks
-14. Authentication Tasks
-15. MongoDB Shell Tasks
-
+ 
 ---
 
 # 1. Database & Collection Tasks
