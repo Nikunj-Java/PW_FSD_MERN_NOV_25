@@ -347,3 +347,49 @@ db.students.updateOne(
         }
     );
 ```
+------------------------------------------------------------------------------------------------------------
+# Embded Documents & Arrays
+- Embded Document is like:
+```
+    "name":"Nikunj Soni",
+    "address":{
+        "city":"Mumbai",
+        "landmark":"Sea Link",
+        "state":"Maharashtra",
+        "pin":"401234",
+    },
+    "skills":[
+        "JAVA","MongoDB","Angular","DevOps","Docker","Kubernetes","AWS","MERN stack","MEAN stack"
+    ]
+
+```
+- lets insert this into the database
+```
+db.students.insertOne({"name":"Nikunj Soni",
+    "address":{
+        "city":"Mumbai",
+        "landmark":"Sea Link",
+        "state":"Maharashtra",
+        "pin":"401234",
+    },
+    "skills":[
+        "JAVA","MongoDB","Angular","DevOps","Docker","Kubernetes","AWS","MERN stack","MEAN stack"
+    ]});
+```
+## Query Nested Field
+```
+db.students.find({"address.city":"Mumbai"});
+```
+- Get Name Only
+```
+db.students.findOne({"address.city":"Mumbai"},{name:1,_id:0});
+```
+```
+db.students.findOne({"address.pin":"401234"},{name:1,_id:0});
+```
+```
+db.students.find(
+    {"address.city":"Mumbai"},
+    {"address.city":1,"address.pin":1,_id:0}
+);
+```
