@@ -246,7 +246,7 @@ db.students.find({},{name:1,city:1,_id:0});
 ```
 db.students.find().sort({age:1})
 db.students.find().sort({city:1})
-db.students.find().sort({name})
+db.students.find().sort({name:1})
 ```
 2. Sort Descending
 ```
