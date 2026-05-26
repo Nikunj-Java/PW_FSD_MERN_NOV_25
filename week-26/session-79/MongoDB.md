@@ -479,6 +479,12 @@ db.students.createIndex({
     });
 
 ```
+or
+```
+db.students.createIndex(
+    {"name":1,"address.city":1}
+);
+```
 - How to use?
 ```
 db.students.find({
@@ -487,4 +493,39 @@ db.students.find({
 })
 ```
 
+# Unique Index
+- Prevent duplicated values.
+- lets create a new collection "users"
+```
+db.createCollection("users");
+```
+```
+db.users.createIndex(
+    {email:1},
+    {unique: true}
+);
+```
+- Get the indexes
+```
+db.users.getIndexes()
+```
 
+- OUTPUT:
+```
+[
+  { v: 2, key: { _id: 1 }, name: '_id_' },
+  { v: 2, key: { email: 1 }, name: 'email_1', unique: true }
+]
+```
+- lets try to insert duplicate record 
+```
+db.users.insertOne({"name":"Nikunj Soni","email":"nikunj@gmail.com"});
+```
+- now let's try to insert same record again
+```
+db.users.insertOne({"name":"Nikunj Soni","email":"nikunj@gmail.com"});
+```
+- Error: 
+```
+E11000 duplicate key error collection: pwskills.users index: email_1 dup key: { email: "nikunj@gmail.com" }
+```
