@@ -734,3 +734,66 @@ db.orders.aggregate([
   totalSales: 5000
 }
 ```
+
+- Example-2: based on city
+```
+db.orders.aggregate([
+    {
+        $group:{
+           _id:{
+            city: "$city",
+            category:"$category",
+           },
+           totalSales:{
+            $sum:"$price"
+           }
+        }
+    }
+]);
+
+```
+
+## What is Project ?
+- it used to :
+    - select fiels
+    - hide fields
+    - rename field
+    - Create Calculated Fields
+- Example:1 
+```
+db.orders.aggregate([
+    {
+        $project:{
+            customer:1,
+            price:1,
+            _id:0
+        }
+    }
+])
+```
+- OUTPUT:
+```
+{
+  customer: 'Rahul',
+  price: 50000
+}
+```
+- Example:2 Rename Fields Using $project
+```
+db.orders.aggregate([
+    {
+        $project:{
+            customerName:"$customer",
+            orderPrice:"price",
+            _id:0
+        }
+    }
+])
+```
+- OUTPUT:
+```
+{
+  "customerName": "Rahul",
+  "orderPrice": 50000
+}
+```
