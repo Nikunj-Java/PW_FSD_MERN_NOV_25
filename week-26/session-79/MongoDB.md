@@ -631,7 +631,6 @@ db.orders.aggregate([
 ]);
 ```
 - You can also use Operators inside $match
-```
 - Example-5:
 ```
 db.orders.aggregate([
