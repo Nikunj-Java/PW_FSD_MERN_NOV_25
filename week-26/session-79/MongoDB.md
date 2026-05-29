@@ -797,3 +797,124 @@ db.orders.aggregate([
   "orderPrice": 50000
 }
 ```
+## Common Operators
+
+| Operator  | Purpose      |
+| --------- | ------------ |
+| $sum      | Total        |
+| $avg      | Average      |
+| $multiply | Multiply     |
+| $concat   | Join strings |
+| $toUpper  | Uppercase    |
+| $substr   | Extract text |
+
+- Example: 1 $multiply
+
+```
+db.orders.aggregate([
+  {
+    $project: {
+      customer: 1,
+      totalAmount: {
+        $multiply: [
+          "$quantity",
+          "$price"
+        ]
+      }
+    }
+  }
+])
+
+```
+- Here we are doing simple calculation
+```
+2 X 50000= 100000
+```
+- Example: 2 $concat
+```
+db.orders.aggregate([
+  {
+    $project: {
+      message: {
+        $concat: [
+          "$customer",
+          " ordered ",
+          "$product"         
+
+        ]
+      }
+    }
+  }
+])
+```
+- $toString
+```
+db.orders.aggregate([
+  {
+    $project: {
+      message: {
+        $concat: [
+          "$customer",
+          " ordered ",
+          "$product",
+          " with price Rs.",
+          {$toString: "$price"}
+
+        ]
+      }
+    }
+  }
+])
+```
+- Uppecase
+```
+db.orders.aggregate([
+  {
+    $project: {
+      message: {
+        $concat: [
+          {$toUpper:"$customer"},
+          " ordered ",
+          "$product",
+          " with price Rs.",
+          {$toString: "$price"}
+
+        ]
+      }
+    }
+  }
+])
+```
+- Multiple Stage Togather
+```
+db.orders.aggregate([
+  {
+    $match: {
+      status: "Delivered"
+    }
+  },
+  {
+    $group: {
+      _id: "$category",
+      totalSales: {
+        $sum: "$price"
+      }
+    }
+  }
+])
+```
+
+- $max
+```
+```
+db.orders.aggregate([
+  {
+    $group: {
+       _id:"$category",
+       highestPrice:{
+        $max:"$price"
+       }
+    }
+  }
+])
+````
