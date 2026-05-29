@@ -784,7 +784,7 @@ db.orders.aggregate([
     {
         $project:{
             customerName:"$customer",
-            orderPrice:"price",
+            orderPrice:"$price",
             _id:0
         }
     }
