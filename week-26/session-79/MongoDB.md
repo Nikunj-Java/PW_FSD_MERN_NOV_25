@@ -590,7 +590,7 @@ db.orders.insertMany([
 ## What is $match?
 - $match filter document
 - it is similar to WHERE Cluase in SQL
-- Example-1:
+- Example-1: Match with status
 ```
 db.orders.aggregate([
     {
@@ -600,7 +600,7 @@ db.orders.aggregate([
     }
 ]);
 ```
-- Example-2:
+- Example-2: Match with Status
 ```
 db.orders.aggregate([
     {
@@ -610,7 +610,7 @@ db.orders.aggregate([
     }
 ]);
 ```
-- Example-3:
+- Example-3: Match With Category
 ```
 db.orders.aggregate([
     {
@@ -620,7 +620,7 @@ db.orders.aggregate([
     }
 ]);
 ```
-- Example-4:
+- Example-4: Match with Category
 ```
 db.orders.aggregate([
     {
@@ -631,7 +631,7 @@ db.orders.aggregate([
 ]);
 ```
 - You can also use Operators inside $match
-- Example-5:
+- Example-5: Match Along With Price
 ```
 db.orders.aggregate([
     {
@@ -642,4 +642,95 @@ db.orders.aggregate([
         }
     }
 ]);
+```
+- Example-6: multiple match
+```
+db.orders.aggregate([
+    {
+        $match:{
+            category:"Electronics",
+            price:{ $gt:10000}
+        }
+    }
+]);
+```
+- Example-7: multiple match with asceding orders
+```
+db.orders.aggregate([
+    {
+        $match:{
+            category:"Electronics",
+            price:{ $gt:10000}
+        }
+    },{
+        $sort:{
+            price:1 
+        }
+    }
+]);
+```
+## What is $Group?
+- it will combine documents into the group
+- Mainly used for
+    - Totals
+    - Average
+    - Counting
+    - Reports
+- lets calculate Total Sales Category-wise
+
+- Example-1
+```
+db.orders.aggregate([
+    {
+        $group:{
+           _id:"$category",
+           totalSales:{
+            $sum:"$price"
+           }
+        }
+    }
+]);
+
+```
+- Output:
+```
+[
+  {
+    "_id": "Electronics",
+    "totalSales": 105000
+  },
+  {
+    "_id": "Fashion",
+    "totalSales": 7000
+  }
+]
+```
+- Example-2: based on city
+```
+db.orders.aggregate([
+    {
+        $group:{
+           _id:"$city",
+           totalSales:{
+            $sum:"$price"
+           }
+        }
+    }
+]);
+
+```
+- OUTPUT
+```
+{
+  _id: 'Delhi',
+  totalSales: 55000
+}
+{
+  _id: 'Mumbai',
+  totalSales: 52000
+}
+{
+  _id: 'Pune',
+  totalSales: 5000
+}
 ```
