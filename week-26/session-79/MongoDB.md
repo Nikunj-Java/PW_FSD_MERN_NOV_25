@@ -903,10 +903,9 @@ db.orders.aggregate([
   }
 ])
 ```
-
 - $max
 ```
-```
+ 
 db.orders.aggregate([
   {
     $group: {
