@@ -529,3 +529,118 @@ db.users.insertOne({"name":"Nikunj Soni","email":"nikunj@gmail.com"});
 ```
 E11000 duplicate key error collection: pwskills.users index: email_1 dup key: { email: "nikunj@gmail.com" }
 ```
+
+----------------------------------------------------------------------------------------------------------
+# Common Stages: $match, $group , $project Expression
+
+- lets create collection
+```
+db.createCollection("orders");
+```
+- insert Sample document
+```
+db.orders.insertMany([
+  {
+    customer: "Rahul",
+    city: "Mumbai",
+    product: "Laptop",
+    category: "Electronics",
+    quantity: 2,
+    price: 50000,
+    status: "Delivered"
+  },
+  {
+    customer: "Amit",
+    city: "Delhi",
+    product: "Mobile",
+    category: "Electronics",
+    quantity: 1,
+    price: 30000,
+    status: "Pending"
+  },
+  {
+    customer: "Neha",
+    city: "Mumbai",
+    product: "Shoes",
+    category: "Fashion",
+    quantity: 3,
+    price: 2000,
+    status: "Delivered"
+  },
+  {
+    customer: "Priya",
+    city: "Pune",
+    product: "Watch",
+    category: "Fashion",
+    quantity: 2,
+    price: 5000,
+    status: "Delivered"
+  },
+  {
+    customer: "Karan",
+    city: "Delhi",
+    product: "Tablet",
+    category: "Electronics",
+    quantity: 1,
+    price: 25000,
+    status: "Cancelled"
+  }
+])
+```
+## What is $match?
+- $match filter document
+- it is similar to WHERE Cluase in SQL
+- Example-1:
+```
+db.orders.aggregate([
+    {
+        $match:{
+            status:"Delivered"
+        }
+    }
+]);
+```
+- Example-2:
+```
+db.orders.aggregate([
+    {
+        $match:{
+            status:"Pending"
+        }
+    }
+]);
+```
+- Example-3:
+```
+db.orders.aggregate([
+    {
+        $match:{
+            category:"Electronics"
+        }
+    }
+]);
+```
+- Example-4:
+```
+db.orders.aggregate([
+    {
+        $match:{
+            category:"Fashion"
+        }
+    }
+]);
+```
+- You can also use Operators inside $match
+```
+- Example-5:
+```
+db.orders.aggregate([
+    {
+        $match:{
+           price:{
+            $gt:10000
+           }
+        }
+    }
+]);
+```
