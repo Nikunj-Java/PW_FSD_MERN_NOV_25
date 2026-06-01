@@ -1,4 +1,4 @@
-````md
+
 # MongoDB Social Media / Blogging Application Project
 
 ## Objective
