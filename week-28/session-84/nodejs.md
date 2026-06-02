@@ -87,7 +87,7 @@ npm start
 
 ![Output](images/image-1.png)
 
-# Modularize Application
+# Modularize Application using "commonjs"
 - goto> package.json file
 ```
 "type": "commonjs"
@@ -132,3 +132,62 @@ npm start
 - OUTPUT:
 
 ![Output](images/image-2.png)
+
+# Modularize Application using "module"
+- goto> package.json file
+```
+"type": "module"
+```
+- create 'calculator.js' file
+```
+function add(a,b){
+    return a + b;
+}
+
+function sub(a,b){
+    return a - b;
+}
+function multiply(a,b){
+    return a * b;
+}
+
+function divide(a,b){
+    if(b==0){
+        return "na"
+    } 
+    return a / b;
+}
+
+const calculator={
+    add,sub,multiply,divide
+};
+
+export default calculator;
+```
+- here module.export help to use this file in another file (as it now work as modularize app)
+- index.js
+```
+
+import calculator from "./calculator.js"
+ 
+console.log("Addition:",calc.add(10,5))
+console.log("Subtraction:",calc.sub(10,5))
+console.log("Multiply:",calc.multiply(10,5))
+console.log("Divide:",calc.divide(10,5))
+```
+- Run the project
+```
+npm start
+```
+- OUTPUT:
+
+![Output](images/image-2.png)
+- Conclusion
+- Here 
+```
+const calc= require("./calculator")
+```
+- is replaced by
+```
+import calculator from "./calculator.js"
+```
