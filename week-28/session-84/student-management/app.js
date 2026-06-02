@@ -1,4 +1,4 @@
-import { getStudents,addStudent } from "./students.js";
+import { getStudents,addStudent,removeLastStudent } from "./students.js";
 
 console.log("Welcome to Students Management System!");
 console.log("Available Students:")
@@ -9,4 +9,8 @@ console.log(addStudent(8,"Tanu Maurya","Appium"));
 console.log(addStudent(9,"Abhishek pal","Java"));
 console.log(addStudent(10,"Vishal Yadav","MySQL"));
 console.log("Students After Adding")
+console.log(getStudents());
+
+const removed= removeLastStudent();
+console.log(removed);
 console.log(getStudents());

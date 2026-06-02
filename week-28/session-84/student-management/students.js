@@ -44,6 +44,16 @@ export function addStudent(id,name,course){
     return "Student Added Successfully!"
 }
 
+export function removeLastStudent(){
+    const removedStudent=students.pop();
+    
+    if(!removedStudent){
+        return "No Record Found!"
+    }
+    return removedStudent
+}
+
+
 // const students={
 //     getStudents,addStudent
 // }
