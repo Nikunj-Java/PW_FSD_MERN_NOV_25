@@ -10,7 +10,7 @@ mkdir my-node-app
 ```
 cd my-node-app
 ```
-## Step:3 Initializa Node,js Project
+## Step:3 Initialize Node.js Project
 ```
 npm init
 ```
@@ -67,4 +67,19 @@ npm init -y
   "type": "commonjs"
 }
 
+```
+## Step:4 Create First Script
+- index.js
+```
+console.log("Hello Node.js Project");
+```
+- Now edit the package.json file
+```
+ "scripts": {
+    "start":"node index.js",
+  },
+``` 
+- instead of running "node index.js" we will use
+```
+npm start
 ```
