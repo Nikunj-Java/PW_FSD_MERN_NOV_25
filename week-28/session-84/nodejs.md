@@ -83,3 +83,6 @@ console.log("Hello Node.js Project");
 ```
 npm start
 ```
+- Output: 
+
+![Output](image.png)
