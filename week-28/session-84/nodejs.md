@@ -87,7 +87,7 @@ npm start
 
 ![Output](images/image-1.png)
 
-# Modularise Application
+# Modularize Application
 - goto> package.json file
 ```
 "type": "commonjs"
