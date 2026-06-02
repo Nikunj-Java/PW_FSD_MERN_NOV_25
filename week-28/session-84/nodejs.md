@@ -125,6 +125,10 @@ console.log("Subtraction:",calc.sub(10,5))
 console.log("Multiply:",calc.multiply(10,5))
 console.log("Divide:",calc.divide(10,5))
 ```
+- Run the project
+```
+npm start
+```
 - OUTPUT:
 
 ![Output](images/image-2.png)
