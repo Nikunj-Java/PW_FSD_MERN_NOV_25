@@ -85,4 +85,4 @@ npm start
 ```
 - Output: 
 
-![Output](image-1.png)
+![Output](images/image-1.png)
