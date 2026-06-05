@@ -322,7 +322,7 @@ fs.readFile("student.txt","utf-8",(err,data)=>{
 
 ```
 
-## Update File
+## Append File
 ```
 Write Code By Your Own
 ```
@@ -330,4 +330,40 @@ Write Code By Your Own
 ## Delete File
 ```
 Write Code By Your Own
+```
+
+## Folders
+- 1. synchronously
+```
+import fs from "fs";
+
+fs.mkdirSync("students");
+```
+- 2. Asynchronously
+```
+fs.mkdir(
+    "teachers",
+    (err) => {
+        if(err) console.log(err);
+        else console.log("Folder Created");
+    }
+);
+```
+- 3. Read Folder
+```
+const files = fs.readdirSync("./");
+
+console.log(files);
+```
+- OUTPUT:
+```
+[
+ 'app.js',
+ 'students',
+ 'package.json'
+]
+```
+- 4. Delete Folder
+```
+fs.rmdirSync("students");
 ```
