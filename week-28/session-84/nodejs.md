@@ -367,3 +367,45 @@ console.log(files);
 ```
 fs.rmdirSync("students");
 ```
+-------------------------------------------------------------------
+# Path Module
+- used to get exact path depending on OS
+```
+import path from "path";
+```
+```
+const filePath =
+path.join(
+    "students",
+    "data",
+    "student.txt"
+);
+
+console.log(filePath);
+```
+- Output: 
+```
+students\data\students.txt
+```
+- Get The Base name
+```
+console.log(
+    path.basename(
+        "/home/user/app.js"
+    )
+);
+```
+- Output:
+```
+app.js
+```
+- Get Extension
+```
+console.log(
+    path.extname("app.js")
+);
+```
+- Output:
+```
+.js
+```
