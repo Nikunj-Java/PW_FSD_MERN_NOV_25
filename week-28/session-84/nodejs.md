@@ -285,3 +285,40 @@ import fs from "fs";
 
 fs.unlinkSync("student.txt");
 ```
+
+## 2. Asynchronous File Operations
+- Asynchronus Means:
+```
+Start Task
+Don't Wait
+Continue Other Work
+Execute Callback When Done
+```
+## Create File
+```
+import fs from 'fs';
+
+fs.writeFileSync("student.txt","Hello Students!",(err)=>{
+    if(err){
+        console.log(err);
+        return;
+    }
+    console.log("File Created!")
+});
+ 
+```
+- Similarly You Can create the rest all Operations
+## Read File
+```
+Write Code By Your Own
+```
+
+## Update File
+```
+Write Code By Your Own
+```
+
+## Delete File
+```
+Write Code By Your Own
+```
