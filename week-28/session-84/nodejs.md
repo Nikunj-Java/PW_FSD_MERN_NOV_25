@@ -191,3 +191,40 @@ const calc= require("./calculator")
 ```
 import calculator from "./calculator.js"
 ```
+# Install Packages in Node js
+- Node js has various libraries(Packages) avaialble that you can easily download using node package manages using 'npm'
+```
+npm install express
+```
+or Shortcut
+```
+npm i express
+```
+- open package.json file and you will see
+```
+"dependencies": {
+    "express": "^5.2.1"
+  }
+```
+## Note
+- Here 5-> Major Version (Big Changes)
+- Here 2-> Minor Version (New Feature)
+- Here 1-> Patch Version (Bug Fixes)
+- ^ Install Compatible updated Automatically
+## Update package
+```
+npm update express
+```
+## Uninstall package
+```
+npm uninstall express
+```
+
+## npm login
+```
+npm login
+```
+
+![Login CLI](images/image-3.png)
+
+![UI](images/image-4.png)
