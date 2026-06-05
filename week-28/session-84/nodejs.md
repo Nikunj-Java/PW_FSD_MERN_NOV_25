@@ -228,3 +228,8 @@ npm login
 ![Login CLI](images/image-3.png)
 
 ![UI](images/image-4.png)
+
+## Publish Package
+```
+npm publish
+```
