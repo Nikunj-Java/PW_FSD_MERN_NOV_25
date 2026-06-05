@@ -409,3 +409,48 @@ console.log(
 ```
 .js
 ```
+---------------------------------------------------------------------------
+# Stream Module
+- Imagine You have 10GB File
+- The Bad Approach is: Load the entire file into Memory
+- But The Good Approach: Read small Part and Process it and Continue the Same Process
+## Stream Approach
+```
+Read Small Part
+Process
+Read Next Part
+Process
+```
+- This is Called Streaming.
+
+## Benefits of Streams
+- Less memory usage
+- Faster processing
+- Suitable for huge files
+- Used in video streaming
+
+- Examples:
+
+    - YouTube
+    - Netflix
+    - File uploads
+## 1. Readable Stream
+- it is used to read data Chunk By Chunk
+```
+import fs from "fs";
+const readableStream=fs.createReadStream("large.txt","utf-8");
+
+readableStream.on("data",(chunk)=>{console.log(chunk)});
+```
+## 2. Writable Stream
+```
+import fs from "fs";
+
+const writableStream=fs.createWriteStream("output.txt");
+
+writableStream.write("Welcome to");
+writableStream.write("Node.js");
+writableStream.write("at Pw Skills");
+
+writableStream.end();
+```
