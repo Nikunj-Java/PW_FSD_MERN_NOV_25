@@ -233,3 +233,55 @@ npm login
 ```
 npm publish
 ```
+--------------------------------------------------------------------------------
+# fs Module
+- the fs (File System) module allows Node.js to:
+1. Create Files
+2. Read File
+3. Upload Files
+4. Delete Files
+5. Create Folders
+6. Delete Folders
+- since 'fs' is a built in module (No need to download using npm)
+```
+import fs from "fs";
+```
+## 1. Synchronous File Operations
+- Synchronus means :
+```
+Do Task 1
+Wait
+Complete Task 1
+Then Do Task 2
+```
+## Create File
+```
+import fs from "fs";
+
+fs.writeFileSync("student.txt", "Hello Students");
+
+console.log("File Created");
+```
+- it eill create a new file in the same folder 'student.txt'
+
+## Read a File
+```
+import fs from "fs";
+
+const data = fs.readFileSync("student.txt", "utf8");
+
+console.log(data);
+```
+## Append Data
+```
+import fs from "fs";
+
+fs.appendFileSync("student.txt", "\nWelcome to Node.js");
+```
+
+## Delete File
+```
+import fs from "fs";
+
+fs.unlinkSync("student.txt");
+```
