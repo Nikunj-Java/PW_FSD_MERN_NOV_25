@@ -31,6 +31,24 @@ const server= http.createServer((req,res)=>{
         // http://localhost:3000/users/1
     }
 
+    if(req.url==="/users" && req.method==="POST"){
+        let body="";
+        req.on("data",chunk=>{
+            body +=chunk;
+        });
+
+        req.on('end',()=>{
+            const newUser=JSON.parse(body);
+            users.push(newUser);
+            res.writeHead(201); // status code 201=> new user created
+            res.end(JSON.stringify({
+                message:"New User Added!",
+                user:newUser
+            }));
+        });
+        return
+    }
+
 });
 
 server.listen(3000,()=>console.log("Server is Running and Up! on http://localhost:3000"));
