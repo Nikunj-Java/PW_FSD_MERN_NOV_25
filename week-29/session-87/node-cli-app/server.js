@@ -19,3 +19,6 @@ program.parse();
 // run: node server.js John --port 4000
 // run: node server.js --port 4000 John
 // run node server.js Nikunj
+
+// you can also use yargs
+// npm install yargs
