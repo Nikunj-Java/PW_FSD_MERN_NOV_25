@@ -42,3 +42,9 @@ program
 });
 
 program.parse();
+
+//1. add student
+/// run: node student-cli.js add Nikunj Mumbai
+
+//2. list students
+/// run: node student-cli.js list
