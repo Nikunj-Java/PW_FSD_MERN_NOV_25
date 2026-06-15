@@ -1,9 +1,11 @@
 import express from 'express';
+import logger from './middleware/logger.js';
 // npm install express
 const app=express();
 const PORT=5000;
 
-app.use(express.json()); //middleware
+//app.use(express.json()); //middleware
+app.use(logger); // custom middleware
 
 app.post('/users',(req,res)=>{
     res.json({
