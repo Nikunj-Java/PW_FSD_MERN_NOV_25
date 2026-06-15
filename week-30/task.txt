@@ -1,0 +1,5 @@
+1. Create Basic Express Application
+2. Add Basic Routing
+3. Now Enhance the same Application with Middleware in separate file
+4. Use Authentication Bearer (Simple)
+4. Now Enhance the same Application with Router in Separate file
