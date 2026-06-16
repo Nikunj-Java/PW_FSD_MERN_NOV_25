@@ -1,4 +1,5 @@
-import users from "../data/user.js";
+import express from 'express'
+// import users from "../data/user.js";
 
 // get all users
 export const getUsers=(req,res)=>{
