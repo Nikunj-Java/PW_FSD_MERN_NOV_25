@@ -110,3 +110,41 @@ export const deleteUserById= async(req,res)=>{
         });
     }
 }
+
+//06. Get multiple params
+export const getMultipleParams= async(req,res)=>{
+    try {
+        const {id, postid}= req.params;
+        res.json({
+            success: true,
+            data: {
+                id: id,
+                postid: postid
+            }
+        })
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: error.message
+        });
+    }
+}
+
+//07. Get query params
+export const getQueryParams= async(req,res)=>{
+    try {
+        const {name, age}= req.query;
+        res.json({
+            success: true,
+            data: {
+                name: name,
+                age: age
+            }
+        })
+    }   catch (error) { 
+        res.status(500).json({
+            success: false,
+            message: error.message
+        });
+    }
+}
