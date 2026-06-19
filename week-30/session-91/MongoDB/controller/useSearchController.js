@@ -1,3 +1,5 @@
+import User from "../model/User.js";
+
 export const searchUsers = async (req, res) => {
     
 
