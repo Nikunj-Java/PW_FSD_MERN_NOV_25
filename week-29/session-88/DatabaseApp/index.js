@@ -30,3 +30,6 @@ const result= await users.updateOne({
 console.log('Data updated successfully:', result);
 
 //05 Delete Data
+await users.deleteOne({name:'Nikunj Soni'});
+
+console.log('Data deleted successfully');
