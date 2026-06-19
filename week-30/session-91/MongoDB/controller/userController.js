@@ -133,13 +133,14 @@ export const getMultipleParams= async(req,res)=>{
 //07. Get query params
 export const getQueryParams= async(req,res)=>{
     try {
-        const {name, age}= req.query;
+        //const {page, age}= req.query;
+        const page= Number(req.query.page) || 1;
+        const limit= Number(req.query.limit) || 10;
+        const skip= (page-1)*limit;
+        const users = await User.find().skip(skip).limit(limit);
         res.json({
             success: true,
-            data: {
-                name: name,
-                age: age
-            }
+            data: users
         })
     }   catch (error) { 
         res.status(500).json({
@@ -148,3 +149,4 @@ export const getQueryParams= async(req,res)=>{
         });
     }
 }
+

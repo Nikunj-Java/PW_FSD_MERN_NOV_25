@@ -13,7 +13,10 @@ route.delete("/:id",deleteUserById);
 // multiple routes can be added here as per requirement
 route.get("/:id/posts/:postid", getMultipleParams);
 
-//query params: http://localhost:3000/search?name=John&age=30
+//query params: http://localhost:3000/users?page=1&limit=2
 route.get("/",getQueryParams);
+// similarly you can  implement search, filter, sort, pagination etc. using query params
+
+
 
 export default route;
