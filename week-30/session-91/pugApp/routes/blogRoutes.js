@@ -13,8 +13,14 @@ router.get("/about",(req,res)=>{
 })
 
 // Blogs Page
-router.get("/blogs",(req,res)=>{
-    res.render('blogs')
+// router.get("/blogs",(req,res)=>{
+//     res.render('blogs')
+// })
+router.get("/blogs/:id",(req,res)=>{
+    const id=req.params.id;
+    res.render('blogs',{
+        blogId: id
+    });
 })
 
 export default router;
