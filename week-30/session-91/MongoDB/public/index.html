@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> User List</h1>
+    <button onclick="getUsers()">
+        Load Users
+    </button>
+    <ul id="userList"></ul>
+    <script>
+         async function getUsers() {
+
+            const response =
+                await fetch(
+                    'http://localhost:3000/users'
+                );
+
+            const users =
+                await response.json();
+            console.log(users);
+        
+        //const list= document.getElementById('userList');
+        }
+    </script>
+    
+</body>
+</html>
