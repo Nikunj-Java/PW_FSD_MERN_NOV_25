@@ -1,10 +1,12 @@
 import express from 'express';
 
 import { createUser, deleteUserById, getAllUsers, getMultipleParams, getQueryParams, getUserByID, updateUserByID } from '../controller/userController.js';
+import authrouter from './authRoutes.js';
 
 const route=express.Router();
 
 route.post("/",createUser);
+route.post("/login",authrouter);
 //route.get("/",getAllUsers);
 route.get("/:id",getUserByID);
 route.put("/:id",updateUserByID);

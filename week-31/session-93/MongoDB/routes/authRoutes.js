@@ -1,5 +1,6 @@
 import express, { json } from 'express';
 import passport from 'passport';
+import User from '../model/User.js';
 
 const authrouter = express.Router();
 
@@ -7,6 +8,7 @@ const authrouter = express.Router();
 authrouter.post('/login', passport.authenticate('local'), (req, res) => {
     res.json({
         success: true,
+        message: 'Login successful!',
         user: req.user
     })
 })
@@ -26,14 +28,37 @@ authrouter.post('/dashboard', (req, res) => {
 })
 
 //Logout
-authrouter.get('/logout',(req, res) => {
-     req.logout(err=>{
-        if(err) return res.status(500).json(err);
-        res.json({
-            message:'Logged Out'
-        })
-     })
+authrouter.get('/logout', (req, res) => {
 
-})
+    req.logout(err => {
+
+        if (err) {
+            return res.status(500).json({
+                success: false,
+                message: err.message
+            });
+        }
+
+        req.session.destroy(err => {
+
+            if (err) {
+                return res.status(500).json({
+                    success: false,
+                    message: err.message
+                });
+            }
+
+            res.clearCookie('connect.sid');
+
+            res.json({
+                success: true,
+                message: 'Logged Out Successfully'
+            });
+
+        });
+
+    });
+
+});
 
 export default authrouter

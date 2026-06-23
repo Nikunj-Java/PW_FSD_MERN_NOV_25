@@ -1,15 +1,16 @@
 import passport from 'passport';
 import {Strategy as LocalStrategy } from 'passport-local';
 import bcrypt from 'bcrypt';
+import User from '../model/User.js';
 
-// fake user Database
+/* fake user Database
 const users=[
     {
         id:1,
         email:'admin@gmail.com',
         password:await bcrypt.hash('Nikunj@1234',10) // here 10 is cost factor(also known as 'salt')
     }
-];
+];*/
 
 passport.use(
     new LocalStrategy(
@@ -17,7 +18,9 @@ passport.use(
             usernameField:'email'
         },
         async (email,password,done)=>{
-            const user= users.find(u=>u.email === email);
+            //const user= users.find(u=>u.email === email);
+            // find user from MongoDB
+            const user= await User.findOne({email})
             if(!user){
                 return done(null,false,{message:'User Not Found'});
             }
@@ -53,11 +56,21 @@ and converts it back to
  */
 
 // retrive User from Session
-passport.deserializeUser( 
-    (id,done)=>{
-        const user= users.find(u=> u.id === id);
-        done(null,user);
-    }
-)
+passport.deserializeUser(
+    async (id, done) => {
 
+        try {
+
+            const user =
+                await User.findById(id);
+
+            done(null, user);
+
+        } catch (error) {
+
+            done(error, null);
+
+        }
+    }
+);
 export default passport

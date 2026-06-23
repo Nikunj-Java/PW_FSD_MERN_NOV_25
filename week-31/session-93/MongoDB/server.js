@@ -6,6 +6,11 @@ import connectDB from "./config/db.js";
 import useRoutes from "./routes/userRoutes.js"
 
 import searchRoutes from "./routes/searchRoute.js"
+import authrouter from './routes/authRoutes.js';
+
+import session from 'express-session';
+import passport from './config/passport.js';
+
 
 const app= express();
 //cross Origin Dependency
@@ -17,9 +22,22 @@ app.use(cors({ origin: 'http://127.0.0.1:5500' }));
 app.use(express.json());
 connectDB();
 
+// Session Middleware FIRST
+app.use(
+    session({
+        secret: 'mysecretkey',
+        resave: false,
+        saveUninitialized: false
+    })
+);
+
+// Passport Middleware
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use("/users",useRoutes);
 app.use("/search",searchRoutes);
+app.use("/auth", authrouter);
 
 
 app.listen(3000,()=>
