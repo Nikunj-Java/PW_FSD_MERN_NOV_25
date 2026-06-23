@@ -10,9 +10,12 @@ import authrouter from './routes/authRoutes.js';
 
 import session from 'express-session';
 import passport from './config/passport.js';
+import dotenv from 'dotenv';
 
+dotenv.config();
 
 const app= express();
+const PORT=process.env.PORT
 //cross Origin Dependency
 // npm installa cors 
 // import cors from 'cors'
@@ -25,7 +28,7 @@ connectDB();
 // Session Middleware FIRST
 app.use(
     session({
-        secret: 'mysecretkey',
+        secret: process.env.SESSION_SECRET,
         resave: false,
         saveUninitialized: false
     })
@@ -40,6 +43,6 @@ app.use("/search",searchRoutes);
 app.use("/auth", authrouter);
 
 
-app.listen(3000,()=>
-    console.log('Server is Running and up! \nvisit: http://localhost:3000')
+app.listen(PORT,()=>
+    console.log(`Server is Running and up! \nvisit: http://localhost:${PORT}`)
 )
