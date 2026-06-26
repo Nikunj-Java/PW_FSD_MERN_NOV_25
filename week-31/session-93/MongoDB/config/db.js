@@ -4,12 +4,10 @@ import dotenv from 'dotenv'
 dotenv.config();
 
 const connectDB = async () => {
-
+    const URI=process.env.MONGODB_ATLAS;
     try {
-
-        await mongoose.connect(
-            process.env.MONGODB_ATLAS
-        );
+        //console.log(process.env.MONGODB_ATLAS);
+        await mongoose.connect(URI);
 
         console.log('MongoDB Connected');
 

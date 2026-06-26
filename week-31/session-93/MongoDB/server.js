@@ -15,7 +15,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app= express();
-const PORT=process.env.PORT
+const PORT=process.env.PORT || 3000;
 //cross Origin Dependency
 // npm installa cors 
 // import cors from 'cors'
@@ -23,7 +23,7 @@ app.use(cors({ origin: 'http://127.0.0.1:5500' }));
 //app.use(cors());
 //app.use(cors({ origin: '*' }));
 app.use(express.json());
-connectDB();
+
 
 // Session Middleware FIRST
 app.use(
@@ -37,6 +37,8 @@ app.use(
 // Passport Middleware
 app.use(passport.initialize());
 app.use(passport.session());
+ 
+connectDB();
 
 app.use("/users",useRoutes);
 app.use("/search",searchRoutes);

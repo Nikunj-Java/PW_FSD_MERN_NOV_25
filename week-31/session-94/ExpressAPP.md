@@ -137,9 +137,33 @@ npm install --save-dev nodemon
 
 ## Deployment
 
-Deploy the API on Netlify as a serverless function and verify
+Deploy the API on Netlify/Renderer as a serverless function and verify
 registration, login, logout, protected routes, and CORS from a frontend.
 
+## Step: 1 Open Renderer
+- Open Rendere and Create/Login to Your Account
+```
+https://www.render.com/
+```
+## Step: 2 Web Service
+```
+click on + icon (Right Side Corner)> Web Service
+```
+## Step: 3 Add the Below Details
+- Connect & choose GitHub Project 
+![alt text](image/image-1.png)
+
+![alt text](image/image-2.png)
+
+![alt text](image/image-3.png)
+
+- click on Deploy
+
+- on Successfull Deployment You will Get the URL
+
+- Replace That URL in POSTMEN and Check the API
+
+![alt text](image/image-4.png)
  
 
  
