@@ -184,7 +184,7 @@ export default function AddToCart({ productId }) {
 ```
 
 ## Link in Next.js
-- Why use <Link> instead of <a>?
+- Why use '<Link>' instead of '<a>'?
 - Because 
   - Link will load only the change required in a webpage
   - where as <a> will load entire page 
