@@ -150,3 +150,35 @@ http://localhost:3000/products/laptop/abc
 - here: 101,1,ABC,abc all are Ids
 
 ![alt text](images/image-5.png)
+
+## Server Vs Client in Next.js 
+- by default all pages are server pages in next.js
+- but the page which needs interaction considered to be client page
+- to make the server page as client page add below syntax
+```
+"use client"
+```
+- app/products/[id]/page.js
+```
+"use client"; // this will make the page as client
+
+import { useState } from "react";
+
+export default function AddToCart({ productId }) {
+
+  const [added, setAdded] = useState(false);
+
+  function handleClick() {
+    console.log("Product Added:", productId);
+    setAdded(true);
+  }
+
+  return (
+    <div>
+      <button onClick={handleClick}>
+        {added ? "Added ✓" : "Add to Cart"}
+      </button>
+    </div>
+  );
+}
+```
