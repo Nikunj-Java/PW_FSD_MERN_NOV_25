@@ -44,6 +44,15 @@ app/
             page.js
         
 ```
+- about/page.js
+```
+export default function About(){
+    return(
+        <h1>Welcome to About US</h1>
+    )
+}
+```
+- similarly you can create pages for all routing
 
 ## Loading in Next .js
 - just implement loading.js under app/
