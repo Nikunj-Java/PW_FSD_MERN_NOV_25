@@ -187,7 +187,7 @@ export default function AddToCart({ productId }) {
 - Why use 'link' instead of 'a'?
 - Because 
   - Link will load only the change required in a webpage
-  - where as <a> will load entire page 
+  - where as "anchor tag: a" will load entire page 
 - import link
 ```
 import Link from "next/link";
