@@ -182,3 +182,27 @@ export default function AddToCart({ productId }) {
   );
 }
 ```
+
+## Link in Next.js
+- Why use <Link> instead of <a>?
+- Because 
+  - Link will load only the change required in a webpage
+  - where as <a> will load entire page 
+- import link
+```
+import Link from "next/link";
+```
+- layout.js
+```
+<nav>
+          MyNavBar
+          <br></br>
+          <hr></hr>
+            <Link href="/">Home</Link>
+            <Link href="/about">About Us</Link>
+            <Link href="/contact">Contact Us</Link>
+            <Link href="/gallery">Pictures</Link>
+            <Link href="/products/101">Products</Link>
+          <hr></hr>
+        </nav>
+```
