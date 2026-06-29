@@ -149,4 +149,4 @@ http://localhost:3000/products/laptop/abc
 
 - here: 101,1,ABC,abc all are Ids
 
-![alt text](images/image-4.png)
+![alt text](images/image-5.png)
