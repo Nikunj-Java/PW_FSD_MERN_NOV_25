@@ -88,3 +88,65 @@ export default function NotFound() {
 ```
 http://localhost:3000/products/mobile/1
 ```
+
+# Dynamic Routing
+- Suppose you have paths like this
+```
+/products/101
+/products/102
+/products/103
+/products/104
+```
+- All of these URLs use the same file.
+- so we have to create a structure like:
+```
+app
+│
+├── products
+│     ├── 1
+│     │     page.js
+│     ├── 2
+│     │     page.js
+│     ├── 3
+│     │     page.js
+│     ├── 4
+│     │     page.js
+│     └── ...
+```
+- Which is Impossible
+- Then What is the Solution
+- with dynamic Routing we can make it easy
+```
+app
+│
+└── products
+    └── Laptop
+          └── [id]
+                └── page.js
+```
+![alt text](images/image-4.png)
+- page.js
+```
+export default async function LaptopPage({ params }) {
+
+  const { id } = await params;
+
+  return (
+    <div>
+      <h1>Welcome to Laptop Page</h1>
+      <p>Product ID: {id}</p>
+    </div>
+  );
+}
+```
+- open browser and check
+```
+http://localhost:3000/products/laptop/101
+http://localhost:3000/products/laptop/1
+http://localhost:3000/products/laptop/ABC
+http://localhost:3000/products/laptop/abc
+```
+
+- here: 101,1,ABC,abc all are Ids
+
+![alt text](images/image-4.png)
