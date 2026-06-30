@@ -301,3 +301,58 @@ const loggedIn= true;
 
 ```
 - it will not redirects and you will be on Dahsboard Page Only
+
+----------------------------------------------------------------------
+## Route Groups
+- Large Applications becomes messy
+- example
+```
+app
+
+admin
+
+customer
+
+dashboard
+
+products
+
+login
+
+register
+```
+- You may want to organize files without changing the URL.
+- use parenthesis to create groups inside the application
+- this will not change the original URL
+```
+app
+│
+├── (marketing)
+│      ├── about
+│      │      └── page.js
+│      └── contact
+│             └── page.js
+│
+└── (shop)
+       ├── products
+       │      └── page.js
+       └── cart
+              └── page.js
+```
+![alt text](images/image-10.png)
+- URLS:
+```
+/about
+
+/contact
+
+/products
+
+/cart
+```
+- Note:
+```
+(marketing)
+(shop)
+```
+- this will not appear in the URL
