@@ -241,3 +241,29 @@ export default function Login(){
 ![alt text](images/image-7.png)
 
 ![alt text](images/image-8.png)
+-------------------------------------------------------------------------
+## Catch All Routes
+- sometimes we don't know that how many URL segment will have
+- Example
+```
+/docs/react
+/docs/react/hooks
+/docs/react/hooks/useState
+/docs/react/hooks/useState/example
+```
+- Creating Folder mannually is impossible.
+- instead we use:
+```
+app
+|
+|--docs
+    |
+    |---[...slug]
+          |
+          |--page.js
+```
+- Note: [...slug] means Accept every segment after /docs.
+
+- Create app/docs/[...slug]/page.js
+
+![alt text](images/image-9.png)
