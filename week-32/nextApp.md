@@ -568,3 +568,85 @@ const linkStyle = {
   transition: "0.3s",
 };
 ```
+----------------------------------------------------------------------------------
+## Parallel Routes
+- Normally, 
+only one page renders
+```
+Dashboard ---> user
+```
+- Sometimes you want multiple sections rendered independently.
+- Example: When You Open GMAIL it renders Inbox, Messages, Advertisement
+- Three sections load independently.
+- use '@folder'
+```
+app
+|
+|---(user)
+|   |
+|   |---layout.js
+|   |
+|   |---dashboard
+|         |---layout.js (it is important to get all segments here)
+|         |---@users
+|         |     |---page.js
+|         |
+|         |---@analytics
+|         |     |---page.js
+|         |---page.js
+```
+- layout.js
+```
+import { redirect } from "next/navigation";
+
+export default function DashboardLayout({
+  children,
+  users,
+  analytics,
+}) {
+
+  const loggedIn = true;
+
+  if (!loggedIn) {
+    redirect("/login");
+  }
+
+  return (
+    <div>
+      <h1>Dashboard Layout</h1>
+
+      <hr />
+
+      {children}
+
+      <hr />
+
+      {users}
+
+      <hr />
+
+      {analytics}
+    </div>
+  );
+}
+```
+- @users/page.js
+```
+export default function Users() {
+  return <h2>Users Panel</h2>;
+}
+```
+- @analytics/page.js
+```
+export default function Analytics() {
+  return <h2>Analytics Panel</h2>;
+}
+```
+- dashboard/page.js
+```
+export default function DashboardPage() {
+  return <h2>Main Dashboard Page</h2>;
+}
+```
+- Output:
+![alt text](images/image-11.png)

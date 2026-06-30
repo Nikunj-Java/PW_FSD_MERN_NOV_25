@@ -8,7 +8,7 @@ export default function Login(){
 
     function handleLogin(){
         alert("Login Successful");
-        router.push("/about")
+        router.push("/dashboard")
     }
     return(
         <div>
