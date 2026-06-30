@@ -267,3 +267,37 @@ app
 - Create app/docs/[...slug]/page.js
 
 ![alt text](images/image-9.png)
+
+## Redirect
+- it is also use for navigation (redirecting the route)
+```
+import { redirect } from "next/navigation";
+```
+- how to use
+```
+redirect("/login")
+```
+- app/dashboard
+```
+import { redirect } from "next/navigation";
+
+export default function Dashboard(){
+    const loggedIn= false;// make false and check the output
+    
+    if(!loggedIn){
+        redirect("/login");
+    }
+    return <h1>Dashboard</h1>
+}
+```
+- now visit:
+```
+http://localhost:3000/dashboard
+```
+- it will redirects you to login page
+- change:
+```
+const loggedIn= true;
+
+```
+- it will not redirects and you will be on Dahsboard Page Only
