@@ -378,7 +378,7 @@ app
 |   |---cart
 ```
 - lets Create two different Layout.js files for the groups
-- for general layout
+- for general layout 'layout.js'
 ```
 import Link from "next/link";
 
@@ -477,7 +477,7 @@ const linkStyle = {
   transition: "0.3s",
 };
 ```
-- for user layout
+- for user layout 'layout.js'
 ```
 import Link from "next/link";
 
