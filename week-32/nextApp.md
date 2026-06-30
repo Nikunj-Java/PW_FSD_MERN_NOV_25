@@ -206,3 +206,38 @@ import Link from "next/link";
           <hr></hr>
         </nav>
 ```
+------------------------------------------------------------------------
+## Programmatic Navigation (useRouter)
+- sometimes you don't want user to click on a link
+- example
+  - on successful Login--> Go to Dashboard
+  - on successful Logout--> Go to Login
+  - Payment Completed --> Go to Success Page
+- so here we will use 'useRouter'
+- Create a folder under app named: login
+- app/login/page.js
+```
+"use client"
+//as it need interaction we will use as a client
+
+import { useRouter } from "next/navigation";
+
+export default function Login(){
+    const router=useRouter();
+
+    function handleLogin(){
+        alert("Login Successful");
+        router.push("/about")
+    }
+    return(
+        <div>
+            <button onClick={handleLogin}>Login</button>
+        </div>
+    )
+}
+```
+![alt text](images/image-6.png)
+
+![alt text](images/image-7.png)
+
+![alt text](images/image-8.png)
