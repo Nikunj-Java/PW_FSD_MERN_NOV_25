@@ -1,8 +1,11 @@
 import { connectDB } from "@/lib/db";
 import {addProduct} from './actions/productAction';
+import product from "@/models/product";
 
 export default async function Home() {
-  //await connectDB();
+  await connectDB();
+
+  const products= await product.find();
 
   return (
     <div>
@@ -13,6 +16,13 @@ export default async function Home() {
         <input type="number" name="price" placeholder="Product Price" required />
         <button type="submit">Add Product</button>
       </form>
+      <hr></hr>
+      <h2>Products List</h2>
+      <ul>
+        {products.map((p)=>(
+          <li key={p._id}>{p.name} - Rs.{p.price} /-</li>
+        ))}
+      </ul>
 
     </div>
   );
