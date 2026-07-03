@@ -405,3 +405,12 @@ export default async function Home() {
   );
 }
 ```
+
+## MongoDB ATLAS Connectivity
+- go to> MongodbAtlas> Create Cluster > Copy the URL & Password > Allow Network access
+- MongoDB URI
+```
+mongodb+srv://<username>:<password>@cluster0.hdejldr.mongodb.net/next-mongo-demo?retryWrites=true&w=majority
+```
+- update in .env.local file and Run the Application Again
+- Now this time the data will be stored in MongoDB Atlas Cluster.
