@@ -407,7 +407,7 @@ export default async function Home() {
 ```
 
 ## MongoDB ATLAS Connectivity
-- go to> MongodbAtlas> Create Cluster > Copy the URL & Password > Allow Network access
+- go to> MongodbAtlas> Create Cluster > Copy the URL & Password > Allow Network access (0.0.0.0/0)
 - MongoDB URI
 ```
 mongodb+srv://<username>:<password>@cluster0.hdejldr.mongodb.net/next-mongo-demo?retryWrites=true&w=majority
