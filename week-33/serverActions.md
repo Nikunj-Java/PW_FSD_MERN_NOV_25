@@ -268,3 +268,140 @@ export default async function Home() {
 http://localhost:3000
 ```
 - Here You will get the List of ALL Products Available
+
+## Full CRUD Operation
+- app/actions/productAction.js
+```
+"use server";
+
+import { connectDB } from "@/lib/db";
+import Product from "@/models/product";
+import { revalidatePath } from "next/cache";
+
+// ================= CREATE =================
+export async function addProduct(formData) {
+  await connectDB();
+
+  const name = formData.get("name");
+  const price = Number(formData.get("price"));
+
+  await Product.create({
+    name,
+    price,
+  });
+
+  revalidatePath("/");
+}
+
+// ================= UPDATE =================
+export async function updateProduct(id, formData) {
+  await connectDB();
+
+  const name = formData.get("name");
+  const price = Number(formData.get("price"));
+
+  await Product.findByIdAndUpdate(id, {
+    name,
+    price,
+  });
+
+  revalidatePath("/");
+}
+
+// ================= DELETE =================
+export async function deleteProduct(id) {
+  await connectDB();
+
+  await Product.findByIdAndDelete(id);
+
+  revalidatePath("/");
+}
+```
+- app/page.js
+```
+import { connectDB } from "@/lib/db";
+import {addProduct,deleteProduct,updateProduct} from './actions/productAction';
+import product from "@/models/product";
+
+export default async function Home() {
+  await connectDB();
+
+  const products= await product.find();
+
+  return (
+    <div style={{ padding: "20px" }}>
+      <h1>Next.js CRUD using Server Actions</h1>
+
+      {/* CREATE */}
+
+      <form action={addProduct}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Product Name"
+          required
+        />
+
+        <input
+          type="number"
+          name="price"
+          placeholder="Price"
+          required
+        />
+
+        <button>Add Product</button>
+      </form>
+
+      <hr />
+
+      <h2>Products</h2>
+
+      {products.map((p) => (
+        <div
+          key={p._id}
+          style={{
+            border: "1px solid gray",
+            padding: "15px",
+            marginBottom: "15px",
+          }}
+        >
+          {/* UPDATE */}
+
+          <form action={updateProduct.bind(null, p._id)}>
+            <input
+              name="name"
+              defaultValue={p.name}
+            />
+
+            <input
+              name="price"
+              type="number"
+              defaultValue={p.price}
+            />
+
+            <button type="submit">
+              Update
+            </button>
+          </form>
+
+          <br />
+
+          {/* DELETE */}
+
+          <form action={deleteProduct.bind(null, p._id)}>
+            <button
+              type="submit"
+              style={{
+                background: "red",
+                color: "white",
+              }}
+            >
+              Delete
+            </button>
+          </form>
+        </div>
+      ))}
+    </div>
+  );
+}
+```
