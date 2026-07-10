@@ -12,7 +12,7 @@ npx shadcn@latest init
     - Choose Anything You Like
 2. you can see Components/ui and lib/utils.js Folder
 ```
-app
+rootfolder(app)
 │
 ├── components
 │     └── ui
