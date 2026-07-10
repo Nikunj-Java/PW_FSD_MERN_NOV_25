@@ -66,13 +66,13 @@ export { handler as GET, handler as POST };
 components/LoginButton.jsx
 ```
 ```
-"use clinet";
+"use client";
 
 import { signIn } from "next-auth/react";
 
 export default function LoginButton(){
     return(
-        <button onClick={() => signIn("google")}>Sign In With Google</button>
+        <button onClick={() => signIn("google",{callbackUrl:"/dashboard"})}>Sign In With Google</button>
     )
 }
 ```
@@ -117,10 +117,11 @@ app/dashboard/page.js
 ```
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
+import LogoutButton from "../components/LogoutButton";
 
 
 export default async function DashboardPage() {
-    const session= await getServerSession(authOptions);
+    const session= await getServerSession();
     if (!session) {
         redirect("/");
     }
@@ -130,9 +131,11 @@ export default async function DashboardPage() {
                   <h1> Dashboard </h1>
                   <p> Welcome, {session.user.name}!</p>
                   <p> {session.user.email}!</p>
+                  <LogoutButton/>
               </main>
             </div>
     )
 
 }
+
 ```
