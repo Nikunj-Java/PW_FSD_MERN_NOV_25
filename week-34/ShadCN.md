@@ -34,6 +34,7 @@ components
 ```
 ## LoginPage With ShadCN
 - Let's Redesign the Login page
+- LoginButton.jsx
 ```
 "use client";
 import {Button} from "@/components/ui/button";
@@ -60,5 +61,20 @@ export default function LoginButton(){
 
     </div>
         )
+}
+```
+- LogoutButton.jsx
+```
+"use client";
+
+import { signOut } from "next-auth/react";
+import {Button} from "@/components/ui/button";
+
+export default function LogoutButton(){
+    return(
+        <Button variant="destructive" onClick={() => signOut()}>
+            Sign Out
+        </Button>
+    )
 }
 ```
