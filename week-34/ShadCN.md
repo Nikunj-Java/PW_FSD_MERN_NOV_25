@@ -1,6 +1,6 @@
 # ShadCN
 - before the use of ShadCN we were using Bootstrap
-- so we need to reply on Bootstrap Library
+- so we need to rely on Bootstrap/React-BootStrap Library
 - bit while we use ShadCN it download it locally the component/library you want to use and you have full control on it
 
 ## How to Install ShadCN ?
