@@ -78,3 +78,84 @@ export default function LogoutButton(){
     )
 }
 ```
+
+### Adding Google Chrome Logo
+ 
+- use in UI
+```
+ <img
+        src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+        alt="Google"
+        width="18"
+        height="18"
+        style={{ marginRight: "8px" }}
+      />
+```
+- loginButton.jsx
+```
+"use client";
+import { Button } from "@/components/ui/button";
+
+import { signIn } from "next-auth/react";
+
+export default function LoginButton() {
+    return (
+        <div>
+            <Button onClick={() => signIn("google", { callbackUrl: "/dashboard" })}>
+                <img
+                    src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                    alt="Google"
+                    width="18"
+                    height="18"
+                    style={{ marginRight: "8px" }}
+                />
+                Sign In With Google
+            </Button>
+            <br />
+            <h1>ShadCN Buttons</h1>
+            <Button variant="destructive">Destructive</Button>
+            <Button variant="outline">Outline</Button>
+            <Button variant="secondary">Secondary</Button>
+            <Button variant="ghost">Ghost</Button>
+            <Button variant="link">Link</Button>
+            <h1>Buttons with size</h1>
+            <Button size="sm">Small</Button>
+            <Button size="lg">Large</Button>
+            <Button size="default">Default</Button>
+            <Button size="icon">+</Button>
+
+
+        </div>
+    )
+}
+```
+### Using Input Tag
+- Generate it
+```
+npx shadcn@latest add input
+```
+- use it
+```
+import { Input } from "@/components/ui/input";
+
+export default function Home() {
+  return (
+    <Input placeholder="Enter Product Name" />
+  );
+}
+```
+
+### Add Card Component
+```
+npx shadcn@latest add card
+```
+
+### Add Table
+```
+npx shadcn@latest add table
+```
+
+### Add Form
+```
+npx shadcn@latest add form
+```
