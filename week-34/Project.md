@@ -66,3 +66,8 @@ app
 │
 └── layout.js
 ```
+## Reference Link
+[MongoDB And Server Action Reference Project](../week-33/next-mongo-demo)
+[ShadCN & Google Auth](google-auth-demo)
+[Bcrypt](../week-31/session-93/Bcrypt.md)
+[Routing](../week-32/my-first-next-app)
