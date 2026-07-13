@@ -67,11 +67,19 @@ app
 └── layout.js
 ```
 ## Reference Link
-[MongoDB And Server Action Reference Project](../week-33/next-mongo-demo)
+- 1. MongoDB & Server Action Next.js Project: [MongoDB And Server Action Reference Project](../week-33/next-mongo-demo)
 
-[ShadCN & Google Auth](google-auth-demo)
+- 2. Server Action: [Server Action Notes](../week-33/serverActions.md)
 
-[Bcrypt](../week-31/session-93/Bcrypt.md)
+- 3. ShadCN & Google Auth Project: [ShadCN & Google Auth Project](google-auth-demo)
 
-[Routing](../week-32/my-first-next-app)
+- 4. ShadCN Notes: [ShadCN Notes](GoogleAuth.md)
+
+- 5. Google Auth Notes: [Google Auth Notes](GoogleAuth.md)
+
+- 6. Bcrypt Notes: [Bcrypt](../week-31/session-93/Bcrypt.md)
+
+- 7. Routing in Next.js: [Routing Project](../week-32/my-first-next-app)
+
+- 8. Routing Notes: [Routing Notes](../week-32/nextApp.md)
 
