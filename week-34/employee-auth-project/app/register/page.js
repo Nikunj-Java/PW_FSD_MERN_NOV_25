@@ -1,3 +1,7 @@
+export const metadata={
+  title:"New Employee Registration",
+  description:"This page is a Registration Page"
+}
 export default function RegisterPage() {
 
   return (

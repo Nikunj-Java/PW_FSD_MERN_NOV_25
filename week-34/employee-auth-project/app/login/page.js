@@ -1,3 +1,7 @@
+export const metadata={
+  title:"Employee Login",
+  description:"This page is a Login Page"
+}
 export default function LoginPage() {
 
   return (

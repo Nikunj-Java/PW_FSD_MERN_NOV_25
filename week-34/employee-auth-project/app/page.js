@@ -1,5 +1,9 @@
 import Link from "next/link";
 
+export const metadata={
+  title:"Employee Management System",
+  description:"Manage Employees using Next.js"
+}
 export default function Home() {
 
   return (
