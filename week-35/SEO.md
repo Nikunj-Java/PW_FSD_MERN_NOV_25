@@ -59,3 +59,58 @@ npm run dev
 <meta property="og:description" content="Manage Employee">
 <meta property="og:image" content="http://localhost:3000/pw.png">
 ```
+
+## Dynamic OG Metadata
+```
+export async function generateMetadata({params}){
+    //const { id } = await params;
+    // using mongo db
+    const product = await Product.findById(params.id);
+    return {
+        title: "Product"-{id}, //or title: product.name,
+        description: "Product Description" // or description: product.description
+        openGraph:{
+            images:[product.image]
+        }
+    }
+}
+```
+- or 
+```
+app
+└── products
+    └── [id]
+        ├── page.js
+        └── opengraph-image.js
+```
+- opengraph-image.js
+```
+import { ImageResponse } from "next/og";
+
+export const size={
+    width:1200,
+    height:630
+
+};
+
+export const contentType="image/png";
+
+export default async function Image({params}){
+    const { id } = await params;
+    return new ImageResponse(
+        <div style={{
+            display:"flex",
+            width:"100%",
+            height:"100%",
+            alignItems:"center",
+            justifyContent:"center",
+            background:"white",
+            fontSize:60,
+            fontWeight:"bold"
+        }}>
+            Product {id}
+
+        </div>
+    ), size
+}
+```
