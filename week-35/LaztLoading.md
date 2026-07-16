@@ -1,4 +1,34 @@
-import dynamic from "next/dynamic";
+# Lazy Loading
+- Suppose Dashboard has
+```
+Charts
+
+Map
+
+Reports
+```
+No Need to load everything Immediatly.
+
+Chart.jsx
+```
+export default function Chart(){
+
+return(
+
+<h1>
+
+Employee Chart
+
+</h1>
+
+)
+
+}
+
+```
+- Dashboard/page.jsx
+```
+ import dynamic from "next/dynamic";
 const Chart=dynamic(
   ()=>import("../components/chart.jsx"),{
     loading:()=><p>Chart is Loading....</p>
@@ -24,3 +54,8 @@ export default function Dashboard() {
     </div>
   );
 }
+```
+### Conclusion
+```
+initially Dashboard Loads Immediately and Chart Downloads Later.
+```
