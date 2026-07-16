@@ -1,10 +1,7 @@
 import { Inter, Roboto } from "next/font/google";
-import localFont from "next/font/local";
+ 
 
-const myFont = localFont({
-  src: "./fonts/MyFont.ttf",
-});
-
+ 
 const inter = Inter({
   subsets: ["latin"],
 })

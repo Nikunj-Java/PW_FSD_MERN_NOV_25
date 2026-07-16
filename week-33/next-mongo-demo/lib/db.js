@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const MONGODB_URI = process.env.MONGODB_ATLAS_URI ;;
+const MONGODB_URI = process.env.MONGODB_ATLAS ;;
 
 if (!MONGODB_URI) {
   throw new Error("Please define MONGODB_ATLAS_URI in .env.local");
