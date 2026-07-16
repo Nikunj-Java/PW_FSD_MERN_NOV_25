@@ -1,3 +1,6 @@
+# CSP Configuration
+- next.config.mjs
+```
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   /* config options here */
@@ -23,3 +26,33 @@ const nextConfig = {
 };
 
 export default nextConfig;
+
+```
+- Restart the server
+```
+npm run dev
+```
+- now every request return below header
+```
+Content-Security-Policy
+```
+## Check Browser
+![alt text](images/image-3.png)
+- Now Lets check the inline Script Blocking
+- add the below code in page.js
+```
+<script src="https://evil.com/virus.js"></script>
+```
+- Browser
+```
+CSP
+
+↓
+
+Not Allowed
+
+↓
+
+Blocked
+```
+![alt text](images/image-4.png)
